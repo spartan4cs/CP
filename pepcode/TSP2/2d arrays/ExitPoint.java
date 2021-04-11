@@ -70,12 +70,13 @@ public class ExitPoint {
         int j = 0;
         while (i >= 0 && j >= 0 && i < r && j < c) {
             if (arr[i][j] == 1) {
-                if (dir >= 3) {
+                if (dir > 3) {
                     dir = 0;
                 } else {
                     dir++;
                 }
-            } else if (arr[i][j] == 0) {
+            }
+            if (arr[i][j] == 0) {
 
                 // same direction
                 if (dir == 0) {
