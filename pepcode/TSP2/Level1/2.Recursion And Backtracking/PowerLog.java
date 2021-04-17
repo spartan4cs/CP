@@ -11,13 +11,14 @@ public class PowerLog {
     }
 
     public static int powLog(int x, int n) {
-
+        System.out.println(n);
         // base
         if (n == 0) {
             return 1;
         }
 
         // faith
+
         int ans = powLog(x, n / 2);
         ans = ans * ans;
         if (n % 2 == 1) {
