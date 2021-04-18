@@ -10,7 +10,9 @@ public class GetMazePathGeneric {
         }
 
         ArrayList<String> ans = new ArrayList<>();
+        // direction
         for (int d = 0; d < dir.length; d++) {
+            // from current row and column
             int r = sr + dir[d][0];
             int c = sc + dir[d][1];
 
