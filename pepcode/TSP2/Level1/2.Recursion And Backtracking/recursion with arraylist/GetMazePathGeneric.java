@@ -39,7 +39,7 @@ public class GetMazePathGeneric {
         ArrayList<String> ans = new ArrayList<>();
         // direction
         for (int d = 0; d < dir.length; d++) {
-            // magnitude
+            // magnitude/jumps
             for (int rad = 1; rad <= Rad; rad++) {
 
                 int r = sr + rad * dir[d][0];
