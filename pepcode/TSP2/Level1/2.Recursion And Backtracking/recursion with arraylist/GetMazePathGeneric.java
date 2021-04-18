@@ -61,12 +61,38 @@ public class GetMazePathGeneric {
         return ans;
     }
 
+    // 0 -> free cell, 1 -> blocked cell
+    public static ArrayList<String> blockedMazePath(int[][] mat, int sr, int sc, int[][] dir, String[] dirS) {
+        int n = mat.length;
+        int m = mat[0].length;
+        if (sr == n - 1 && sc == m - 1) {
+            ArrayList<String> base = new ArrayList<>();
+            base.add("");
+            return base;
+        }
+
+        ArrayList<String> ans = new ArrayList<>();
+        for (int d = 0; d < dir.length; d++) {
+            int r = sr + dir[d][0];
+            int c = sc + dir[d][1];
+
+            if (r >= 0 && c >= 0 && r <= n - 1 && c <= m - 1 && mat[r][c] == 0) {
+                ArrayList<String> recAns = blockedMazePath(mat, r, c, dir, dirS);
+                for (String s : recAns) {
+                    ans.add(dirS[d] + s);
+                }
+            }
+        }
+
+        return ans;
+    }
+
     public static void main(String[] args) {
-        int[][] dir = { { 1, 0 }, { 1, 1 }, { 0, 1 } };
-        String[] dirS = { "V", "D", "H" };
-        int n = 1;
-        int m = 4;
-        System.out.println(mazePathGenric(0, 0, n - 1, m - 1, dir, dirS, Math.max(n, m)));
+        int[][] dir = { { 1, 1 } };
+        String[] dirS = { "D" };
+        int n = 5;
+        int m = 5;
+        System.out.println(mazePathGenric(0, 0, n - 1, m - 1, dir, dirS, 3));
         System.out.println(mazePath(0, 0, n - 1, m - 1, dir, dirS));
     }
 }
