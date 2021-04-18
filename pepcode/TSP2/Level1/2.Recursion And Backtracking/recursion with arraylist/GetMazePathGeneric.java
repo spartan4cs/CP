@@ -52,7 +52,7 @@ public class GetMazePathGeneric {
                         ans.add(dirS[d] + rad + s);
                     }
                 } else
-                //beyond range
+                    // beyond range
                     break;
             }
         }
@@ -63,9 +63,9 @@ public class GetMazePathGeneric {
     public static void main(String[] args) {
         int[][] dir = { { 1, 0 }, { 1, 1 }, { 0, 1 } };
         String[] dirS = { "V", "D", "H" };
-        int n = 4;
-        int m = 7;
+        int n = 2;
+        int m = 2;
         System.out.println(mazePathGenric(0, 0, n - 1, m - 1, dir, dirS, Math.max(n, m)));
-
+        System.out.println(mazePath(0, 0, n - 1, m - 1, dir, dirS));
     }
 }
