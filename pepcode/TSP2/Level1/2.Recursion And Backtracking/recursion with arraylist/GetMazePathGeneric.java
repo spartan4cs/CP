@@ -16,6 +16,7 @@ public class GetMazePathGeneric {
             int r = sr + dir[d][0];
             int c = sc + dir[d][1];
 
+            // specified the range
             if (r >= 0 && c >= 0 && r <= er && c <= ec) {
                 ArrayList<String> recAns = mazePath(r, c, er, ec, dir, dirS);
                 for (String s : recAns) {
@@ -36,17 +37,22 @@ public class GetMazePathGeneric {
         }
 
         ArrayList<String> ans = new ArrayList<>();
+        // direction
         for (int d = 0; d < dir.length; d++) {
+            // magnitude
             for (int rad = 1; rad <= Rad; rad++) {
+
                 int r = sr + rad * dir[d][0];
                 int c = sc + rad * dir[d][1];
 
+                // range specified
                 if (r >= 0 && c >= 0 && r <= er && c <= ec) {
                     ArrayList<String> recAns = mazePathGenric(r, c, er, ec, dir, dirS, Rad);
                     for (String s : recAns) {
                         ans.add(dirS[d] + rad + s);
                     }
                 } else
+                //beyond range
                     break;
             }
         }
