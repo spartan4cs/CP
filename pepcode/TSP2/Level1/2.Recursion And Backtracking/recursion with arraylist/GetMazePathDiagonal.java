@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class GetMazePath {
+public class GetMazePathDiagonal {
 
     public static ArrayList<String> getMazePathSmart(int sr, int sc, int dr, int dc) {
         // System.out.println(sr + " " + sc);
@@ -29,6 +29,12 @@ public class GetMazePath {
             }
         }
 
+        if (sr <= dr && sc <= dc) {
+            ArrayList<String> dres = getMazePathSmart(sr + 1, sc + 1, dr, dc);
+            for (String d : dres) {
+                myres.add("d" + d);
+            }
+        }
         return myres;
     }
 
@@ -46,6 +52,7 @@ public class GetMazePath {
 
         ArrayList<String> hres = getMazePathStupid(sr, sc + 1, dr, dc);
         ArrayList<String> vres = getMazePathStupid(sr + 1, sc, dr, dc);
+        ArrayList<String> dres = getMazePathStupid(sr + 1, sc + 1, dr, dc);
         ArrayList<String> myres = new ArrayList<>();
 
         for (String h : hres) {
@@ -53,6 +60,9 @@ public class GetMazePath {
         }
         for (String v : vres) {
             myres.add("v" + v);
+        }
+        for (String d : dres) {
+            myres.add("d" + d);
         }
 
         return myres;
@@ -66,6 +76,6 @@ public class GetMazePath {
         // smart calls
         System.out.println(getMazePathSmart(0, 0, n - 1, m - 1));
         // stupid calls
-        // System.out.println(getMazePathStupid(0, 0, n - 1, m - 1));
+        System.out.println(getMazePathStupid(0, 0, n - 1, m - 1));
     }
 }
