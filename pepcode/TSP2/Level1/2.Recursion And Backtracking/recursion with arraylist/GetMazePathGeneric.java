@@ -42,6 +42,7 @@ public class GetMazePathGeneric {
             // magnitude/jumps
             for (int rad = 1; rad <= Rad; rad++) {
 
+                // will move with magnitude rad*unit Vector from current point sr and sc
                 int r = sr + rad * dir[d][0];
                 int c = sc + rad * dir[d][1];
 
