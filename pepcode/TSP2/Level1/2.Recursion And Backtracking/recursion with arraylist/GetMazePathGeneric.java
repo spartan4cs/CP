@@ -63,8 +63,8 @@ public class GetMazePathGeneric {
     public static void main(String[] args) {
         int[][] dir = { { 1, 0 }, { 1, 1 }, { 0, 1 } };
         String[] dirS = { "V", "D", "H" };
-        int n = 2;
-        int m = 2;
+        int n = 1;
+        int m = 4;
         System.out.println(mazePathGenric(0, 0, n - 1, m - 1, dir, dirS, Math.max(n, m)));
         System.out.println(mazePath(0, 0, n - 1, m - 1, dir, dirS));
     }
