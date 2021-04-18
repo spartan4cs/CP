@@ -1,2 +1,1 @@
-[hhvv, hvhv, hvvh, hvd, hdv, vhhv, vhvh, vhd, vvhh, vdh, dhv, dvh, dd]
-[hhvv, hvhv, hvvh, hvd, hdv, vhhv, vhvh, vhd, vvhh, vdh, dhv, dvh, dd]
+[v1v1v1v1, v1v1v2, v1v2v1, v1v3, v2v1v1, v2v2, v3v1, v4]
