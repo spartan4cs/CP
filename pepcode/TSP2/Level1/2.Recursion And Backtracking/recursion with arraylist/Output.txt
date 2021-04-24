@@ -1,8 +1,6 @@
-h1h1h1h1
-h1h1h2
-h1h2h1
-h1h3
-h2h1h1
-h2h2
-h3h1
-h4
+abc
+acb
+bac
+bca
+cab
+cba
