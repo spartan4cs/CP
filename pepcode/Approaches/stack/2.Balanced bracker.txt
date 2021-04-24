@@ -1,0 +1,32 @@
+//Balanced brackets
+1. You are given a string exp representing an expression.
+2. You are required to check if the expression is balanced i.e. closing brackets and opening brackets match up well.
+
+e.g.
+[(a + b) + {(c + d) * (e / f)}] -> true
+[(a + b) + {(c + d) * (e / f)]} -> false
+[(a + b) + {(c + d) * (e / f)} -> false
+([(a + b) + {(c + d) * (e / f)}] -> false
+
+//approach
+
+intiialize stack;
+
+while(elements are present){
+	
+	if(open brackets){
+		push
+	}else if(closing bracket){
+	
+		if(stack is empty ) print false;return;
+		else if(at peek, opeing bracket is  different) print false; return;
+		else pop;
+	}
+	
+}
+
+if(stack is empty){
+	means balanced. so print true;
+}else{
+	print false;
+}
