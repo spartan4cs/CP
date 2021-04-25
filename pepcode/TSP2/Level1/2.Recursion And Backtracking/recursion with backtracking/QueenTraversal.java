@@ -25,9 +25,9 @@ public class QueenTraversal {
 
                 if (nr >= 0 && nr <= n - 1 && nc >= 0 && nc <= m - 1) {
                     System.out.println("Direction : " + d + " -> " + " ( " + nr + " , " + nc + " )");
-
                 }
             }
+            System.out.println();
         }
     }
 
