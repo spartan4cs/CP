@@ -1,35 +1,3 @@
-Direction : 0 ->  ( 2 , 3 )
-Direction : 0 ->  ( 1 , 3 )
-Direction : 0 ->  ( 0 , 3 )
-
-Direction : 1 ->  ( 2 , 4 )
-Direction : 1 ->  ( 1 , 5 )
-Direction : 1 ->  ( 0 , 6 )
-
-Direction : 2 ->  ( 3 , 4 )
-Direction : 2 ->  ( 3 , 5 )
-Direction : 2 ->  ( 3 , 6 )
-Direction : 2 ->  ( 3 , 7 )
-
-Direction : 3 ->  ( 4 , 4 )
-Direction : 3 ->  ( 5 , 5 )
-Direction : 3 ->  ( 6 , 6 )
-Direction : 3 ->  ( 7 , 7 )
-
-Direction : 4 ->  ( 4 , 3 )
-Direction : 4 ->  ( 5 , 3 )
-Direction : 4 ->  ( 6 , 3 )
-Direction : 4 ->  ( 7 , 3 )
-
-Direction : 5 ->  ( 4 , 2 )
-Direction : 5 ->  ( 5 , 1 )
-Direction : 5 ->  ( 6 , 0 )
-
-Direction : 6 ->  ( 3 , 2 )
-Direction : 6 ->  ( 3 , 1 )
-Direction : 6 ->  ( 3 , 0 )
-
-Direction : 7 ->  ( 2 , 2 )
-Direction : 7 ->  ( 1 , 1 )
-Direction : 7 ->  ( 0 , 0 )
-
+dddrrtttrrrddddd
+dddrrddrrr
+dddrrrrrdd
