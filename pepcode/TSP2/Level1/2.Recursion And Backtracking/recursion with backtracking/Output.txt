@@ -1,0 +1,15 @@
+Radius : 1 r : 0 c : 1
+Radius : 1 r : 1 c : 2
+Radius : 1 r : 2 c : 1
+Radius : 1 r : 1 c : 0
+Radius : 2 r : 1 c : 3
+Radius : 2 r : 3 c : 1
+Radius : 3 r : 4 c : 1
+-------------------------------------
+Direction : 0 r : 0 c : 1
+Direction : 1 r : 1 c : 2
+Direction : 1 r : 1 c : 3
+Direction : 2 r : 2 c : 1
+Direction : 2 r : 3 c : 1
+Direction : 2 r : 4 c : 1
+Direction : 3 r : 1 c : 0
