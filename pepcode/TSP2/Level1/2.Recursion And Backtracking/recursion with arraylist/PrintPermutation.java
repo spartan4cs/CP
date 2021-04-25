@@ -2,12 +2,13 @@ import java.util.Scanner;
 
 public class PrintPermutation {
 
-    // no need to aadd for loop
+    // no need to aadd for loop/
+
     public static String passRemaining(String str, int k) {
 
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < str.length(); i++) {
-            if (i != k) {
+            if (i != k) { // willl not work if str = aaa
                 sb.append(str.charAt(i));
             }
         }
