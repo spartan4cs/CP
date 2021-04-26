@@ -28,6 +28,10 @@ public class TargetSumSubset {
             return;
 
         }
+        // required if stupid calls
+        // else if (ssf>tar) {
+        // return;
+        // }
 
         // yes calls
         if (ssf + arr[idx] <= tar) // you will not get anything beyond target path so dont explore.
