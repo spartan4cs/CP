@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-class SearchingTheory {
+class TopicSortSearchTimeComplexity {
 
     // poly1 = f(x,n) = 1.x^n + 2.x^n-1 + 3.x^n-2 + ... + n.x^1
     // think from back
