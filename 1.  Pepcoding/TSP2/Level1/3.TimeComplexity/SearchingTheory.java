@@ -103,6 +103,70 @@ class SearchingTheory {
 
     }
 
+    public static int[] mergeTwoSortedArrays(int[] a, int[] b) {
+        // write your code here
+
+        int alen = a.length;
+        int blen = b.length;
+        int[] ans = new int[alen + blen];
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        while (i < alen && j < blen) {
+            // if below 2 while not written
+
+            if (a[i] < b[j]) {
+                ans[k] = a[i];
+                i++;
+            } else {
+
+                ans[k] = b[j];
+                j++;
+            }
+            k++;
+        }
+        // if i is remaining
+        while (i < alen) {
+            ans[k] = a[i];
+            i++;
+            k++;
+        }
+        // if j is remaining
+        while (j < blen) {
+            ans[k] = b[j];
+            j++;
+        }
+        return ans;
+
+    }
+
+    public static int[] mergeTwoSortedArraysinSingleWhile(int[] a, int[] b) {
+        // write your code here
+
+        int alen = a.length;
+        int blen = b.length;
+        int[] ans = new int[alen + blen];
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        while (i < alen || j < blen) {
+            int ival = i < alen ? a[i] : Integer.MAX_VALUE;
+            int jval = j < blen ? b[j] : Integer.MAX_VALUE;
+            if (ival < jval) {
+                ans[k] = ival;
+                i++;
+            } else {
+
+                ans[k] = jval;
+                j++;
+            }
+            k++;
+        }
+
+        return ans;
+
+    }
+
     public static void swap(int[] arr, int i, int j) {
         System.out.println("Swapping index " + i + " and index " + j);
         int temp = arr[i];
@@ -127,8 +191,14 @@ class SearchingTheory {
         int[] arr = { 0, 1, 0, 1, 0 };
         int[] arr1 = { 0, 1, 0, 1, 0, 2, 1, 0 };
 
+        int[] a = { 1, 4, 7 };
+        int[] b = { 2, 5, 7 };
         sort01(arr);
         sort012(arr1);
+        int ans[] = mergeTwoSortedArrays(a, b);
+        display(ans);
+        ans = mergeTwoSortedArraysinSingleWhile(a, b);
+        display(ans);
         display(arr);
         display(arr1);
 
