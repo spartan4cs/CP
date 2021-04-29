@@ -2,6 +2,21 @@ import java.util.Arrays;
 
 class SearchingTheory {
 
+    // poly1 = f(x,n) = 1.x^n + 2.x^n-1 + 3.x^n-2 + ... + n.x^1
+    // think from back
+    public static int poly1(int x, int N) {
+
+        int xval = x;
+        int sum = 0;
+        for (int n = N; n >= 1; n--) {
+
+            sum += n * xval;
+            xval = xval * x;
+        }
+
+        return sum;
+    }
+
     public static int linearSearch(int[] arr, int data) {
         for (int i = 0; i < arr.length; i++) {
             if (data == i)
@@ -64,6 +79,30 @@ class SearchingTheory {
         }
     }
 
+    public static void sort012(int[] arr) {
+
+        int i = 0; // first unsolved
+        int j = 0; // first 1
+        int k = arr.length - 1; // last unsolved
+        while (i <= k) { // till last unsolved
+
+            if (arr[i] == 0) {
+                swap(arr, i, j);
+                i++;
+                j++;
+
+            } else if (arr[i] == 1) {
+
+                i++;
+            } else if (arr[i] == 2) {
+                swap(arr, i, k);
+
+                k--;
+            }
+        }
+
+    }
+
     public static void swap(int[] arr, int i, int j) {
         System.out.println("Swapping index " + i + " and index " + j);
         int temp = arr[i];
@@ -84,16 +123,20 @@ class SearchingTheory {
         display(p);
     }
 
-    public static void sort1() {
+    public static void sort() {
         int[] arr = { 0, 1, 0, 1, 0 };
+        int[] arr1 = { 0, 1, 0, 1, 0, 2, 1, 0 };
 
         sort01(arr);
+        sort012(arr1);
         display(arr);
+        display(arr1);
+
     }
 
     public static void sorting() {
 
-        sort1();
+        sort();
     }
 
     public static void ques() {
