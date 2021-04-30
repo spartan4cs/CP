@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class NQueen {
+class NQueenSubsetApproach {
     public static void main(String[] args) throws Exception {
         Scanner sc = new Scanner(System.in);
 
