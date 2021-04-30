@@ -42,7 +42,7 @@ public class NQueenOptionLevelApproach {
         // here we are not chekc the condition of number of queen placed because
         // we are calling recursive only when we place;
         if (row == board.length) {
-            System.out.println(asf);
+            System.out.println(asf + ".");
             return;
         }
 
