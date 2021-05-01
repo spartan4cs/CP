@@ -1,5 +1,4 @@
-2
-5
-7
-8
-9
+Swapping -2 and 7
+Swapping 1 and 7
+Swapping 3 and 4
+-2 1 3 7 4 
