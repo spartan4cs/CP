@@ -38,6 +38,33 @@ public class MergeTwoSortedArr {
 
     }
 
+    public static int[] mergeTwoSortedArraysinSingleWhile(int[] a, int[] b) {
+        // write your code here
+
+        int alen = a.length;
+        int blen = b.length;
+        int[] ans = new int[alen + blen];
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        while (i < alen || j < blen) {
+            int ival = i < alen ? a[i] : Integer.MAX_VALUE;
+            int jval = j < blen ? b[j] : Integer.MAX_VALUE;
+            if (ival < jval) {
+                ans[k] = ival;
+                i++;
+            } else {
+
+                ans[k] = jval;
+                j++;
+            }
+            k++;
+        }
+
+        return ans;
+
+    }
+
     public static void print(int[] arr) {
         for (int i = 0; i < arr.length; i++) {
             System.out.println(arr[i]);
