@@ -7,11 +7,12 @@ public class SelectionSort {
         int n = arr.length;
         for (int i = 0; i < n - 1; i++) {
             int minindex = i;
-            for (int j = i + 1; j < n; j++) {
-                if (isSmaller(arr, j, minindex)) {
-                    swap(arr, j, minindex);
-                }
-            }
+
+            for (int j = i + 1; j < n; j++)
+                if (isSmaller(arr, j, minindex))
+                    minindex = j;
+
+            swap(arr, i, minindex);
         }
     }
 

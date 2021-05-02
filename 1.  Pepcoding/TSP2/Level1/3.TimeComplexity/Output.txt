@@ -1,23 +1,31 @@
+min index - >0 element - >5
 Comparing 4 and 5
-Swapping 4 and 5
+min index - >1 element - >4
 Comparing 3 and 4
-Swapping 3 and 4
+min index - >2 element - >3
 Comparing 2 and 3
-Swapping 2 and 3
+min index - >3 element - >2
 Comparing 1 and 2
-Swapping 1 and 2
-Comparing 4 and 5
-Swapping 4 and 5
+Swapping 5 and 1
+
+min index - >1 element - >4
 Comparing 3 and 4
-Swapping 3 and 4
+min index - >2 element - >3
 Comparing 2 and 3
-Swapping 2 and 3
-Comparing 4 and 5
-Swapping 4 and 5
-Comparing 3 and 4
-Swapping 3 and 4
-Comparing 4 and 5
-Swapping 4 and 5
+min index - >3 element - >2
+Comparing 5 and 2
+Swapping 4 and 2
+
+min index - >2 element - >3
+Comparing 4 and 3
+min index - >2 element - >3
+Comparing 5 and 3
+Swapping 3 and 3
+
+min index - >3 element - >4
+Comparing 5 and 4
+Swapping 4 and 4
+
 1
 2
 3
