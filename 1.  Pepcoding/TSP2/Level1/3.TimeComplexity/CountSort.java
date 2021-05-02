@@ -1,7 +1,30 @@
+import java.util.*;
+
 public class CountSort {
     public static void countSort(int[] arr, int min, int max) {
         // write your code here
+        int freqMap[] = generateFreqMap(arr, min, max);
+        int index = 0;
+        for (int i = 0; i < freqMap.length; i++) {
+            int val = i + min;// for handling -ve
+            int fq = freqMap[i];
 
+            for (int j = 0; j < fq; j++) {
+                arr[index] = val;
+                index++;
+            }
+
+        }
+    }
+
+    public static int[] generateFreqMap(int[] arr, int min, int max) {
+        int[] freqMap = new int[max - min + 1]; // 10 - (-2) +1 = 13 //for handling -ve
+
+        for (int i = 0; i < arr.length; i++) {
+            int index = arr[i] - min; // for handling -ve
+            freqMap[index]++;
+        }
+        return freqMap;
     }
 
     public static void print(int[] arr) {
@@ -12,6 +35,7 @@ public class CountSort {
 
     public static void main(String[] args) throws Exception {
         Scanner scn = new Scanner(System.in);
+
         int n = scn.nextInt();
         int[] arr = new int[n];
         int max = Integer.MIN_VALUE;
