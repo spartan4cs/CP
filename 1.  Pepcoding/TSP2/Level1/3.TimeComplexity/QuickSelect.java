@@ -8,12 +8,12 @@ public class QuickSelect {
         int ans = 0;
         int pi = partition(arr, pivot, lo, hi);
         if (pi == k) {
-            ans = pi;
-        } else if (k < pivot) {
+            ans = pivot;
+        } else if (k < pi) {
             ans = quickSelect(arr, lo, pi - 1, k);
-        } else if (k > pivot) {
+        } else if (k > pi) {
 
-            ans = quickSelect(arr, lo, pi + 1, k);
+            ans = quickSelect(arr, pi + 1, hi, k);
         }
         return ans;
 
