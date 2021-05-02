@@ -1,10 +1,25 @@
-pivot -> 5
-Swapping 3 and 3
-Swapping 4 and 7
-Swapping 5 and 7
-pivot index -> 2
-pivot -> 4
-Swapping 3 and 3
-Swapping 4 and 4
-pivot index -> 1
+Comparing 4 and 5
+Swapping 4 and 5
+Comparing 2 and 5
+Swapping 2 and 5
+Comparing 1 and 5
+Swapping 1 and 5
+Comparing 0 and 5
+Swapping 0 and 5
+Comparing 2 and 4
+Swapping 2 and 4
+Comparing 1 and 4
+Swapping 1 and 4
+Comparing 0 and 4
+Swapping 0 and 4
+Comparing 1 and 2
+Swapping 1 and 2
+Comparing 0 and 2
+Swapping 0 and 2
+Comparing 0 and 1
+Swapping 0 and 1
+0
+1
+2
 4
+5
