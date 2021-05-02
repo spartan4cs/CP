@@ -1,17 +1,22 @@
-import java.util.Arrays;
-import java.util.Scanner;
+import java.io.*;
+import java.util.*;
 
-public class QuickSort {
-    public static void quickSort(int[] arr, int lo, int hi) {
+public class QuickSelect {
+    public static int quickSelect(int[] arr, int lo, int hi, int k) {
         // write your code here
-        if (lo > hi) {
-            return;
-        }
-
         int pivot = arr[hi];
-        int p = partition(arr, pivot, lo, hi);
-        quickSort(arr, lo, p - 1);
-        quickSort(arr, p + 1, hi);
+        int ans = 0;
+        int pi = partition(arr, pivot, lo, hi);
+        if (pi == k) {
+            ans = pi;
+        } else if (k < pivot) {
+            ans = quickSelect(arr, lo, pi - 1, k);
+        } else if (k > pivot) {
+
+            ans = quickSelect(arr, lo, pi + 1, k);
+        }
+        return ans;
+
     }
 
     public static int partition(int[] arr, int pivot, int lo, int hi) {
@@ -47,13 +52,12 @@ public class QuickSort {
 
     public static void main(String[] args) throws Exception {
         Scanner scn = new Scanner(System.in);
-        Arrays.sort(a);
         int n = scn.nextInt();
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
             arr[i] = scn.nextInt();
         }
-        quickSort(arr, 0, arr.length - 1);
-        print(arr);
+        int k = scn.nextInt();
+        System.out.println(quickSelect(arr, 0, arr.length - 1, k - 1));
     }
 }
