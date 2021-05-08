@@ -1,6 +1,11 @@
 import java.util.Scanner;
 import java.util.Stack;
 
+/**
+ * https://leetcode.com/problems/next-greater-element-i/submissions/
+ * 
+ * 
+ */
 class Leet_NextGreaterElement_I {
     public static int[] nextGreaterElement(int[] nums1, int[] nums2) {
 
@@ -36,7 +41,7 @@ class Leet_NextGreaterElement_I {
         for (int i = 0; i < n1; i++) {
             int pos = heap[nums1[i]];
             ans[i] = nge2[pos];
-             System.out.println(ans[i]);
+            // System.out.println(ans[i]);
         }
 
         return ans;
