@@ -55,6 +55,8 @@ public class LargestAreaHistogram {
 
             st2.push(i);
         }
+
+        // get max area using rb and lb
         int maxArea = 0;
         for (int i = 0; i < n; i++) {
             int width = rb[i] - lb[i] - 1;
