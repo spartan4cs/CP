@@ -22,7 +22,7 @@ public class LargestAreaHistogram {
         st1.push(0);
         for (int i = 1; i < n; i++) {
 
-            while (st1.size() > 0 && a[i] < a[st1.peek()]) {
+            while (st1.size() > 0 && a[i] <= a[st1.peek()]) {
                 st1.pop();
             }
 
@@ -39,16 +39,16 @@ public class LargestAreaHistogram {
         int[] rb = new int[n];
         Stack<Integer> st2 = new Stack<>();
 
-        rb[n - 1] = -1;
+        rb[n - 1] = n;
         st2.push(n - 1);
         for (int i = n - 2; i >= 0; i--) {
 
-            while (st2.size() > 0 && a[i] < a[st2.peek()]) {
+            while (st2.size() > 0 && a[i] <= a[st2.peek()]) {
                 st2.pop();
             }
 
             if (st2.empty()) {
-                rb[i] = -1;
+                rb[i] = n;
             } else {
                 rb[i] = st2.peek();
             }
@@ -56,6 +56,7 @@ public class LargestAreaHistogram {
             st2.push(i);
         }
 
+     
         // get max area using rb and lb
         int maxArea = 0;
         for (int i = 0; i < n; i++) {
