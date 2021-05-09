@@ -1,5 +1,9 @@
 import java.util.Stack;
 
+/**
+ * https://leetcode.com/problems/maximal-rectangle/
+ */
+
 public class Leet_Maximal_Rectangle {
 
     public static int largestAreaHistogram(int a[]) {
