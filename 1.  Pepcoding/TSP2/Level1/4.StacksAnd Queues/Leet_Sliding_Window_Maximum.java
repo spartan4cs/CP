@@ -36,13 +36,10 @@ class Leet_Sliding_Window_Maximum {
             while (nge[j] < i + k) {
                 j = nge[j];
 
-                // edge case for last element when nge just to last elemetn
-                if (j == n)
-                    break;
             }
 
             ans[i] = arr[j];
-            // System.out.println(arr[j]);
+            System.out.println(arr[j]);
         }
         return ans;
     }
