@@ -8,7 +8,7 @@ public class Leet_Maximal_Rectangle {
 
     public static int largestAreaHistogram(int a[]) {
         int n = a.length;
-        // nsetl
+        // next smaller element to left (left boundary)
         int[] lb = new int[n];
         Stack<Integer> st1 = new Stack<>();
 
@@ -29,7 +29,7 @@ public class Leet_Maximal_Rectangle {
             st1.push(i);
         }
 
-        // nsetr
+        // next smaller element to right (right boundary)
         int[] rb = new int[n];
         Stack<Integer> st2 = new Stack<>();
 
