@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-public class InfixEvaluation {
+public class Leet_BasicCalculator_II {
 
     private static void solve(Stack<Integer> operands, Stack<Character> operator) {
         char op = operator.pop();
@@ -36,8 +36,7 @@ public class InfixEvaluation {
         return val;
     }
 
-    public static void infixEvaluate(String str) {
-
+    public static int calculate(String str) {
         int n = str.length();
         // 2 stack
         Stack<Integer> operands = new Stack<>();
@@ -72,14 +71,14 @@ public class InfixEvaluation {
             solve(operands, operator);
         }
 
-        System.out.println(operands.peek());
+        return operands.peek();
+        // System.out.println(operands.peek());
     }
 
+    // Input: s = "3+2*2"
+    // Output: 7
     public static void main(String[] args) {
-        // BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        // String exp = br.readLine();
-
-        String exp = "2*(3+5)";
-        infixEvaluate(exp);
+        String s = "1 + 1";
+        System.out.println(calculate(s));
     }
 }
