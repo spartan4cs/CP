@@ -1,1 +1,3 @@
-0
+abc
+java.lang.Exception
+closing
