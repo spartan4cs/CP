@@ -19,3 +19,5 @@ https://www.spoj.com/
 
 final 450
 https://drive.google.com/file/d/1FMdN_OCfOI0iAeDlqswCiC2DZzD4nPsb/view
+
+https://dev.to/seanpgallivan/series/11116
