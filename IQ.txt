@@ -215,7 +215,7 @@ what is use of dispatcher servlet
 
 difference between put and post
 
-
+https://www.javainterviewpoint.com/jax-rs-pathparam-example/
 ------------------------------------------------------------UI
 HTML
 CSS
