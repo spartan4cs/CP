@@ -13,7 +13,7 @@ Resources:
   
   Books:
   1. CP Handbook: https://cses.fi/book/book.pdf
-  2. Graphs: 	   https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbGpDcW1RVmo4a3phRC1ReU5odUFwVF9YX0g2UXxBQ3Jtc0tuY1ZHM3dtUW5OcW44d09aak5CNlZMVmpicGFyaUc3cmNMa0lXUHpIUVZnNm51M3VnQmpoYzI5eG1Fd0VFMW9PN2xGajJWRkxGMHk3dmdNTUZERk92ZHJZYjlmd1FqMzVmNmQ0Z0cyTGFYNDYzTFQ5cw&q=https%3A%2F%2Fweb.stanford.edu%2Fclass%2Fcs103x%2Fcs103x-notes.pdf
+  2. Graphs: https://web.stanford.edu/class/cs103x/cs103x-notes.pdf	   
   
   Videos:
   1. Indian Programming Camp:https://www.youtube.com/watch?v=VGq6w9TlJBY&list=PLi0ZM-RCX5nsTc2Z6woHr5qoF6n3b-thO&t=0s
