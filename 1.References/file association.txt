@@ -1,0 +1,9 @@
+"C:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\c++"  !.cpp -o !.exe
+
+"C:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\g++" !.cpp -o !.exe -ggdb -DDEBUG -std=c++11 -O2 -Wl,--stack=256000000 -Wall -Wextra -Wshadow
+
+
+"C:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin\gdb.exe"  !.exe
+
+
+test

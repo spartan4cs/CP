@@ -1,0 +1,19 @@
+Sumeet Sir's Important Notes
+
+(Sir writes it everytime, so I compiled some of them)
+
+1. beta question same se he hain. Leetcode prefer karte hain ab. Uske testcase better hain.  Ye new list hai, leetcode se
+https://drive.google.com/drive/u/0/folders/15E9vAooWGtLv1UlzpkawUkM1f7_mFeJs
+
+2. If you have done foundation
+beta pehle ye list karo - https://docs.google.com/spreadsheets/u/1/d/1XdXJbn9NC7fx1CeavItkxR0Yos8rQAC9xXjnH4-f6Eg/edit#gid=0
+baad mei ye - https://docs.google.com/spreadsheets/u/1/d/1XdXJbn9NC7fx1CeavItkxR0Yos8rQAC9xXjnH4-f6Eg/edit#gid=0
+
+3.
+OS -> Sanchit Jain Videos + Galvin (chapter 3 to 9)
+
+DBMS -> Sanchit Jain Videos + Korth
+
++ InterviewBit SQL tutorial + W3Schools for queries
+
+OOPS -> OCJP (Chapter 2, 7, 8, 9)

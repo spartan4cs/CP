@@ -1,0 +1,27 @@
+. Virtual On-Site - 2 (Google Meet)
+
+Problem: Its a kind of pin ball game where you will be given 2D matrix board with obstacles ('\', '/' ) and start and end position, you need to return the end point by travelling ball from start point. When ball hits obstacle it changes it direction perpendicular to the ball current direction towords the face of obstacle.
+Ex: ball going to Left -> Hit the '/' it turns to Down side.
+				 - - -
+				|/|/|\|
+				 - - -
+				| | |\|X
+				 - - -
+				| |\| |O
+				 - - -
+					0	1	2	3
+				 0	/	/	\
+				 1			\	X
+				 2		\		0
+				 
+				 llttrdrr exit
+output: position of X i.e. (1,3),
+explanation: ball starts from (2,3) left direction, move to (2,2) then (2,1) 
+change direction to UP, 
+move to (1,1) then (0,1) 
+change direction to right 
+move to (0,2) 
+change direction to down
+ move to (1,2) 
+ change direction right 
+ move to (1, 3) you are at exit point X.
