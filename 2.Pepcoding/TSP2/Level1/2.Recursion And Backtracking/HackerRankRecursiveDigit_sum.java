@@ -5,7 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-class Result {
+class HackerRankRecursiveDigit_sum {
 
     /*
      * Complete the 'superDigit' function below.
@@ -33,25 +33,10 @@ class Result {
         return sum;
     }
 
-}
-
-public class HackerRankRecursiveDigit_sum {
     public static void main(String[] args) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
-        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv("OUTPUT_PATH")));
 
-        String[] firstMultipleInput = bufferedReader.readLine().replaceAll("\\s+$", "").split(" ");
+        System.out.println(superDigit("123", 3));
 
-        String n = firstMultipleInput[0];
-
-        int k = Integer.parseInt(firstMultipleInput[1]);
-
-        int result = Result.superDigit(n, k);
-
-        bufferedWriter.write(String.valueOf(result));
-        bufferedWriter.newLine();
-
-        bufferedReader.close();
-        bufferedWriter.close();
     }
+
 }
