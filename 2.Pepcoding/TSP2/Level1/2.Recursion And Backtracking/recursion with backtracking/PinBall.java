@@ -13,8 +13,8 @@ public class PinBall {
 
         if (sr >= 0 && sc >= 0 && sr <= dr && sc <= dc) {
 
-            if (board[sr][sc] == '\\') {
-                if (currDir == 'l') {
+            if (board[sr][sc] == '\\') {// obstacle 1
+                if (currDir == 'l') {// based on current direction i am changing the direction
                     traverse(board, sr - 1, sc, dr, dc, 't', asf + "t", coordinates + "(" + sr + "," + sc + ")");
                 } else if (currDir == 't') {
                     traverse(board, sr, sc - 1, dr, dc, 'l', asf + "l", coordinates + "(" + sr + "," + sc + ")");
@@ -23,8 +23,8 @@ public class PinBall {
                 } else if (currDir == 'd') {
                     traverse(board, sr, sc + 1, dr, dc, 'r', asf + "r", coordinates + "(" + sr + "," + sc + ")");
                 }
-            } else if (board[sr][sc] == '/') {
-                if (currDir == 'l') {
+            } else if (board[sr][sc] == '/') {// obstacle 2
+                if (currDir == 'l') {// based on current direction i am changing the direction
                     traverse(board, sr + 1, sc, dr, dc, 'd', asf + "d", coordinates + "(" + sr + "," + sc + ")");
                 } else if (currDir == 't') {
                     traverse(board, sr, sc + 1, dr, dc, 'r', asf + "r", coordinates + "(" + sr + "," + sc + ")");
@@ -34,6 +34,8 @@ public class PinBall {
                     traverse(board, sr, sc - 1, dr, dc, 'l', asf + "l", coordinates + "(" + sr + "," + sc + ")");
                 }
             } else {
+                // no obstacle
+                // move in exitiing direction
                 if (currDir == 't') {
                     traverse(board, sr - 1, sc, dr, dc, currDir, asf + currDir,
                             coordinates + "(" + sr + "," + sc + ")");
