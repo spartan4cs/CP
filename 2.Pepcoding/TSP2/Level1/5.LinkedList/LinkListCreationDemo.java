@@ -178,7 +178,7 @@ class linkedlist {
     // getAt
     public int getAt(int index) {
 
-        if (index < 0 || index > this.size) {
+        if (index < 0 || index > this.size - 1) {
             System.out.println("Invalid index");
             return -1;
 
