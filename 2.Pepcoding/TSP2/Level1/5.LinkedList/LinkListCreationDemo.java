@@ -41,21 +41,11 @@ class linkedlist {
         private int data;
         private Node next;
 
-        public Node() {
-            this.data = 0;
-            this.next = null;
-        }
-
         public Node(int data) {
             this.data = data;
             this.next = null;
         }
 
-        public Node(int data, Node next) {
-
-            this.data = data;
-            this.next = next;
-        }
     }// node end
 
     // addfirst
@@ -118,6 +108,9 @@ class linkedlist {
 
     public int removeFirst() {
 
+        if (size == 0) {
+            return -1;
+        }
         int val = head.data;
         head = head.next;
         size--;
@@ -126,6 +119,9 @@ class linkedlist {
 
     public int removeLast() {
 
+        if (size == 0) {
+            return -1;
+        }
         int val = tail.data;
         Node temp = head;
 
@@ -141,15 +137,24 @@ class linkedlist {
 
     public int removeAt(int index) {
 
-        Node temp = head;
-        for (int i = 0; i < index - 1; i++) {
-
-            temp = temp.next;
+        if (size == 0) {
+            return -1;
         }
-        int val = temp.next.data;
-        temp.next = temp.next.next;
-        size--;
-        return val;
+        if (index == 0) {
+            return removeFirst();
+        } else if (index == size - 1) {
+            return removeLast();
+        } else {
+            Node temp = head;
+            for (int i = 0; i < index - 1; i++) {
+
+                temp = temp.next;
+            }
+            int val = temp.next.data;
+            temp.next = temp.next.next;
+            size--;
+            return val;
+        }
 
     }
 
