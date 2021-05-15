@@ -25,3 +25,10 @@ change direction to down
  move to (1,2) 
  change direction right 
  move to (1, 3) you are at exit point X.
+
+
+    			{ '/', '/', '\\', '0' },
+
+                { '\\', '0', '/', '0' },
+
+                { '0', '\\', '0', '0' }
