@@ -1,19 +1,21 @@
-false
-bool Solution::hotel(vector &arrive, vector &depart, int K) {
-int size=arrive.size();
-sort(arrive.begin(), arrive.end());
-sort(depart.begin(), depart.end());
-int c=0, i=0, j=0;
-while(i<size && j<size){
-if(arrive[i]>=depart[j]){
-c++;
-j++;
-i++;
-}
-else{
-i++;
-}
-}
-// cout<<size-c;
-return (size-c)<=K;
-}
+11
+7
+11
+4
+6
+4
+2
+5
+2
+8
+4
+8
+5
+3
+5
+20
+2
+20
+10
+1
+10
