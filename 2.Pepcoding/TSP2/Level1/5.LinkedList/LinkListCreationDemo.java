@@ -9,6 +9,20 @@ class LinkListCreationDemo {
         l.addLast(40);
         System.out.println(l.size());
         l.displayList();
+        l.getAt(2);
+        l.removeFirst();
+        l.displayList();
+
+        l.removeLast();
+        l.displayList();
+        l.addFirst(20);
+        l.addFirst(10);
+        l.addLast(30);
+        l.addLast(40);
+        l.displayList();
+        l.removeAt(2);
+        l.displayList();
+
     }
 }
 
@@ -42,7 +56,7 @@ class linkedlist {
             this.data = data;
             this.next = next;
         }
-    }
+    }// node end
 
     // addfirst
     // addlast
@@ -76,6 +90,12 @@ class linkedlist {
     }
 
     public void addAt(int val, int index) {
+
+        if (index < 0 || index > this.size) {
+            System.out.println("Invalid index");
+            return;
+        }
+
         if (size() == 0) {
             Node n = new Node(val);
             this.head = this.tail = n;
@@ -96,31 +116,87 @@ class linkedlist {
     // removelast
     // removeat
 
-    // public int removeFirst(int val) {
+    public int removeFirst() {
 
-    // }
+        int val = head.data;
+        head = head.next;
+        size--;
+        return val;
+    }
 
-    // public int removeLast(int val) {
+    public int removeLast() {
 
-    // }
+        int val = tail.data;
+        Node temp = head;
 
-    // public int removeAt(int val, int index) {
+        while (temp.next.next != null) {
+            temp = temp.next;
+        }
+        temp.next = null;
+        tail = temp;
+        size--;
+        return val;
 
-    // }
+    }
+
+    public int removeAt(int index) {
+
+        Node temp = head;
+        for (int i = 0; i < index - 1; i++) {
+
+            temp = temp.next;
+        }
+        int val = temp.next.data;
+        temp.next = temp.next.next;
+        size--;
+        return val;
+
+    }
 
     // getfirst
+    public int getFirst() {
+        if (size() == 0) {
+            return -1;
+        }
+
+        return this.head.data;
+    }
+
     // getlast
+    public int getLast() {
+        if (size() == 0) {
+            return -1;
+        }
+        return this.tail.data;
+    }
+
     // getAt
+    public int getAt(int index) {
+
+        if (index < 0 || index > this.size) {
+            System.out.println("Invalid index");
+            return -1;
+
+        }
+        Node temp = head;
+        for (int i = 0; i < index; i++) {
+
+            temp = temp.next;
+        }
+        System.out.println(temp.data);
+        return temp.data;
+    }
 
     public void displayList() {
 
         Node temp = head;
-        while (temp.next != null) {
+        while (temp != null) {
 
-            System.out.println(temp.data + " ");
+            System.out.print(temp.data + " ");
             temp = temp.next;
         }
-        System.out.println(temp.data);
+        System.out.println();
+
     }
 
     public int size() {
