@@ -2,6 +2,7 @@ import java.io.*;
 import java.util.*;
 
 public class QuickSelect {
+
     public static int quickSelect(int[] arr, int lo, int hi, int k) {
         // write your code here
         int pivot = arr[hi];
@@ -50,6 +51,13 @@ public class QuickSelect {
         System.out.println();
     }
 
+    // 5 =n
+    // 7
+    // -2
+    // 4
+    // 1
+    // 3
+    // 3 = k
     public static void main(String[] args) throws Exception {
         Scanner scn = new Scanner(System.in);
         int n = scn.nextInt();
