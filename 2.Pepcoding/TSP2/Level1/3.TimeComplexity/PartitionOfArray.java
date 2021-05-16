@@ -4,6 +4,8 @@ class PartitionOfArray {
     public static void partition(int[] arr, int pivot) {
         // write your code here
 
+        // i = 1st unsolved
+        // j - 1st greater lement after pivot
         int i = 0;
         int j = 0;
         while (i < arr.length) {
