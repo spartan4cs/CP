@@ -47,7 +47,6 @@ public class QuickSort {
 
     public static void main(String[] args) throws Exception {
         Scanner scn = new Scanner(System.in);
-        Arrays.sort(a);
         int n = scn.nextInt();
         int[] arr = new int[n];
         for (int i = 0; i < n; i++) {
