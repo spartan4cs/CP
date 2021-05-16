@@ -1,3 +1,6 @@
+import java.util.*;
+import java.util.List;
+
 class VectorDemo {
 
     public static void demo() {
@@ -40,6 +43,32 @@ class VectorDemo {
                 }
             }
         }
+    }
+
+    public static List<List<Integer>> combinationSum(int[] candidates, int target, String asf,
+            List<List<Integer>> ans) {
+        // // write your code here
+        if (target == 0) {
+            List<Integer> bres = new ArrayList<>();
+            // / bres.add(new ArrayList<>());
+            for (int i = 0; i < asf.length(); i++) {
+                bres.add(asf.charAt(i) - '0');
+            }
+            ans.add(bres);
+            return ans;
+        }
+
+        for (int i = 0; i < target; i++) {
+
+            if (target > 0) {
+
+                ans = combinationSum(candidates, target - candidates[i], asf + candidates[i], ans);
+
+            }
+
+        }
+
+        return ans;
     }
 
     public static void main(String[] args) {
