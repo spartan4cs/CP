@@ -28,7 +28,7 @@ import java.io.*;
 // Sample Output 0
 
 // [[2, 2, 3], [7]]
-class CombinationalSum {
+class HackerRankCombinationSum {
     public static List<List<Integer>> combinationSum(int[] candidates, int target, String asf, List<List<Integer>> ans,
             int currI) {
         // // write your code here
