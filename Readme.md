@@ -1,4 +1,4 @@
-https://visitor-badge.glitch.me/badge?page_id=jwenjian.visitor-badge
+https://visitor-badge.glitch.me/badge?page_id=spartan4cs.cp.visitor-badge
 Practice resources
 
 Basic Pepcoding:https://www.pepcoding.com/resources/
