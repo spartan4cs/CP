@@ -1,1 +1,4 @@
-9
+ans so far-->  b count so far--> 1
+ans so far-->  a count so far--> 1
+ans so far-->  c count so far--> 1
+1

@@ -16,9 +16,9 @@ public class TargetSumPair {
                 left++;
                 right--;
             } else if (sum < target) {
-                left++;
+                left++; // value increase honar
             } else if (sum > target) {
-                right--;
+                right--; // value decrease honar
             }
         }
     }
