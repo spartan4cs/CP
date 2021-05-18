@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-class Leet_longest_string_chain {
+class Leet_longest_string_chain_Recursive_approach {
 
 	public static boolean wordContainString(String str, String[] words) {
 
