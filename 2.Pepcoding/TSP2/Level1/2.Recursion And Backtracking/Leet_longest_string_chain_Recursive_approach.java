@@ -28,6 +28,7 @@ class Leet_longest_string_chain_Recursive_approach {
 
 		// if same string comes then fetch from the storage
 		if (storage.containsKey(str)) {
+			// storage.entrySet().stream().forEach(System.out::println);
 			return storage.get(str);
 		}
 
@@ -36,6 +37,8 @@ class Leet_longest_string_chain_Recursive_approach {
 		for (int i = 0; i < str.length(); i++) { // options bdca at 0th level
 			// call only if substring is present in word arr
 			if (wordContainString(str, words) == true) {
+
+				// System.out.println();
 				// next level as remaining string
 				int c = helper_fun(words, str.substring(0, i) + str.substring(i + 1), count + 1, asf + str.charAt(i),
 						storage);
@@ -45,6 +48,7 @@ class Leet_longest_string_chain_Recursive_approach {
 
 				// get the max value of all the iteration count
 				ans = Math.max(ans, c);
+				// storage.entrySet().stream().forEach(System.out::println);
 
 			}
 
@@ -67,7 +71,7 @@ class Leet_longest_string_chain_Recursive_approach {
 	}
 
 	public static void main(String args[]) {
-		String[] words = { "xbc", "pcxbcf", "xb", "cxbc", "pcxbc" };
+		String[] words = { "a", "b", "ba", "bca", "bda", "bdca" };
 		System.out.println(longest_string_chain(words));
 	}
 }
