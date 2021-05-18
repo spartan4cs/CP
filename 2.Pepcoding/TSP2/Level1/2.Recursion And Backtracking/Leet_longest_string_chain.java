@@ -3,35 +3,7 @@ import java.util.*;
 
 class Leet_longest_string_chain {
 
-	public static String getStringOfMaxLength(String[] words) {
-		String max = "";
-		for (String word : words) {
-			if (word.length() > max.length()) {
-				max = word;
-			}
-		}
-		return max;
-	}
-
-	public static List<String> getPermutaionOfword(String word, String asf, List<String> ans) {
-
-		if (word.length() == 0) {
-			ans.add(asf);
-			// System.out.println("asf- permutation --> " + asf);
-			return ans;
-		}
-
-		for (int i = 0; i < word.length(); i++) {
-			ans = getPermutaionOfword(word.substring(0, i) + word.substring(i + 1), asf + word.charAt(i), ans);
-
-		}
-		return ans;
-	}
-
 	public static boolean wordContainString(String str, String[] words) {
-		// List<String> ans = new ArrayList();
-		// List<String> list = getPermutaionOfword("", "", ans);
-		// System.out.println(list);
 
 		for (String word : words) {
 
@@ -82,15 +54,20 @@ class Leet_longest_string_chain {
 	}
 
 	public static int longest_string_chain(String[] words) {
-		String str = getStringOfMaxLength(words);
+		// String str = getStringOfMaxLength(words);
+		Arrays.sort(words, (a, b) -> b.length() - a.length());
 		HashMap<String, Integer> store = new HashMap<>();
-		int count = helper_fun(words, str, 0, "", store);
+		int max = 0;
+		for (String str : words) {
 
-		return count;
+			max = Math.max(max, helper_fun(words, str, 0, "", store));
+		}
+
+		return max;
 	}
 
 	public static void main(String args[]) {
-		String[] words = { "a", "b", "ab", "bac" };
+		String[] words = { "xbc", "pcxbcf", "xb", "cxbc", "pcxbc" };
 		System.out.println(longest_string_chain(words));
 	}
 }
