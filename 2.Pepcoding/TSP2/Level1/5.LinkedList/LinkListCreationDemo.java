@@ -1,7 +1,11 @@
+import java.util.LinkedList;
+
 class LinkListCreationDemo {
 
     public static void main(String[] args) {
         linkedlist l = new linkedlist();
+
+        LinkedList<String> ll = new LinkedList<>();
 
         l.addFirst(20);
         l.addFirst(10);
