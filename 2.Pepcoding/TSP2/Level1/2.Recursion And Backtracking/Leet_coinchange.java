@@ -5,21 +5,21 @@ public class Leet_coinchange {
 
     public static int coinChange(int[] coins, int amount) {
 
-        int dp[] = new int[amount + 1];
-        Arrays.fill(dp, -1);
-        dp[0] = 0;
-        for (int coin : coins) {
-            for (int i = 1; i <= amount; i++) {
-                if (i > coin) {
-
-                    dp[i] = dp[i - coin] != -1 ? dp[i] == -1 ? 1 + dp[i - coin] : Math.min(dp[i], 1 + dp[i - coin])
-                            : -1;
-                } else if (i == coin) {
-                    dp[i] = 1;
+     int []dp = new int[amount+1];
+        dp[0]=0;
+        for(int i=1;i<=amount;i++){
+            dp[i]=-1;
+            for(int coin :coins){
+                if(i-coin>=0 && dp[i-coin]!=-1)
+                {
+                    int min = dp[i-coin]+1;
+                    if(dp[i]==-1)
+                        dp[i]=min;
+                    else if(min<dp[i])
+                        dp[i]=min;
                 }
             }
         }
-
         return dp[amount];
 
     }
