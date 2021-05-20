@@ -2,7 +2,7 @@
 import java.io.*;
 import java.util.*;
 
-public class KReverseinLL {
+public class DisplayReverseRecursive {
     public static class Node {
         int data;
         Node next;
@@ -330,56 +330,55 @@ public class KReverseinLL {
             }
         }
 
-        // pointer appraoch
-        public void kReversePointer(int k) {
-
-        }
-        // data approach
-
         public void kReverse(int k) {
-            // write your code here
+            LinkedList prev = null;
 
-            LinkedList prev = null;// we will make data here
             while (this.size > 0) {
                 LinkedList curr = new LinkedList();
 
                 if (this.size >= k) {
-                    // remove first from this && add first in curr
                     for (int i = 0; i < k; i++) {
                         int val = this.getFirst();
                         this.removeFirst();
                         curr.addFirst(val);
                     }
                 } else {
-                    // size less asel tar
-                    // remove first from this and add last in curr
-                    while (this.size > 0) {
+                    int sz = this.size;
+                    for (int i = 0; i < sz; i++) {
                         int val = this.getFirst();
-
                         this.removeFirst();
                         curr.addLast(val);
                     }
-                    // prev null -mneans 1st time
-                    if (prev == null) {
-                        prev = curr;
-
-                    } else {
-                        prev.tail.next = curr.head;
-                        prev.tail = curr.tail;
-                        prev.size += curr.size;
-                    }
-
                 }
 
-                // update linklist
-
-                this.head = prev.head;
-                this.tail = prev.tail;
-                this.size = prev.size;
+                if (prev == null) {
+                    prev = curr;
+                } else {
+                    prev.tail.next = curr.head;
+                    prev.tail = curr.tail;
+                    prev.size += curr.size;
+                }
             }
 
+            this.head = prev.head;
+            this.tail = prev.tail;
+            this.size = prev.size;
         }
 
+        private void displayReverseHelper(Node node) {
+            // write your code here
+
+            if (node == null) {
+                return;
+            }
+            displayReverseHelper(node.next);
+            System.out.println(node.data + " ");
+        }
+
+        public void displayReverse() {
+            displayReverseHelper(head);
+            System.out.println();
+        }
     }
 
     public static void main(String[] args) throws Exception {
@@ -393,15 +392,13 @@ public class KReverseinLL {
             l1.addLast(d);
         }
 
-        int k = Integer.parseInt(br.readLine());
         int a = Integer.parseInt(br.readLine());
         int b = Integer.parseInt(br.readLine());
 
         l1.display();
-        l1.kReverse(k);
-        l1.display();
-        l1.addFirst(a);
-        l1.addLast(b);
+        l1.displayReverse();
+        l1.addLast(a);
+        l1.addFirst(b);
         l1.display();
     }
 }
