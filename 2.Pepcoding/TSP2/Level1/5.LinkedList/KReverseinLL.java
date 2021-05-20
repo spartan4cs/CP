@@ -332,7 +332,50 @@ public class KReverseinLL {
 
         public void kReverse(int k) {
             // write your code here
+
+            // data approach
+
+            LinkedList prev = null;// we will make data here
+            while (this.size > 0) {
+                LinkedList curr = new LinkedList();
+
+                if (this.size >= k) {
+                    // remove first from this && add first in curr
+                    for (int i = 0; i < k; i++) {
+                        int val = this.getFirst();
+                        this.removeFirst();
+                        curr.addFirst(val);
+                    }
+                } else {
+                    // size less asel tar
+                    // remove first from this and add last in curr
+                    while (this.size > 0) {
+                        int val = this.getFirst();
+
+                        this.removeFirst();
+                        curr.addLast(val);
+                    }
+                    // prev null -mneans 1st time
+                    if (prev == null) {
+                        prev = curr;
+
+                    } else {
+                        prev.tail.next = curr.head;
+                        prev.tail = curr.tail;
+                        prev.size += curr.size;
+                    }
+
+                }
+
+                // update linklist
+
+                this.head = prev.head;
+                this.tail = prev.tail;
+                this.size = prev.size;
+            }
+
         }
+
     }
 
     public static void main(String[] args) throws Exception {
