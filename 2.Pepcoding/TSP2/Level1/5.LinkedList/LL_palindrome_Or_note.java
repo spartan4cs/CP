@@ -394,6 +394,45 @@ public class LL_palindrome_Or_note {
             tail.next = null;
         }
 
+        public static Node getMidNode(Node head) {
+            Node slow = head;
+            Node fast = head;
+            while (fast.next != null && fast.next.next != null) {
+                fast = fast.next.next;
+                slow = slow.next;
+            }
+            return slow;
+
+        }
+
+        public boolean IsPalindrome_sirsapproach() {
+
+            Node head1 = head;
+
+            Node mid = getMidNode(head1);
+            Node head2 = mid.next;
+            mid.next = null;
+
+            head2 = reverse(head2);
+
+            Node t1 = head1;
+            Node t2 = head2;
+
+            while (t1 != null && t2 != null) {
+                if (t1.data != t2.data) {
+                    return false;
+                }
+                t1 = t1.next;
+                t2 = t2.next;
+            }
+
+            // maintain original list
+            head2 = reverse(head2);
+            mid.next = head2;
+
+            return true;
+        }
+
         public boolean IsPalindrome() {
             // write your code here
 
