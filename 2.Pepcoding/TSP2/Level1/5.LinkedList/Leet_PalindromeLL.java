@@ -14,7 +14,8 @@ public class Leet_PalindromeLL {
             slow = slow.next;
 
         // second: reverse 2nd half
-        slow = reverse(slow);
+        slow = reverse(slow); // at this point slow will point at head of 2nd half
+        //make fast as head
         fast = head;
 
         // compare 1st half with 2nd
