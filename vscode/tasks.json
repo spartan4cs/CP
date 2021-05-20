@@ -11,7 +11,7 @@
         {
             "label": "Commit and push ",
             "type": "shell",
-            "command": "git pull origin main && git add . &&  git commit -m \"Updated code on timestamp:   %date% - %time%\" && git push",
+            "command": "git pull origin main && git add -A &&  git commit -m \"Updated code on timestamp:   %date% - %time%\" && git push",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
