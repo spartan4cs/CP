@@ -1,3 +1,15 @@
-NEGETIVE
-POSITIVE
-NEGETIVE
+rrddl count - 5 currmin - 5
+rrdddlt count - 7 currmin - 5
+rrddrdllt count - 9 currmin - 5
+rrdrdll count - 7 currmin - 5
+rrdrdldlt count - 9 currmin - 5
+rrdrddltl count - 9 currmin - 5
+rrdrddllt count - 9 currmin - 5
+rrrdldl count - 7 currmin - 5
+rrrdlddlt count - 9 currmin - 5
+rrrdldrdllt count - 11 currmin - 5
+rrrddll count - 7 currmin - 5
+rrrddldlt count - 9 currmin - 5
+rrrdddltl count - 9 currmin - 5
+rrrdddllt count - 9 currmin - 5
+5
