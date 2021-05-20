@@ -9,7 +9,7 @@ Codeforces A2OJ: https://a2oj.com/Ladder14.html
 
 DP:https://atcoder.jp/contests/dp/tasks
 
-Faang1- https://www.pepcoding.com/most-important-interview-questions-list-for-product-based-companies
+(OUTDATED)Faang1- https://www.pepcoding.com/most-important-interview-questions-list-for-product-based-companies
 Faang2- https://www.pepcoding.com/level-2-questions
 
 Resources:
