@@ -4,6 +4,31 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "type": "shell",
+            "label": "C/C++: g++.exe BUILD active file",
+           
+            "command": "C:\\Program Files (x86)\\mingw-w64\\i686-8.1.0-posix-dwarf-rt_v6-rev0\\mingw32\\bin\\g++.exe",
+            "args": ["-g", "${file}", "-o", "${fileDirname}\\${fileBasenameNoExtension}.exe"],
+            "options": {
+              "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": ["$gcc"],
+            "group": {
+              "kind": "build",
+              "isDefault": true
+            }
+          },
+          {
+            "label": "C/C++: g++.exe RUN active file",
+            "type": "shell",
+            "command": "${fileBasenameNoExtension}.exe>Output.txt",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+          },
+        {
             "label": "echo",
             "type": "shell",
             "command": "echo Hello"
@@ -11,7 +36,7 @@
         {
             "label": "Commit and push ",
             "type": "shell",
-            "command": "git pull origin main && git add -A &&  git commit -m \"Updated code on timestamp:   %date% - %time%\" && git push",
+            "command": "git add -A &&  git commit -m \"Updated code on timestamp:   %date% - %time%\" && git push",
             "problemMatcher": [],
             "group": {
                 "kind": "build",
