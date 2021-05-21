@@ -1,4 +1,4 @@
-public class FoldALL {
+public class FoldALinkedList {
     public static void main(String[] args) {
         
     }
