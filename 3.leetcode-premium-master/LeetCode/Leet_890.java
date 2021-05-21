@@ -10,6 +10,7 @@ public class Leet_890 {
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
             int chi = ch - 'a';
+			// assigning index to every char so that pattern is maintained
             if (fc[chi] == 0) {
 
                 fc[chi] = index;
@@ -21,7 +22,6 @@ public class Leet_890 {
 
     }
 
-    // assigning index to every char
     public static List<String> findAndReplacePattern(String[] words, String pattern) {
 
         List<String> res = new ArrayList<>();
