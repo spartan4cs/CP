@@ -6,7 +6,7 @@ public class Leet_890 {
 
         int index = 1;
         int fc[] = new int[26];
-        int res = "";
+        String res = "";
         for (int i = 0; i < s.length(); i++) {
             char ch = s.charAt(i);
             int chi = ch - 'a';
@@ -15,7 +15,7 @@ public class Leet_890 {
                 fc[chi] = index;
                 index++;
             }
-            res += index;
+            res += fc[chi];
         }
         return res;
 
