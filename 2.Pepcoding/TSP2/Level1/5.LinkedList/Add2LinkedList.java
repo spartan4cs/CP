@@ -409,7 +409,7 @@ public class Add2LinkedList {
 
         // without using recursion() i.e no space and O(n)
         // youo will be given 2 head in actuall coding
-        public static LinkedList addTwoLists(LinkedList one, LinkedList two) {
+        public static LinkedList addTwoListsNoRecursion(LinkedList one, LinkedList two) {
             // write your code here
             Node head1 = one.head;
             Node head2 = two.head;
@@ -445,10 +445,50 @@ public class Add2LinkedList {
             return res;
         }
 
+        public static int recursionHelper(Node head1, int i, Node head2, int j, LinkedList res) {
+
+            if (head1 == null && head2 == null) {
+                return 0;
+            }
+            int sum = 0;
+            int data1 = head1.data;
+            int data2 = head2.data;
+            if (i > j) {
+                // move i ahead
+                int carry = recursionHelper(head1.next, i - 1, head2, j, res);
+                // j will be empty
+                sum = carry + data1;
+            } else if (j > i) {
+                // move j ahead
+                int carry = recursionHelper(head1, i, head2.next, j - 1, res);
+
+                // i will be empty
+                sum = carry + data2;
+            } else {
+                int carry = recursionHelper(head1.next, i - 1, head2.next, j - 1, res);
+                sum = carry + data1 + data2;
+            }
+            res.addFirst(sum % 10);
+            return sum / 10;
+        }
+
         // using recursion(or you can use arraylist ) this is extra space
         public static LinkedList addTwoLists_recursion(LinkedList one, LinkedList two) {
             // write your code here
+            // will need helper
 
+            Node head1 = one.head;
+            Node head2 = two.head;
+            int size1 = one.size;
+            int size2 = two.size;
+            LinkedList res = new LinkedList();
+            int carry = recursionHelper(head1, size1, head2, size2, res);
+            // if case 99+1 then carry will be 1 at the end
+            if (carry > 0) {
+                res.addFirst(carry);
+            }
+
+            return res;
         }
     }
 
@@ -471,7 +511,8 @@ public class Add2LinkedList {
             l2.addLast(d);
         }
 
-        LinkedList sum = LinkedList.addTwoLists(l1, l2);
+        // LinkedList sum = LinkedList.addTwoListsNoRecursion(l1, l2);
+        LinkedList sum = LinkedList.addTwoLists_recursion(l1, l2);
 
         int a = Integer.parseInt(br.readLine());
         int b = Integer.parseInt(br.readLine());
