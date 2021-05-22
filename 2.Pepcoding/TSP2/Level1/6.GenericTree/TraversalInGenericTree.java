@@ -2,7 +2,7 @@
 import java.io.*;
 import java.util.*;
 
-public class HeightOfTree {
+public class TraversalInGenericTree {
     private static class Node {
         int data;
         ArrayList<Node> children = new ArrayList<>();
@@ -69,17 +69,19 @@ public class HeightOfTree {
     }
 
     public static int height(Node node) {
-        // write your code here
+        int h = -1;
 
-        int ht = -1;
         for (Node child : node.children) {
-
-            int x = height(child);
-            ht = Math.max(x, ht);
+            int ch = height(child);
+            h = Math.max(h, ch);
         }
-        ht = ht + 1;
-        return ht;
+        h += 1;
 
+        return h;
+    }
+
+    public static void traversals(Node node) {
+        // write your code here
     }
 
     public static void main(String[] args) throws Exception {
@@ -92,9 +94,7 @@ public class HeightOfTree {
         }
 
         Node root = construct(arr);
-        int h = height(root);
-        System.out.println(h);
-        // display(root);
+        traversals(root);
     }
 
 }
