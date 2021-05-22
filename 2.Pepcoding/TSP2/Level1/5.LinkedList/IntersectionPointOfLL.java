@@ -396,6 +396,30 @@ public class IntersectionPointOfLL {
 
         public static int findIntersection(LinkedList one, LinkedList two) {
             // write your code here
+
+            // get difference of two linklist
+            int s1 = one.size;
+            int s2 = two.size;
+            Node n1 = one.head;
+            Node n2 = two.head;
+            if (s1 > s2) {
+                // go till diff
+                for (int i = 0; i < s1 - s2; i++) {
+                    n1 = n1.next;
+                }
+            } else {
+
+                for (int i = 0; i < s2 - s1; i++) {
+                    n2 = n2.next;
+                }
+            }
+            // move bith simultaneously
+            while (n1 != n2) {
+                n1 = n1.next;
+                n2 = n2.next;
+            }
+            return n1.data;
+
         }
     }
 
