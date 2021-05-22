@@ -1,5 +1,5 @@
 
-![](https://visitor-badge.glitch.me/badge?page_id=spartan4cs.spartan4cs)
+![](https://visitor-badge.glitch.me/badge?page_id=spartan4cs.cp)
 
 </br>
 Practice resources
