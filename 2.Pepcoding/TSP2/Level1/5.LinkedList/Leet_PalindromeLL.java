@@ -1,4 +1,14 @@
 public class Leet_PalindromeLL {
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        public ListNode(int val) {
+            this.val = val;
+            this.next = null;
+        }
+    }
+
     public boolean isPalindrome(ListNode head) {
 
         // first : move to middle
@@ -15,7 +25,7 @@ public class Leet_PalindromeLL {
 
         // second: reverse 2nd half
         slow = reverse(slow); // at this point slow will point at head of 2nd half
-        //make fast as head
+        // make fast as head
         fast = head;
 
         // compare 1st half with 2nd

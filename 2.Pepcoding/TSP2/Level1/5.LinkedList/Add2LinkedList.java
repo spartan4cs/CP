@@ -408,6 +408,7 @@ public class Add2LinkedList {
         }
 
         // without using recursion() i.e no space and O(n)
+        // youo will be given 2 head in actuall coding
         public static LinkedList addTwoLists(LinkedList one, LinkedList two) {
             // write your code here
             Node head1 = one.head;
@@ -444,10 +445,10 @@ public class Add2LinkedList {
             return res;
         }
 
-        // using recursion
-
+        // using recursion(or you can use arraylist ) this is extra space
         public static LinkedList addTwoLists_recursion(LinkedList one, LinkedList two) {
             // write your code here
+
         }
     }
 

@@ -1,4 +1,14 @@
 public class Leet_mergeTwoSorterLinklist {
+    public class ListNode {
+        int val;
+        ListNode next;
+
+        public ListNode(int val) {
+            this.val = val;
+            this.next = null;
+        }
+    }
+
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode t1 = l1;
         ListNode t2 = l2;
