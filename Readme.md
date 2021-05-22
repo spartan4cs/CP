@@ -1,4 +1,7 @@
 
+![](https://visitor-badge.glitch.me/badge?page_id=spartan4cs.spartan4cs)
+
+</br>
 Practice resources
 
 Basic Pepcoding:https://www.pepcoding.com/resources/
