@@ -130,6 +130,32 @@ public class LevelOrderLinewiseTraversal {
     // approach 2 using delimiter using single queue
     public static void levelOrderLinewiseDelimiter(Node node) {
 
+        // using linkedlist as queue
+        // because arrayDequeue does not allow usto add null
+        Queue<Node> qu = new LinkedList<>();
+
+        qu.add(node);
+        qu.add(null);
+        while (qu.size() > 0) {
+
+            // remove
+            Node rem = qu.remove();
+
+            if (rem == null) { // if delimiter encountered
+                System.out.println();
+                if (qu.size() > 0)
+                    qu.add(null);// only if qu size>0 else it will go to infinite
+            } else {
+                // print
+                System.out.print(rem.data + " ");
+                // add children
+                for (Node child : rem.children) {
+                    qu.add(child);
+                }
+            }
+
+        }
+
     }
 
     public static void main(String[] args) throws Exception {
