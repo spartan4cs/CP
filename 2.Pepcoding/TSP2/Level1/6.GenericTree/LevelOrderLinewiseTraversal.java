@@ -90,6 +90,7 @@ public class LevelOrderLinewiseTraversal {
         }
 
         System.out.println("Node Post " + node.data);
+        System.gc();
     }
 
     // approach 1 - using 2 queue
