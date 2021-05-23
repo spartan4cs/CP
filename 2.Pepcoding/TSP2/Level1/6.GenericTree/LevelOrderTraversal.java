@@ -92,6 +92,7 @@ public class LevelOrderTraversal {
         System.out.println("Node Post " + node.data);
     }
 
+    // breadth order traversal
     public static void levelOrder(Node node) {
         // write your code here
         Queue<Node> q = new ArrayDeque<>();
@@ -110,6 +111,22 @@ public class LevelOrderTraversal {
         System.out.print(".");
     }
 
+    // depth traversal using stack
+    public static void depthOrder(Node root) {
+
+        Stack<Node> st = new Stack<>();
+
+        st.push(root);
+        while (st.size() > 0) {
+            // RPA
+            Node rem = st.pop();
+            System.out.print(rem.data + " ");
+            for (Node child : rem.children) {// traversal will be from right to left
+                st.push(child);
+            }
+        }
+    }
+
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
@@ -121,6 +138,8 @@ public class LevelOrderTraversal {
 
         Node root = construct(arr);
         levelOrder(root);
+        System.out.println();
+        depthOrder(root);
     }
 
 }

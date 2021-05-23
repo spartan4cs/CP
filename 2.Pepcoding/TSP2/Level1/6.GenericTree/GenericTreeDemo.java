@@ -65,23 +65,6 @@ class GenericTreeDemo {
 
     }
 
-    // depth traversal using stack
-
-    public static void displayusingstack(Node root) {
-
-        Stack<Node> st = new Stack<>();
-
-        st.push(root);
-        while (st.size() > 0) {
-            // RPA
-            Node rem = st.pop();
-            System.out.print(rem.data + " ");
-            for (Node child : rem.children) {
-                st.push(child);
-            }
-        }
-    }
-
     public static void fun() {
 
         Integer[] arr = { 10, 20, null, 30, 50, null, 60, null, null, 40, null, null };
