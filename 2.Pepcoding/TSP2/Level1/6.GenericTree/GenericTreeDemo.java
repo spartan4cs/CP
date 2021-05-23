@@ -31,13 +31,14 @@ class GenericTreeDemo {
             Integer data = arr[i];
             if (data != null) {
                 Node temp = new Node(data);
+
                 if (st.size() == 0) {
                     root = temp;
-                    st.push(temp);
                 } else {
                     st.peek().children.add(temp);
-                    st.push(temp);
                 }
+
+                st.push(temp);
             } else {
                 st.pop();
             }
