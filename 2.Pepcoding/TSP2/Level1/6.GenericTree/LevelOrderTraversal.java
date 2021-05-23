@@ -108,9 +108,7 @@ public class LevelOrderTraversal {
             System.out.print(rem.data + " ");
 
             // add rem children
-            for (Node child : rem.children) {
-                q.add(child);
-            }
+            q.addAll(rem.children);
 
         }
         System.out.print(".");
