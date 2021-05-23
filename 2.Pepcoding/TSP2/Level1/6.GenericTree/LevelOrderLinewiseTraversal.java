@@ -92,8 +92,44 @@ public class LevelOrderLinewiseTraversal {
         System.out.println("Node Post " + node.data);
     }
 
+    // approach 1 - using 2 queue
     public static void levelOrderLinewise(Node node) {
         // write your code here
+        // you need to put extra line in levelorder traversal
+
+        // approach1
+        Queue<Node> mainQ = new ArrayDeque<>();
+        Queue<Node> childQ = new ArrayDeque<>();
+
+        mainQ.add(node);
+        while (mainQ.size() > 0) {
+            // RPA
+
+            // remove
+            Node rem = mainQ.remove();
+
+            System.out.print(rem.data + " ");
+
+            for (Node child : rem.children) {
+                childQ.add(child);
+            }
+            if (mainQ.isEmpty()) {
+                // hit enter
+                System.out.println();
+
+                // swap main and child
+                Queue<Node> temp = mainQ;
+                mainQ = childQ;
+                childQ = temp;
+
+            }
+        }
+
+    }
+
+    // approach 2 using delimiter using single queue
+    public static void levelOrderLinewiseDelimiter(Node node) {
+
     }
 
     public static void main(String[] args) throws Exception {
