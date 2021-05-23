@@ -104,17 +104,13 @@ public class LevelOrderLinewiseTraversal {
 
         mainQ.add(node);
         while (mainQ.size() > 0) {
+
             // RPA
-
-            // remove
             Node rem = mainQ.remove();
-
             System.out.print(rem.data + " ");
+            childQ.addAll(rem.children);
 
-            for (Node child : rem.children) {
-                childQ.add(child);
-            }
-            if (mainQ.isEmpty()) {
+            if (mainQ.isEmpty()) {// empty means level completed
                 // hit enter
                 System.out.println();
 
@@ -141,7 +137,6 @@ public class LevelOrderLinewiseTraversal {
 
             // remove
             Node rem = qu.remove();
-
             if (rem == null) { // if delimiter encountered
                 System.out.println();
                 if (qu.size() > 0)
@@ -150,9 +145,7 @@ public class LevelOrderLinewiseTraversal {
                 // print
                 System.out.print(rem.data + " ");
                 // add children
-                for (Node child : rem.children) {
-                    qu.add(child);
-                }
+                qu.addAll(rem.children);
             }
 
         }
@@ -170,15 +163,14 @@ public class LevelOrderLinewiseTraversal {
             // find size
             int sz = q.size();
             while (sz-- > 0) {
-                // remove
+                // RPA
                 Node rem = q.remove();
-                // print
                 System.out.print(rem.data + " ");
-                // add children
                 q.addAll(rem.children);
-            }
+            } // at the end of this which loop
+              // we can ensure that level is completed
+            height++; // can be used for getting height of tree
             // hit enter
-            height++;
             System.out.println();
 
         }
