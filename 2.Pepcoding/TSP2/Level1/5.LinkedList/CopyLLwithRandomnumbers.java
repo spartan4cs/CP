@@ -29,7 +29,7 @@ class CopyLLwithRandomnumbers {
         }
         head2 = head2.next;
 
-        // connext in zigzag order
+        // 2. connext in zigzag order
         t1 = head1;
         t2 = head2;
         while (t1 != null && t1 != null) {
@@ -44,14 +44,14 @@ class CopyLLwithRandomnumbers {
             t2 = n2;
         }
 
-        // set the random pointer
+        // 3. set the random pointer
         t1 = head;
         while (t1 != null) {
             t1.next.random = t1.random == null ? null : t1.random.next;
             t1 = t1.next.next;
         }
 
-        // rearrange original list;
+        // 4. rearrange original list;
 
         ListNode d1 = new ListNode(-1);
         t1 = d1;
@@ -71,7 +71,7 @@ class CopyLLwithRandomnumbers {
         t1.next = null;
         t2.next = null;
 
-        // return d2.head
+        // 5. return d2.head
         return d2.next;
 
     }
