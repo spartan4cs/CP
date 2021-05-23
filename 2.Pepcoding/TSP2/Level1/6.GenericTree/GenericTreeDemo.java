@@ -20,6 +20,7 @@ class GenericTreeDemo {
 
         }
     }
+    // 10, 20, null, 30, 50, null, 60, null, null, 40, null, null
 
     public static Node construction(Integer[] arr) {
 
