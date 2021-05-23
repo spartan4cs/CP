@@ -131,6 +131,47 @@ public class LevelOrderLinewiseZigzag {
         }
     }
 
+    // using single loop
+    public static void levelOrderLinewiseZZOhterway(Node node) {
+        // write your code here
+
+        // we will use 2 stack
+        // for odd level add child from left to right
+        // for even level add child from right to left
+
+        Stack<Node> mainS = new Stack<>();
+        Stack<Node> childS = new Stack<>();
+
+        mainS.push(node);
+        int level = 1;
+        while (mainS.size() > 0) { // once swaped we check if main is empty/?
+
+            // RP
+            Node rem = mainS.pop();
+            System.out.print(rem.data + " ");
+
+            if (level % 2 == 1) {
+                // for odd level- add left to right
+                childS.addAll(rem.children);
+            } else {
+
+                // for even level - add right to left
+                for (int i = rem.children.size() - 1; i >= 0; i--) {
+                    childS.add(rem.children.get(i));
+                }
+            }
+
+            // if mainstack becomes empty then increase level and swap main and child
+            if (mainS.isEmpty()) {
+                level++;
+                System.out.println();
+                Stack<Node> temp = mainS;
+                mainS = childS;
+                childS = temp;
+            }
+        }
+    }
+
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
@@ -142,6 +183,7 @@ public class LevelOrderLinewiseZigzag {
 
         Node root = construct(arr);
         levelOrderLinewiseZZ(root);
+        levelOrderLinewiseZZOhterway(root);
     }
 
 }
