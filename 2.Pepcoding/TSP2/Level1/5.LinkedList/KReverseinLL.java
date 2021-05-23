@@ -359,24 +359,23 @@ public class KReverseinLL {
                         this.removeFirst();
                         curr.addLast(val);
                     }
-                    // prev null -mneans 1st time
-                    if (prev == null) {
-                        prev = curr;
-
-                    } else {
-                        prev.tail.next = curr.head;
-                        prev.tail = curr.tail;
-                        prev.size += curr.size;
-                    }
 
                 }
+                // prev null -means 1st time
+                if (prev == null) {
+                    prev = curr;
 
-                // update linklist
+                } else {
+                    prev.tail.next = curr.head;
+                    prev.tail = curr.tail;
+                    prev.size += curr.size;
+                }
 
-                this.head = prev.head;
-                this.tail = prev.tail;
-                this.size = prev.size;
             }
+            // update linklist
+            this.head = prev.head;
+            this.tail = prev.tail;
+            this.size = prev.size;
 
         }
 
