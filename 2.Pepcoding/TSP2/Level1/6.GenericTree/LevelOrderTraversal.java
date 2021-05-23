@@ -2,7 +2,7 @@
 import java.io.*;
 import java.util.*;
 
-public class TraversalInGenericTree {
+public class LevelOrderTraversal {
     private static class Node {
         int data;
         ArrayList<Node> children = new ArrayList<>();
@@ -81,23 +81,40 @@ public class TraversalInGenericTree {
     }
 
     public static void traversals(Node node) {
-        // write your code here
         System.out.println("Node Pre " + node.data);
-        for (int i = 0; i < node.children.size(); i++) {
-            Node child = node.children.get(i);
+
+        for (Node child : node.children) {
             System.out.println("Edge Pre " + node.data + "--" + child.data);
             traversals(child);
             System.out.println("Edge Post " + node.data + "--" + child.data);
         }
+
         System.out.println("Node Post " + node.data);
     }
-    // 12
-    // 10 20 -1 30 50 -1 60 -1 -1 40 -1 -1
-    // 10
-    // / | \
-    // 20 30 40
-    // / \
-    // 50 60
+
+    public static void levelOrder(Node node) {
+        // write your code here
+        Queue<Node> q = new ArrayDeque<>();
+
+        // add first element
+        // RPA
+        q.add(node);
+
+        while (q.size() > 0) {
+            // remove
+            Node rem = q.remove();
+
+            // /print removed item
+            System.out.print(rem.data + " ");
+
+            // add rem children
+            for (Node child : rem.children) {
+                q.add(child);
+            }
+
+        }
+        System.out.print(".");
+    }
 
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -109,7 +126,7 @@ public class TraversalInGenericTree {
         }
 
         Node root = construct(arr);
-        traversals(root);
+        levelOrder(root);
     }
 
 }
