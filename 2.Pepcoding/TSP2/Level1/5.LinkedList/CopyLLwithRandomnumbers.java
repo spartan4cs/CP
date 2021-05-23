@@ -16,23 +16,22 @@ class CopyLLwithRandomnumbers {
         // write code here
 
         ListNode head1 = head;
-        ListNode t1 = head;
+        ListNode t1 = head1;// iterator 1
 
         // 1. clone with random pointer
         ListNode head2 = new ListNode(-1);
-        ListNode dummy = head2;
+        ListNode t2 = head2; // iterator2
         while (t1 != null) {
             ListNode temp = new ListNode(t1.val);
-            dummy.next = temp;
-            dummy = temp;
+            t2.next = temp;
+            t2 = temp;
             t1 = t1.next;
         }
         head2 = head2.next;
-         
 
         // connext in zigzag order
-        t1 = head;
-        ListNode t2 = head2;
+        t1 = head1;
+        t2 = head2;
         while (t1 != null && t1 != null) {
 
             ListNode n1 = t1.next;
