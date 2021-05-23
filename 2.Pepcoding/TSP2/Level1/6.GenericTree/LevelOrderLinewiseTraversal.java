@@ -163,6 +163,7 @@ public class LevelOrderLinewiseTraversal {
 
         Queue<Node> q = new ArrayDeque<>();
         q.add(node);
+        int height = 0;
         while (q.size() > 0) {
 
             // find size
@@ -176,10 +177,11 @@ public class LevelOrderLinewiseTraversal {
                 q.addAll(rem.children);
             }
             // hit enter
+            height++;
             System.out.println();
 
         }
-
+        System.out.println(height);
     }
 
     public static void main(String[] args) throws Exception {
