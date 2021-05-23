@@ -101,13 +101,9 @@ public class LevelOrderTraversal {
         q.add(node);
 
         while (q.size() > 0) {
-            // remove
+            // RPA
             Node rem = q.remove();
-
-            // /print removed item
             System.out.print(rem.data + " ");
-
-            // add rem children
             q.addAll(rem.children);
 
         }
