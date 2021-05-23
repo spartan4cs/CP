@@ -158,6 +158,30 @@ public class LevelOrderLinewiseTraversal {
 
     }
 
+    // approach 3 using size of queue approach
+    public static void levelOrderLinewiseQueueSize(Node node) {
+
+        Queue<Node> q = new ArrayDeque<>();
+        q.add(node);
+        while (q.size() > 0) {
+
+            // find size
+            int sz = q.size();
+            while (sz-- > 0) {
+                // remove
+                Node rem = q.remove();
+                // print
+                System.out.print(rem.data + " ");
+                // add children
+                q.addAll(rem.children);
+            }
+            // hit enter
+            System.out.println();
+
+        }
+
+    }
+
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
@@ -170,6 +194,7 @@ public class LevelOrderLinewiseTraversal {
         Node root = construct(arr);
         levelOrderLinewise(root);
         levelOrderLinewiseDelimiter(root);
+        levelOrderLinewiseQueueSize(root);
     }
 
 }
