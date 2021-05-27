@@ -129,7 +129,19 @@ public class MirrorAGT {
         for (Node child : node.children) {
             mirror(child);
         }
-        Collections.reverse(node.children);
+        // Collections.reverse(node.children);
+        // oR
+        // reverse children of current node
+        int left = 0;
+        int right = node.children.size() - 1;
+
+        while (left < right) {
+            Node temp = node.children.get(left);
+            node.children.set(left, node.children.get(right));
+            node.children.set(right, temp);
+            left++;
+            right--;
+        }
     }
 
     public static void main(String[] args) throws Exception {
