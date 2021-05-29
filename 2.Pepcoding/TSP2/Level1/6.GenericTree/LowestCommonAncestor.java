@@ -72,13 +72,13 @@ public class LowestCommonAncestor {
 
         int i = arr1.size() - 1;
         int j = arr2.size() - 1;
-        int res=-1
+        int res = -1;
         while (i >= 0 && j >= 0 && arr1.get(i) == arr2.get(j)) {
-            res=arr1.get(i);
+            res = arr1.get(i);
             i--;
             j--;
         }
-       
+
         return res;
     }
 
