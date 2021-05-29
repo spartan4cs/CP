@@ -47,6 +47,20 @@ public class NodeToRootPath {
 
     public static ArrayList<Integer> nodeToRootPath(Node node, int data) {
         // write your code here
+        if (node.data == data) {
+            ArrayList<Integer> bres = new ArrayList<>();
+            bres.add(data);
+            return bres;
+        }
+
+        for (Node child : node.children) {
+            ArrayList<Integer> res = nodeToRootPath(child, data);
+            if (res.size() > 0) {
+                res.add(node.data);
+            }
+        }
+
+        return new ArrayList<>();
     }
 
     public static void main(String[] args) throws Exception {
