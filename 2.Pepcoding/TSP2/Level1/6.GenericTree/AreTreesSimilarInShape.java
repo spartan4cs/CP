@@ -80,6 +80,7 @@ public class AreTreesSimilarInShape {
         return h;
     }
 
+    // can also be done using iterative queue level wise
     public static boolean areSimilar(Node n1, Node n2) {
         // write your code here
         if (n1.children.size() != n2.children.size()) {
