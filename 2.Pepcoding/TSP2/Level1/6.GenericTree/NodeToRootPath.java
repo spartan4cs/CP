@@ -57,6 +57,7 @@ public class NodeToRootPath {
             ArrayList<Integer> res = nodeToRootPath(child, data);
             if (res.size() > 0) {
                 res.add(node.data);
+                return res;
             }
         }
 

@@ -58,6 +58,7 @@ public class FindElementInGenericTree {
             if (res == true) {
                 return true;
             }
+            //res = res||find(child,data);
         }
 
         return res;
