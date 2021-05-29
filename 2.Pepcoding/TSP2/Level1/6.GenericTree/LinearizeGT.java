@@ -184,9 +184,11 @@ public class LinearizeGT {
             return node;
         }
 
+        // this call is for 1 edge
         Node lastTail = linearize2(node.children.get(node.children.size() - 1));
         for (int i = node.children.size() - 2; i >= 0; i--) {
             Node last = node.children.remove(i + 1);
+            // this call is for remaining edge
             Node slastTail = linearize2(node.children.get(i));
             slastTail.children.add(last);
         }
