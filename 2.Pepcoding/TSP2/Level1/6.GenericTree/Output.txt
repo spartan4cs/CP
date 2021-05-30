@@ -1,1 +1,11 @@
-true
+Node-data - > -50 respective sum -> -50
+Node-data - > 60 respective sum -> 60
+Node-data - > 20 respective sum -> 30
+Node-data - > -70 respective sum -> -70
+Node-data - > 80 respective sum -> 80
+Node-data - > 90 respective sum -> 90
+Node-data - > 30 respective sum -> 130
+Node-data - > -100 respective sum -> -100
+Node-data - > 40 respective sum -> -60
+Node-data - > 10 respective sum -> 110
+30@130
