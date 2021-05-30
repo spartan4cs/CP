@@ -83,7 +83,29 @@ public class LevelOrderTraversal {
     public static void levelOrder(Node node) {
         // write your code here
 
-        
+        Queue<Node> q = new ArrayDeque<>();
+        q.add(node);
+
+        while (q.size() > 0) {
+
+            int sz = q.size();
+            while (sz-- > 0) {
+                // RPA
+                Node rem = q.remove();
+                System.out.print(rem.data + " ");
+
+                if (rem.left != null) {
+                    q.add(rem.left);
+
+                }
+
+                if (rem.right != null) {
+                    q.add(rem.right);
+
+                }
+            } // level complete
+            System.out.println();
+        }
     }
 
     public static void main(String[] args) throws Exception {
