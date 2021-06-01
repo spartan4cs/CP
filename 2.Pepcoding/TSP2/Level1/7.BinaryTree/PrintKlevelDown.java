@@ -2,7 +2,7 @@
 import java.io.*;
 import java.util.*;
 
-public class NodeToRootPath {
+public class PrintKlevelDown {
     public static class Node {
         int data;
         Node left;
@@ -80,56 +80,16 @@ public class NodeToRootPath {
         display(node.right);
     }
 
-    public static boolean find(Node node, int data) {
+    public static void printKLevelsDown(Node node, int k) {
         // write your code here
         if (node == null) {
-            return false;
+            return;
         }
-        if (node.data == data) {
-            return true;
+        if (k == 0) {
+            System.out.println(node.data + " ");
         }
-
-        // boolean res = false;
-        // res = find(node.left, data);
-        // if (res == true) {
-        // return res;
-        // }
-        // res = find(node.right, data);
-        // if (res == true) {
-        // return res;
-        // }
-
-        boolean res = false;
-        res = find(node.left, data);
-        res = res || find(node.right, data);
-
-        return res;
-    }
-
-    public static ArrayList<Integer> nodeToRootPath(Node node, int data) {
-        // write your code here
-
-        if (node == null) {
-            return new ArrayList<>();
-        }
-        if (node.data == data) {
-            ArrayList<Integer> bres = new ArrayList<>();
-            bres.add(node.data);
-            return bres;
-
-        }
-
-        ArrayList<Integer> lres = nodeToRootPath(node.left, data);
-        if (lres.size() > 0) {
-            lres.add(node.data);
-            return lres;
-        }
-        ArrayList<Integer> rres = nodeToRootPath(node.right, data);
-        if (rres.size() > 0) {
-            rres.add(node.data);
-            return rres;
-        }
-        return new ArrayList<>();
+        printKLevelsDown(node.left, k - 1);
+        printKLevelsDown(node.right, k - 1);
     }
 
     public static void main(String[] args) throws Exception {
@@ -145,14 +105,10 @@ public class NodeToRootPath {
             }
         }
 
-        int data = Integer.parseInt(br.readLine());
+        int k = Integer.parseInt(br.readLine());
 
         Node root = construct(arr);
-        boolean found = find(root, data);
-        System.out.println(found);
-
-        ArrayList<Integer> path = nodeToRootPath(root, data);
-        System.out.println(path);
+        printKLevelsDown(root, k);
     }
 
 }
