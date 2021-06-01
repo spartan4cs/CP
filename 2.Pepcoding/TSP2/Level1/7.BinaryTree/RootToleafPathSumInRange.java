@@ -82,7 +82,7 @@ public class RootToleafPathSumInRange {
 
     public static void pathToLeafFromRoot(Node node, String path, int sum, int lo, int hi) {
         // write your code here
-        if (sum > hi) {
+        if (node == null || sum > hi) {
             return;
         }
         if (node.left == null && node.right == null) {
@@ -95,14 +95,10 @@ public class RootToleafPathSumInRange {
             return;
         }
 
-        if (node.left != null) {
+        pathToLeafFromRoot(node.left, path + node.data + " ", sum + node.data, lo, hi);
 
-            pathToLeafFromRoot(node.left, path + node.data + " ", sum + node.data, lo, hi);
-        }
-        if (node.right != null) {
+        pathToLeafFromRoot(node.right, path + node.data + " ", sum + node.data, lo, hi);
 
-            pathToLeafFromRoot(node.right, path + node.data + " ", sum + node.data, lo, hi);
-        }
     }
 
     public static void main(String[] args) throws Exception {
