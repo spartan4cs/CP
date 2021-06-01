@@ -95,13 +95,19 @@ public class IterativePrePostInOrderinBT {
                 preorder += top.node.data + " ";
                 // state increase kar and left push kar
                 top.state++;
-                st.push(new Pair(top.node.left, 0));
+                if (top.node.left != null) {
+
+                    st.push(new Pair(top.node.left, 0));
+                }
             } else if (top.state == 1) {
                 // inorder
                 inorder += top.node.data + " ";
                 // state increase kar and right push kar
                 top.state++;
-                st.push(new Pair(top.node.right, 0));
+                if (top.node.right != null) {
+
+                    st.push(new Pair(top.node.right, 0));
+                }
 
             } else if (top.state == 2) {
                 postorder += top.node.data + " ";
@@ -111,6 +117,9 @@ public class IterativePrePostInOrderinBT {
             }
 
         }
+        System.out.println(preorder);
+        System.out.println(inorder);
+        System.out.println(postorder);
     }
 
     public static void main(String[] args) throws Exception {
