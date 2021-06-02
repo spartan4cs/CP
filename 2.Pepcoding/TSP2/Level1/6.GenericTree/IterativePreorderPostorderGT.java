@@ -45,8 +45,45 @@ public class IterativePreorderPostorderGT {
         return root;
     }
 
+    public static class Pair {
+
+        Node node;
+        int state;
+
+        public Pair(Node node, int state) {
+            this.node = node;
+            this.state = state;
+        }
+    }
+
     public static void IterativePreandPostOrder(Node node) {
         // write your code here
+        Stack<Pair> st = new Stack<>();
+        st.push(new Pair(node, -1));
+
+        String preorder = "";
+        String postorder = "";
+
+        while (st.size() > 0) {
+
+            Pair top = st.peek();
+            if (top.state == -1) {
+
+                preorder += top.node.data + " ";
+                top.state++;
+
+            } else if (top.state == top.node.children.size()) {
+                postorder += top.node.data + " ";
+                st.pop();
+            } else {
+
+                Node nn = top.node.children.get(top.state);
+                st.push(new Pair(nn, -1));
+                top.state++;
+            }
+        }
+        System.out.println(preorder);
+        System.out.println(postorder);
     }
 
     public static void main(String[] args) throws Exception {
