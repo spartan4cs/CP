@@ -100,6 +100,21 @@ public class TransformNormalToLeftClone {
 
     }
 
+    // preorder approach
+    public static void createleftClone(Node node) {
+
+        if (node == null) {
+            return;
+
+        }
+        Node nn = new Node(node.data, null, null);
+        nn.left = node.left;
+        node.left = nn;
+        createleftClone(node.left.left);
+        createleftClone(node.right);
+
+    }
+
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
@@ -114,7 +129,8 @@ public class TransformNormalToLeftClone {
         }
 
         Node root = construct(arr);
-        root = createLeftCloneTree(root);
+        // root = createLeftCloneTree(root);
+        createleftClone(root);
         display(root);
     }
 
