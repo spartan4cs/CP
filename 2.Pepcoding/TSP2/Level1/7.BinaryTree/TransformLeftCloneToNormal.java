@@ -80,6 +80,7 @@ public class TransformLeftCloneToNormal {
         display(node.right);
     }
 
+    // postorder
     public static Node transBackFromLeftClonedTree(Node node) {
         // write your code here
 
@@ -93,6 +94,19 @@ public class TransformLeftCloneToNormal {
         node.right = rcn;
 
         return node;
+    }
+
+    // preorder
+    public static void transBackFromLeftClonedTreePre(Node node) {
+        // write your code here
+
+        if (node == null)
+            return;
+
+        node.left = node.left.left;
+        transBackFromLeftClonedTreePre(node.left);
+        transBackFromLeftClonedTreePre(node.right);
+
     }
 
     public static void main(String[] args) throws Exception {
@@ -109,7 +123,8 @@ public class TransformLeftCloneToNormal {
         }
 
         Node root = construct(arr);
-        root = transBackFromLeftClonedTree(root);
+        // root = transBackFromLeftClonedTree(root);
+        transBackFromLeftClonedTreePre(root);
         display(root);
     }
 
