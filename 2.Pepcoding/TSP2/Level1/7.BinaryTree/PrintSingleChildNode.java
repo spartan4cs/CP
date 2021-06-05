@@ -80,7 +80,8 @@ public class PrintSingleChildNode {
         display(node.right);
     }
 
-    public static void printSingleChildNodes(Node node, Node parent) {
+    // aproach one using parent
+    public static void printSingleChildNodes1(Node node, Node parent) {
         // write your code here
 
         if (node == null) {
@@ -96,8 +97,27 @@ public class PrintSingleChildNode {
             System.out.println(node.data);
         }
 
-        printSingleChildNodes(node.left, node);
-        printSingleChildNodes(node.right, node);
+        printSingleChildNodes1(node.left, node);
+        printSingleChildNodes1(node.right, node);
+    }
+
+    // aproach 2 without using parent
+    public static void printSingleChildNodes(Node node) {
+        // write your code here
+
+        if (node == null)
+            return;
+
+        if (node.left != null && node.right == null) {
+            System.out.println(node.left.data);
+        }
+
+        if (node.left == null && node.right != null) {
+            System.out.println(node.right.data);
+        }
+
+        printSingleChildNodes(node.left);
+        printSingleChildNodes(node.right);
     }
 
     public static void main(String[] args) throws Exception {
@@ -114,7 +134,9 @@ public class PrintSingleChildNode {
         }
 
         Node root = construct(arr);
-        printSingleChildNodes(root, null);
+        printSingleChildNodes(root);
+        printSingleChildNodes1(root, null);
+
     }
 
 }
