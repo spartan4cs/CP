@@ -97,10 +97,10 @@ public class IsBalancesBST {
 
         // write your code here
         // System.out.println(isBalanced(root).isbalance);
-        // System.out.println(isBalanced2(root));
+         System.out.println(isBalanced2(root));
 
-        isBalanced3(root);
-        System.out.println(isbal);
+       // isBalanced3(root);
+       // System.out.println(isbal);
     }
 
     static class BPair {
@@ -155,10 +155,10 @@ public class IsBalancesBST {
 
         int factor = Math.abs(lh - rh);
 
-        if (factor <= 1) {
-            return isBalanced2(node.left) && isBalanced2(node.right);
+        if (factor > 1) {
+            return false;
         }
-        return false;
+        return isBalanced2(node.left) && isBalanced2(node.right);
 
     }
 
