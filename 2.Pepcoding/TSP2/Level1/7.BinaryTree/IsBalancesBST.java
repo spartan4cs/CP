@@ -97,7 +97,10 @@ public class IsBalancesBST {
 
         // write your code here
         // System.out.println(isBalanced(root).isbalance);
-        System.out.println(isBalanced2(root));
+        // System.out.println(isBalanced2(root));
+
+        isBalanced3(root);
+        System.out.println(isbal);
     }
 
     static class BPair {
@@ -157,5 +160,26 @@ public class IsBalancesBST {
         }
         return false;
 
+    }
+
+    // travel (calculate height)and solve(is balanced)
+
+    static boolean isbal = true;
+
+    public static int isBalanced3(Node node) {
+
+        if (node == null)
+            return -1;
+
+        int l = isBalanced3(node.left);
+        int r = isBalanced3(node.right);
+
+        int factor = Math.abs(l - r);
+        // solve
+        if (factor > 1) {
+            isbal = false;
+        }
+
+        return Math.max(l, r) + 1;
     }
 }
