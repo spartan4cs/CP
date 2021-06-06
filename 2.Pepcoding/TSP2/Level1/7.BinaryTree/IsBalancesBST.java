@@ -150,7 +150,7 @@ public class IsBalancesBST {
         int lh = getheight(node.left);
         int rh = getheight(node.right);
 
-        int factor = Math.abs(lh - rh);
+        int factor = Math.abs(lh - rh + 1);
 
         if (factor <= 1) {
             return true;
