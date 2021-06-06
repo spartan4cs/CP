@@ -150,13 +150,12 @@ public class IsBalancesBST {
         int lh = getheight(node.left);
         int rh = getheight(node.right);
 
-        int factor = Math.abs(lh - rh );
+        int factor = Math.abs(lh - rh);
 
         if (factor <= 1) {
-            return true;
-        }else if(factor>1)
-			return false;
+            return isBalanced2(node.left) && isBalanced2(node.right);
+        }
+        return false;
 
-        return isBalanced2(node.left) && isBalanced2(node.right);
     }
 }
