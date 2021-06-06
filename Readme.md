@@ -48,3 +48,19 @@ https://dev.to/seanpgallivan/series/11116
 https://aaronice.gitbook.io/lintcode/
 
 https://code.dennyzhang.com/
+
+
+https://coggle.it/diagram/W5u8QkZs6r4sZM3J/t/master-the-interview
+https://coggle.it/diagram/W5E5tqYlrXvFJPsq/t/master-the-interview-click-here-for-course-link
+
+https://adventofcode.com/
+
+https://github.com//zero-to-mastery
+https://github.com/MaximAbramchuck/awesome-interview-questions
+https://github.com/h5bp/Front-end-Developer-Interview-Questions
+
+https://www.codementor.io/@nihantanu/21-essential-javascript-tech-interview-practice-questions-answers-du107p62z
+https://www.toptal.com/javascript/interview-questions
+http://www.thatjsdude.com/interview/js2.html
+https://zerotomastery.io/community/coding-challenges/
+ 
