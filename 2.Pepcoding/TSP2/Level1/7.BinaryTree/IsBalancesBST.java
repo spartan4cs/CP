@@ -109,6 +109,7 @@ public class IsBalancesBST {
         }
     }
 
+    // Approach 1 O(n)
     public static BPair isBalanced(Node node) {
 
         if (node == null) {
@@ -125,4 +126,35 @@ public class IsBalancesBST {
 
     }
 
+    // Approach2
+
+    public static int getheight(Node node) {
+
+        if (node == null) {
+            return -1;
+        }
+
+        int l = getheight(node.left);
+        int r = getheight(node.right);
+        return Math.max(l, r) + 1;
+
+    }
+
+    public static boolean isBalanced2(Node node) {
+
+        if (node == null) {
+            return false;
+        }
+
+        int lh = getheight(node.left);
+        int rh = getheight(node.right);
+
+        int factor = Math.abs(lh - rh);
+
+        if (factor <= 1) {
+            return true;
+        }
+
+        return isBalanced2(node.left) && isBalanced2(node.right);
+    }
 }
