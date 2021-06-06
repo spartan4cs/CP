@@ -96,7 +96,8 @@ public class IsBalancesBST {
         Node root = construct(arr);
 
         // write your code here
-        System.out.println(isBalanced(root).isbalance);
+        // System.out.println(isBalanced(root).isbalance);
+        System.out.println(isBalanced2(root));
     }
 
     static class BPair {
@@ -126,7 +127,7 @@ public class IsBalancesBST {
 
     }
 
-    // Approach2
+    // Approach2 O(n^2)
 
     public static int getheight(Node node) {
 
