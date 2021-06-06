@@ -144,7 +144,7 @@ public class IsBalancesBST {
     public static boolean isBalanced2(Node node) {
 
         if (node == null) {
-            return false;
+            return true;
         }
 
         int lh = getheight(node.left);
@@ -154,7 +154,8 @@ public class IsBalancesBST {
 
         if (factor <= 1) {
             return true;
-        }
+        }else if(factor>1)
+			return false;
 
         return isBalanced2(node.left) && isBalanced2(node.right);
     }
