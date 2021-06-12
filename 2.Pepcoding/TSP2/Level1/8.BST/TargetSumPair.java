@@ -177,5 +177,79 @@ public class TargetSumPair {
     // Approach 3
     // TIme O(n)
     // Space O(h)
+    public static void targetSum3(Node node, int target) {
+
+        Stack<Pair> ls = new Stack<>();
+        Stack<Pair> rs = new Stack<>();
+        ls.push(new Pair(node, 0));
+        rs.push(new Pair(node, 0));
+
+        int l = inorderItr(ls);
+        int r = revInorderItr(rs);
+
+        while (l < r) {
+            int sum = l + r;
+            if (sum > target) {
+                r = revInorderItr(rs);
+            } else if (sum < target) {
+                l = inorderItr(ls);
+            } else {
+                System.out.println(l + " " + r);
+                l = inorderItr(ls);
+                r = revInorderItr(rs);
+
+            }
+        }
+    }
+
+    public static int inorderItr(Stack<Pair> st) {
+
+        while (st.size() > 0) {
+            Pair p = st.peek();
+            if (p.state == 0) {
+                // add left child
+                if (p.node.left != null) {
+                    st.push(new Pair(p.node.left, 0));
+                }
+                p.state++;
+            } else if (p.state == 1) {
+                // add right child
+
+                if (p.node.right != null) {
+                    st.push(new Pair(p.node.right, 0));
+                }
+                p.state++;
+                return p.node.data;
+            } else {
+                st.pop();
+            }
+        }
+        return -1;
+    }
+
+    public static int revInorderItr(Stack<Pair> st) {
+        while (st.size() > 0) {
+            Pair p = st.peek();
+            if (p.state == 0) {
+                // add right child
+                if (p.node.right != null) {
+                    st.push(new Pair(p.node.right, 0));
+                }
+                p.state++;
+            } else if (p.state == 1) {
+                // add left child
+
+                if (p.node.left != null) {
+                    st.push(new Pair(p.node.left, 0));
+                }
+                p.state++;
+                return p.node.data;
+
+            } else {
+                st.pop();
+            }
+        }
+        return -1;
+    }
 
 }
