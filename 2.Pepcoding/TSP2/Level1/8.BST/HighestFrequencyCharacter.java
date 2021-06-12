@@ -16,7 +16,7 @@ public class HighestFrequencyCharacter {
         int ans = 0;
         String ansc = "";
         for (Character k : map.keySet()) {
-            System.out.println(k + " " + map.get(k));
+            // System.out.println(k + " " + map.get(k));
             // ans = Math.max(ans, map.get(k));
             if (map.get(k) > ans) {
                 ans = map.get(k);
