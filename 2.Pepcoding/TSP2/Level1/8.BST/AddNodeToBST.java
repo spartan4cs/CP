@@ -82,6 +82,18 @@ public class AddNodeToBST {
 
     public static Node add(Node node, int data) {
         // write your code here
+        if (node == null) {
+            Node nn = new Node(data, null, null);
+            return nn;
+        }
+
+        if (data > node.data) {
+            node.right = add(node.right, data);
+        } else if (data < node.data) {
+            node.left = add(node.left, data);
+        }
+
+        return node;
     }
 
     public static void main(String[] args) throws Exception {
