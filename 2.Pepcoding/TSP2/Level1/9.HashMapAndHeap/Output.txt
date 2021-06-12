@@ -1,1 +1,29 @@
-s
+[Nepal - 10]
+[Pak - 20]
+[Bhutan - 2]
+[India - 145]
+[Lanka - 1]
+[China - 150]
+[Afgan - 13]
+[Aus - 50]
+bucket : 0 -> [Nepal - 10], .
+bucket : 1 -> .
+bucket : 2 -> [Pak - 20], [Bhutan - 2], .
+bucket : 3 -> [India - 145], [Lanka - 1], [China - 150], [Afgan - 13], [Aus - 50], .
+8
+-1
+20
+bucket : 0 -> [Nepal - 10], .
+bucket : 1 -> .
+bucket : 2 -> [Bhutan - 2], .
+bucket : 3 -> [India - 145], [Lanka - 1], [China - 150], [Afgan - 13], [Aus - 50], .
+7
+keyset--->
+Nepal
+Bhutan
+India
+Lanka
+China
+Afgan
+Aus
+7
