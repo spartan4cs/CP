@@ -85,6 +85,19 @@ public class ReplaceNodeSumOfLargerValue {
     public static void rwsol(Node node) {
         // write your code here
 
+        if (node == null) {
+            return;
+        }
+        // rigth
+        rwsol(node.right);
+
+        // out work
+        int d = node.data;
+        node.data = sum;
+        sum += d;
+        // left
+        rwsol(node.left);
+
     }
 
     public static void main(String[] args) throws Exception {

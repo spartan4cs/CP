@@ -14,7 +14,6 @@ public class LcaInBST {
             this.right = right;
         }
     }
-
     public static class Pair {
         Node node;
         int state;
@@ -108,7 +107,8 @@ public class LcaInBST {
 
     }
 
-    public static int lca(Node node, int d1, int d2) {
+    // using ntr
+    public static int lcausingntr(Node node, int d1, int d2) {
         // write your code here
         ArrayList<Integer> one = ntr(node, d1);
         ArrayList<Integer> two = ntr(node, d2);
@@ -124,6 +124,17 @@ public class LcaInBST {
         }
         i++;
         return one.get(i);
+    }
+
+    public static int lca(Node node, int d1, int d2) {
+
+        if (d1 > node.data && d2 > node.data) {
+            return lca(node.right, d1, d2);
+        } else if (d1<node.data && d2<node.data) {
+            return lca(node.left, d1, d2);
+        } else {
+            return node.data;
+        }
     }
 
     public static void main(String[] args) throws Exception {
