@@ -110,7 +110,23 @@ public class CreateMyOwnHashMap {
         }
     }
 
-    // 6. keyset
+    // 6 contains key
+    public boolean containsKey(String key) {
+
+        // find bucket index using hashfucntion
+        int bi = hashFunction(key);
+
+        // find data index of linkedlist from that particular bucket index
+        int di = searchInBucket(key, bi);
+        if (di == -1) {
+            // if not present then return -1
+
+            return false;
+        }
+        return true;
+    }
+
+    // 7. keyset
     public ArrayList<String> keySet() {
         ArrayList<String> al = new ArrayList<>();
         for (int i = 0; i < bucket.length; i++) {
@@ -121,7 +137,7 @@ public class CreateMyOwnHashMap {
         return al;
     }
 
-    // 7. display
+    // 8. display
     public void display() {
         for (int i = 0; i < bucket.length; i++) {
             for (Node node : bucket[i]) {
@@ -131,7 +147,7 @@ public class CreateMyOwnHashMap {
         }
     }
 
-    // 8. hashmap view
+    // 9. hashmap view
     public void hashmapview() {
         for (int i = 0; i < bucket.length; i++) {
             System.out.print("bucket : " + i + " -> ");
@@ -175,5 +191,7 @@ public class CreateMyOwnHashMap {
         map.keySet().forEach(s -> System.out.println(s));
         System.out.println(map.size());
         System.out.println(map.get("India"));
+        System.out.println(map.containsKey("Lanka"));
+        System.out.println(map.containsKey("Pak"));
     }
 }
