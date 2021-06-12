@@ -98,7 +98,7 @@ public class TargetSumPair {
         Node root = construct(arr);
         // write your code here
 
-            targetSum1(root, root, data);
+        targetSum1(root, root, data);
         // targetSum2();
         // targetSum3();
     }
