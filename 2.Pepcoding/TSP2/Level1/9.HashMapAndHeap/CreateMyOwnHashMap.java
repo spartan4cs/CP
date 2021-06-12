@@ -67,6 +67,29 @@ public class CreateMyOwnHashMap {
             // if data index present then update existing node
             bucket[bi].get(di).value = value;
         }
+
+        // rehash
+        int n = size;
+        int N = bucket.length;
+        double lambda = n * 1.0 / N;
+
+        if (lambda > 2) {
+            rehash();
+        }
+    }
+
+    private void rehash() {
+        LinkedList<Node>[] ob = bucket;
+        init(2 * bucket.length);
+
+        size = 0;
+        // travel old bucket ans filli in new one
+
+        for (int i = 0; i < ob.length; i++) {
+            for (Node node : ob[i]) {
+                put(node.key, node.value);
+            }
+        }
     }
 
     // 4. get Functionality

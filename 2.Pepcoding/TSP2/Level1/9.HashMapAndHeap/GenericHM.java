@@ -59,6 +59,25 @@ public class GenericHM {
                 size++;
             } else {
                 buckets[bi].get(di).value = value;
+            } // rehash
+            int n = size;
+            int N = buckets.length;
+            double lambda = n * 1.0 / N;
+
+            if (lambda > 2.0) {
+                rehash();
+            }
+        }
+
+        private void rehash() throws Exception {
+            LinkedList<HMNode>[] ob = buckets;
+            initbuckets(2 * buckets.length);
+            // travel old bucket ans filli in new one
+            size = 0;
+            for (int i = 0; i < ob.length; i++) {
+                for (HMNode node : ob[i]) {
+                    put(node.key, node.value);
+                }
             }
         }
 
@@ -83,14 +102,48 @@ public class GenericHM {
 
         public boolean containsKey(K key) {
             // write your code here
+            // find bucket index using hashfucntion
+            int bi = hashFunction(key);
+
+            // find data index of linkedlist from that particular bucket index
+            int di = searchInBucket(key, bi);
+            if (di == -1) {
+                // if not present then return -1
+
+                return false;
+            } else
+                return true;
         }
 
         public V remove(K key) throws Exception {
             // write your code here
+            // find bucket index using hashfucntion
+            int bi = hashFunction(key);
+
+            // find data index of linkedlist from that particular bucket index
+            int di = searchInBucket(key, bi);
+            if (di == -1) {
+                // if not present then return -1
+
+                return null;
+            } else {
+                // if data index present then remove
+
+                HMNode n = buckets[bi].remove(di);
+                size--;
+                return n.value;
+            }
         }
 
         public ArrayList<K> keyset() throws Exception {
             // write your code here
+            ArrayList<K> al = new ArrayList<>();
+            for (int i = 0; i < buckets.length; i++) {
+                for (HMNode node : buckets[i]) {
+                    al.add(node.key);
+                }
+            }
+            return al;
         }
 
         public int size() {
