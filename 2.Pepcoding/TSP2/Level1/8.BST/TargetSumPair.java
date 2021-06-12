@@ -98,9 +98,9 @@ public class TargetSumPair {
         Node root = construct(arr);
         // write your code here
 
-        targetSum1(root, root, data);
-        // targetSum2();
-        // targetSum3();
+        // targetSum1(root, root, data);
+        // targetSum2(root, data);
+        targetSum3(root, data);
     }
 
     // Appraoch 1
@@ -135,5 +135,47 @@ public class TargetSumPair {
             return true;
         }
     }
+
+    // Approach 2
+    // Time O(n) Space O(h)
+
+    public static void targetSum2(Node node, int target) {
+
+        // sort using inorder
+        ArrayList<Integer> al = new ArrayList<>();
+        inorderFiller(node, al);
+
+        // use two pointer to get pair
+
+        int l = 0;
+        int r = al.size() - 1;
+        while (l < r) {
+            int sum = al.get(l) + al.get(r);
+
+            if (sum > target) {
+                r--;
+            } else if (sum < target) {
+                l++;
+            } else {
+
+                System.out.println(al.get(l) + " " + al.get(r));
+                l++;
+                r--;
+            }
+        }
+    }
+
+    public static void inorderFiller(Node node, ArrayList<Integer> al) {
+        if (node == null) {
+            return;
+        }
+        inorderFiller(node.left, al);
+        al.add(node.data);
+        inorderFiller(node.right, al);
+    }
+
+    // Approach 3
+    // TIme O(n)
+    // Space O(h)
 
 }
