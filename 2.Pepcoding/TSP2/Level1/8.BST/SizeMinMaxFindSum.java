@@ -82,22 +82,55 @@ public class SizeMinMaxFindSum {
 
     public static int size(Node node) {
         // write your code here
+        if (node == null) {
+            return 0;
+        }
+        int l = size(node.left);
+        int r = size(node.right);
+        return l + r + 1;
     }
 
     public static int sum(Node node) {
         // write your code here
+        if (node == null) {
+            return 0;
+        }
+        int l = sum(node.left);
+        int r = sum(node.right);
+        return l + r + node.data;
     }
 
     public static int max(Node node) {
         // write your code here
+        if (node.right != null) {
+            return max(node.right);
+        } else {
+            return node.data;
+        }
     }
 
     public static int min(Node node) {
         // write your code here
+        if (node.left != null) {
+            return min(node.left);
+        } else {
+            return node.data;
+        }
     }
 
     public static boolean find(Node node, int data) {
         // write your code here
+        if (node == null) {
+            return false;
+        }
+        if (data > node.data) {
+            return find(node.right, data);
+        } else if (data < node.data) {
+            return find(node.left, data);
+        } else {
+            return true;
+        }
+
     }
 
     public static void main(String[] args) throws Exception {
