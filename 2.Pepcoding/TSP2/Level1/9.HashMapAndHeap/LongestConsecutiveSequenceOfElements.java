@@ -47,7 +47,7 @@ public class LongestConsecutiveSequenceOfElements {
                 while (map.containsKey(key + 1)) {
                     key++;
                     len++;
-                    
+
                 }
                 // update max
                 if (len > maxlength) {
@@ -56,6 +56,7 @@ public class LongestConsecutiveSequenceOfElements {
                 }
                 map.put(st, false);// to duplicate present in arrso ignore it
             }
+            // System.out.println(key);
 
         }
 
