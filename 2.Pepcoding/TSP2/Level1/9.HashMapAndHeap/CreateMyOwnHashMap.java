@@ -174,6 +174,6 @@ public class CreateMyOwnHashMap {
 
         map.keySet().forEach(s -> System.out.println(s));
         System.out.println(map.size());
-        map.get("India");
+        System.out.println(map.get("India"));
     }
 }
