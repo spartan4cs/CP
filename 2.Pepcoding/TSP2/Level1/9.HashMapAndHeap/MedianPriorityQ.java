@@ -38,7 +38,7 @@ public class MedianPriorityQ {
       } else if (right.size() > left.size()) {
         res = right.peek();
         right.remove();
-      } else if (left.size() > right.size()) {
+      } else  {
         res = left.peek();
         left.remove();
       }
@@ -54,7 +54,7 @@ public class MedianPriorityQ {
         return -1;
       } else if (right.size() > left.size()) {
         res = right.peek();
-      } else if (left.size() > right.size()) {
+      } else  {
         res = left.peek();
       }
 
