@@ -1,0 +1,121 @@
+import java.util.LinkedList;
+
+public class CreateMyOwnHashMap {
+
+    // helper
+    private int hashFunction(String key) {
+        return Math.abs(key.hashCode()) % bucket.length;
+    }
+
+    private int searchInBucket(String key, int bi) {
+
+        int di = -1;
+        for (Node node : bucket[bi]) {
+            di++;
+            if (node.key.equals(key)) {
+                return di;
+            }
+        }
+        return -1;
+    }
+
+    // 1. create node
+    class Node {
+        String key;
+        int value;
+
+        public Node(String key, int value) {
+            this.key = key;
+            this.value = value;
+        }
+    }
+
+    // 2. initialization
+    int size = 0;
+    private LinkedList<Node>[] bucket;
+
+    private void init(int cap) {
+        bucket = new LinkedList[cap];
+        for (int i = 0; i < cap; i++) {
+            bucket[i] = new LinkedList<>();
+        }
+        this.size = 0;
+    }
+
+    public CreateMyOwnHashMap() {
+        init(4);
+    }
+
+    // 3. Funcationalities
+
+    // put
+
+    public void put(String key, int value) {
+
+        // find bucket index using hashfucntion
+        int bi = hashFunction(key);
+
+        // find data index of linkedlist from that particular bucket index
+        int di = searchInBucket(key, bi);
+        if (di == -1) {
+            // if not present then insert
+            bucket[bi].addLast(new Node(key, value));
+            size++;
+
+        } else {
+            // if data index present then update existing node
+            bucket[bi].get(di).value = value;
+        }
+    }
+
+    // 4. get Functionality
+    public int get(String key) {
+
+        // find bucket index using hashfucntion
+        int bi = hashFunction(key);
+
+        // find data index of linkedlist from that particular bucket index
+        int di = searchInBucket(key, bi);
+        if (di == -1) {
+            // if not present then return -1
+
+            return -1;
+        } else {
+            // if data index present then remove
+
+            Node n = bucket[bi].get(di);
+            return n.value;
+        }
+    }
+
+    // 5. remove functionaluty
+    public int remove(String key) {
+
+        // find bucket index using hashfucntion
+        int bi = hashFunction(key);
+
+        // find data index of linkedlist from that particular bucket index
+        int di = searchInBucket(key, bi);
+        if (di == -1) {
+            // if not present then return -1
+
+            return -1;
+        } else {
+            // if data index present then remove
+
+            Node n = bucket[bi].remove(di);
+            return n.value;
+        }
+    }
+
+    // 6. keyset
+
+    // 7. display
+
+    // 8. hashmap view
+
+    // 9. size
+    public int size() {
+        return this.size;
+    }
+}
