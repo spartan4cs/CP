@@ -93,4 +93,16 @@ public class CustomPriorityQueue {
         System.out.println(data);
     }
 
+    public static void main(String[] args) {
+        CustomPriorityQueue pq = new CustomPriorityQueue();
+
+        pq.add(50);
+        pq.add(10);
+        pq.add(20);
+        pq.add(30);
+        pq.add(40);
+        System.out.println(pq.size());
+        pq.display();
+
+    }
 }
