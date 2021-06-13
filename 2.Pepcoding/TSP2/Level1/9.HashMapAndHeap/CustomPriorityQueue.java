@@ -95,13 +95,52 @@ public class CustomPriorityQueue {
 
     public static void main(String[] args) {
         CustomPriorityQueue pq = new CustomPriorityQueue();
-
+        // add 10
+        // add 20
+        // add 30
+        // add 40
+        // peek
+        // add 50
+        // peek
+        // remove
+        // peek
+        // remove
+        // peek
+        // remove
+        // peek
+        // remove
+        // peek
+        // quit
         pq.add(50);
         pq.add(10);
         pq.add(20);
         pq.add(30);
-        pq.add(40);
-        System.out.println(pq.size());
+        pq.display();
+        pq.add(9);
+        pq.display();
+
+        System.out.println(pq.peek());
+        System.out.println("r->" + pq.remove());
+        pq.display();
+
+        System.out.println(pq.peek());
+        System.out.println("r->" + pq.remove());
+        pq.display();
+
+        System.out.println(pq.peek());
+        System.out.println("r->" + pq.remove());
+        pq.display();
+
+        System.out.println(pq.peek());
+        System.out.println("r->" + pq.remove());
+        pq.display();
+
+        System.out.println(pq.peek());
+        System.out.println("r->" + pq.remove());
+        pq.display();
+
+        System.out.println(pq.peek());
+        System.out.println("r->" + pq.remove());
         pq.display();
 
     }
