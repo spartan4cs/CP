@@ -1,7 +1,8 @@
+
 import java.io.*;
 import java.util.*;
 
-public class HasPath {
+public class PrintAllPath {
     static class Edge {
         int src;
         int nbr;
@@ -14,30 +15,25 @@ public class HasPath {
         }
     }
 
-    //
-    public static boolean hasPath(ArrayList<Edge>[] graph, int src, int dest, boolean[] vis) {
+    public static void printAllPath(ArrayList<Edge> graph[], int src, int dest, boolean[] vis, String asf, int ssf) {
 
         if (src == dest) {
-            return true;
+            asf += src;
+            System.out.println(asf);
         }
 
-        // aate hi mark kardo
+        // mark
         vis[src] = true;
-        for (Edge edge : graph[src]) {
-
-            int nbr = edge.nbr;
-            // if not visited then move to that node
+        for (Edge e : graph[src]) {
+            int nbr = e.nbr;
+            int sum = e.wt;
             if (vis[nbr] == false) {
-
-                boolean res = hasPath(graph, nbr, dest, vis);
-                if (res) {
-                    return true;
-                }
+                printAllPath(graph, nbr, dest, vis, asf + src, ssf + sum);
             }
         }
+        // unmark
+        vis[src] = false;
 
-        // path nhi milala
-        return false;
     }
 
     public static void main(String[] args) throws Exception {
@@ -62,9 +58,10 @@ public class HasPath {
         int src = Integer.parseInt(br.readLine());
         int dest = Integer.parseInt(br.readLine());
 
-        // write your code here
-        boolean vis[] = new boolean[vtces];
-        System.out.println(hasPath(graph, src, dest, vis));
+        // write all your codes here
+
+        boolean[] vis = new boolean[vtces];
+        printAllPath(graph, src, dest, vis, "", 0);
     }
 
 }
