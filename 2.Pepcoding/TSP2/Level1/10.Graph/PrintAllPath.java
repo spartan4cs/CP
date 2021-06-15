@@ -15,6 +15,10 @@ public class PrintAllPath {
         }
     }
 
+    // solve using return type
+
+    // jatani solve kela
+    // without return type
     public static void printAllPath(ArrayList<Edge> graph[], int src, int dest, boolean[] vis, String asf, int ssf) {
 
         if (src == dest) {
