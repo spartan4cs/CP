@@ -1,0 +1,17 @@
+The Teachers Insurance and Annuity Association of America-College Retirement Equities Fund, is a Fortune 100 financial services organization that is the leading provider of financial services in the academic, research, medical, cultural and governmental fields. TIAA serves over 5 million active and retired employees participating at more than 15,000 institutions and has $1 trillion in combined assets under management with holdings in more than 50 countries.
+Use of the project 
+this project is used for giving the demo of Tiaa Bank & Finance Applications to Institutions and Government Accross Usa
+
+This project was taken as Research project as proof of concept
+Why ? 
+First thing was they already had the demobuilder , but then why 2nd demobuilder?
+Some retirement application are so complex to show the dynamic transaction. So some presenter does not show some of the good features and services they are able to provide;
+
+Other problem they were facing was when they visit the University, there had some internet isssue due to which the presenter were not able to give demo. And for Tiaa it was very critical that when they goes for demo, they want their client to be onboard and does not want any mishaps happening which can lead to loss of even single client. So they wanted to provide the offline demo and prodvide the same dynamic transaction to clients
+
+So they decided was they will use the production war files and deploy it in local machine tomcat and start the tomcat and show the demo. 
+this seems so simple. 
+From here on research started. We were jjust the 3 new joinee we joined on March 2020. After 3 days we were declare as wfh due to corona :)
+
+So there are various microservice finance appplication 
+We started takeing single application which was accoutn home application
