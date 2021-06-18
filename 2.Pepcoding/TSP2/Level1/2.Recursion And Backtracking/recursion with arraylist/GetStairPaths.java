@@ -51,14 +51,40 @@ public class GetStairPaths {
         return paths;
     }
 
+    // using level option
+
+    public static ArrayList<String> getStairPathLevelOrder(int n) {
+
+        if (n == 0) {
+            ArrayList<String> bres = new ArrayList<>();
+            bres.add("");
+            return bres;
+        }
+
+        if (n < 0) {
+            return new ArrayList<>();
+        }
+        ArrayList<String> mres = new ArrayList<>();
+        for (int i = 1; i <= 3; i++) {
+            ArrayList<String> rres = getStairPathLevelOrder(n - i);
+            for (String s : rres) {
+                mres.add(i + s);
+            }
+
+        }
+        return mres;
+    }
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         // smart call
-         System.out.println(getStaitPathSmart(n));
+        System.out.println(getStaitPathSmart(n));
         // stupid call
         System.out.println(getStaitPathStupid(n));
+        // leveloption
+        System.out.println(getStairPathLevelOrder(n));
 
     }
 }
