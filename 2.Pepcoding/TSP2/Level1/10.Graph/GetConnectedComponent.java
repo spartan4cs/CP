@@ -1,7 +1,8 @@
+
 import java.io.*;
 import java.util.*;
 
-public class HasPath {
+public class GetConnectedComponent {
     static class Edge {
         int src;
         int nbr;
@@ -12,37 +13,6 @@ public class HasPath {
             this.nbr = nbr;
             this.wt = wt;
         }
-    }
-
-    //
-    public static boolean hasPath(ArrayList<Edge>[] graph, int src, int dest, boolean[] vis) {
-
-        if (src == dest) {
-            return true;
-        }
-
-        // mark
-        // for all neighbour not visited
-        // dfs
-        // unmark
-
-        // aate hi mark kardo
-        vis[src] = true;
-        for (Edge edge : graph[src]) {
-
-            int nbr = edge.nbr;
-            // if not visited then move to that node
-            if (vis[nbr] == false) {
-
-                boolean res = hasPath(graph, nbr, dest, vis);
-                if (res) {
-                    return true;
-                }
-            }
-        }
-
-        // path nhi milala
-        return false;
     }
 
     public static void main(String[] args) throws Exception {
@@ -64,12 +34,34 @@ public class HasPath {
             graph[v2].add(new Edge(v2, v1, wt));
         }
 
-        int src = Integer.parseInt(br.readLine());
-        int dest = Integer.parseInt(br.readLine());
+        ArrayList<ArrayList<Integer>> comps = new ArrayList<>();
 
         // write your code here
-        boolean vis[] = new boolean[vtces];
-        System.out.println(hasPath(graph, src, dest, vis));
+
+        boolean[] vis = new boolean[graph.length];
+        for (int v = 0; v < graph.length; v++) {
+            if (vis[v] == false) {
+
+                ArrayList<Integer> ans = new ArrayList<>();
+                gcc(graph, v, ans, vis);
+                comps.add(ans);
+            }
+        }
+
+        System.out.println(comps);
     }
 
+    public static void gcc(ArrayList<Edge>[] graph, int src, ArrayList<Integer> ans, boolean[] vis) {
+
+        // mark
+        vis[src] = true;
+
+        ans.add(src);
+        // for every neighbour not visited
+        for (Edge e : graph[src]) {
+            if (vis[e.nbr] == false) {
+                gcc(graph, e.nbr, ans, vis);
+            }
+        }
+    }
 }
