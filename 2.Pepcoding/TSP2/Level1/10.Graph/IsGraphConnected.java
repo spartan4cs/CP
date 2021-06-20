@@ -35,5 +35,38 @@ public class IsGraphConnected {
         }
 
         // write your code here
+
+        int n = graph.length;
+        boolean vis[] = new boolean[n];
+        // travel each vertex
+        int count = 0;
+        for (int v = 0; v < n; v++) {
+            if (vis[v] == false) {
+
+                count++;
+                if (count > 1) {
+
+                    break;
+                }
+                isgcc(graph, vis, v);
+            }
+
+        }
+        if (count > 1) {
+            System.out.println(false);
+        } else {
+            System.out.println(true);
+        }
+    }
+
+    public static void isgcc(ArrayList<Edge>[] graph, boolean[] vis, int src) {
+
+        vis[src] = true;
+
+        for (Edge e : graph[src]) {
+            if (vis[e.nbr] == false) {
+                isgcc(graph, vis, e.nbr);
+            }
+        }
     }
 }
