@@ -37,6 +37,42 @@ public class HamiltonianPathAndCycle {
 
         // write all your codes here
 
+        HashSet<Integer> vis = new HashSet<>();
+        visitAllPath(graph, src, vis, "", src);
+    }
+
+    public static void visitAllPath(ArrayList<Edge>[] graph, int src, HashSet<Integer> vis, String psf, int osrc) {
+
+        if (vis.size() == graph.length - 1) {
+            psf += src;
+            System.out.print(psf);
+            // check if cycle
+            // to chekc cycel we need original source
+            boolean iscycle = false;
+            for (Edge e : graph[osrc]) {
+                if (e.nbr == src) {
+                    iscycle = true;
+                    break;
+                }
+            }
+
+            if (iscycle) {
+                System.out.println("*");
+            } else {
+                System.out.println(".");
+            }
+
+            return;
+        }
+
+        vis.add(src);// mark and add
+
+        for (Edge e : graph[src]) {
+            if (vis.contains(e.nbr) == false) {
+                visitAllPath(graph, e.nbr, vis, psf + src, osrc);
+            }
+        }
+        vis.remove(src);// too exlore all path
     }
 
 }
