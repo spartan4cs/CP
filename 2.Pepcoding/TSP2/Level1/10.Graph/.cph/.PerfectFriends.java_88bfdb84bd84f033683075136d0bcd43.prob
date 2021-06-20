@@ -1,0 +1,1 @@
+{"name":"Local: PerfectFriends","url":"e:\\github\\CP\\2.Pepcoding\\TSP2\\Level1\\10.Graph\\PerfectFriends.java","tests":[{"id":1624205494346,"input":"7\n5\n0 1\n2 3\n4 5\n5 6\n4 6","output":"16"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\github\\CP\\2.Pepcoding\\TSP2\\Level1\\10.Graph\\PerfectFriends.java","group":"local","local":true}
