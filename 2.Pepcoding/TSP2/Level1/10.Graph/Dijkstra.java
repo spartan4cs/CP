@@ -35,8 +35,53 @@ public class Dijkstra {
 
         int src = Integer.parseInt(br.readLine());
         // write your code here
+        bfsWithPQ(graph, src);
+    }
 
-        
+    public static void bfsWithPQ(ArrayList<Edge>[] graph, int src) {
+
+        boolean vis[] = new boolean[graph.length];
+        PriorityQueue<Pair> qu = new PriorityQueue<>();
+        qu.add(new Pair(src, "" + src, 0));
+
+        while (qu.size() > 0) {
+            // rmwa
+            Pair rem = qu.remove();
+
+            // mark
+
+            if (vis[rem.vtx] == true) {
+                continue;
+            }
+            vis[rem.vtx] = true;
+
+            // work
+            System.out.println(rem.vtx + " via " + rem.psf + " @ " + rem.wgt);
+
+            // add neighbout
+            for (Edge e : graph[rem.vtx]) {
+                if (vis[e.nbr] == false) {
+                    qu.add(new Pair(e.nbr, rem.psf + e.nbr, rem.wgt + e.wt));
+                }
+            }
+        }
+    }
+
+    static class Pair implements Comparable<Pair> {
+        int vtx;
+        String psf;
+        int wgt;
+
+        public Pair(int vtx, String psf, int wgt) {
+            this.wgt = wgt;
+            this.psf = psf;
+            this.wgt = wgt;
+
+        }
+
+        public int compareTo(Pair o) {
+            return this.wgt - o.wgt;
+        }
 
     }
 }
