@@ -34,8 +34,6 @@ public class PerfectFriends {
 
         // System.out.println(res);[[0, 1], [2, 3], [4, 5, 6]]
 
-
-        
         // display arr
         // for (int i = 0; i < n; i++) {
         // System.out.print(i + "-> ");
@@ -45,6 +43,18 @@ public class PerfectFriends {
         // System.out.println();
         // }
 
+        // get p and c
+        int sum = res.get(res.size() - 1).size(); // last ka size
+        // iterate form back
+
+        int ans = 0;
+        for (int i = res.size() - 2; i >= 0; i--) {
+            int eleSize = res.get(i).size();
+            ans += eleSize * sum;
+            sum += eleSize;
+
+        }
+        System.out.println(ans);
     }
 
     public static void getgcc(ArrayList<Integer>[] g, boolean[] vis, int src, ArrayList<Integer> comp) {
