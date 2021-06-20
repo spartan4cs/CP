@@ -73,7 +73,7 @@ public class Dijkstra {
         int wgt;
 
         public Pair(int vtx, String psf, int wgt) {
-            this.wgt = wgt;
+            this.vtx = vtx;
             this.psf = psf;
             this.wgt = wgt;
 
