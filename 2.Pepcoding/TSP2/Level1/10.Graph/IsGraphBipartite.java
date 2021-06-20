@@ -68,7 +68,11 @@ public class IsGraphBipartite {
             Pair rem = qu.remove();
 
             // mark
-            if (rem.level != -1) {
+            // already discovered
+            // 1. if again discovered with same level-> continue
+            // 2. if again discovered, but with different level -> return false,
+            // because odd size cycle is present in graph
+            if (vis[rem.vtx] != -1) {
                 // already visited
                 if (vis[rem.vtx] == rem.level) {
                     // same level continue
