@@ -55,7 +55,7 @@ public class Multisolver_Smallest_Longest_Ceil_Floor_KthlargestPath {
         int k = Integer.parseInt(br.readLine());
 
         boolean[] visited = new boolean[vtces];
-        multisolver(graph, src, dest, visited, criteria, k, src + "", 0);
+        multisolver(graph, src, dest, visited, criteria, k, "", 0);
 
         System.out.println("Smallest Path = " + spath + "@" + spathwt);
         System.out.println("Largest Path = " + lpath + "@" + lpathwt);
@@ -77,5 +77,61 @@ public class Multisolver_Smallest_Longest_Ceil_Floor_KthlargestPath {
     public static void multisolver(ArrayList<Edge>[] graph, int src, int dest, boolean[] visited, int criteria, int k,
             String psf, int wsf) {
 
+        if (src == dest) {
+
+            psf += src;
+
+            // System.out.println(psf + "@" + wsf);
+
+            // smaller
+            if (wsf < spathwt) {
+                spath = psf;
+                spathwt = wsf;
+            }
+            // larger
+            if (wsf > lpathwt) {
+                lpath = psf;
+                lpathwt = wsf;
+            }
+
+            // ceil for criteria
+            if (wsf > criteria) {
+                if (wsf < cpathwt) {
+                    cpath = psf;
+                    cpathwt = wsf;
+                }
+            }
+            // floow for criteria
+            if (wsf < criteria) {
+                if (wsf > fpathwt) {
+                    fpath = psf;
+                    fpathwt = wsf;
+                }
+            }
+
+            // kth largers
+            // maintain k pq elements only
+            if (pq.size() < k) {
+                pq.add(new Pair(wsf, psf));
+            } else {
+                if (wsf > pq.peek().wsf) {
+                    pq.remove();
+                    pq.add(new Pair(wsf, psf));
+                }
+            }
+
+            return;
+
+        }
+
+        // traverse through graph
+        // mark
+        visited[src] = true;
+        for (Edge e : graph[src]) {
+            if (visited[e.nbr] == false) {
+                multisolver(graph, e.nbr, dest, visited, criteria, k, psf + src, wsf + e.wt);
+            }
+        }
+        visited[src] = false;
     }
 }

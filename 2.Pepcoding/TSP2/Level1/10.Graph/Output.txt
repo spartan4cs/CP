@@ -1,1 +1,5 @@
-[[0, 1], [2, 3], [4, 5, 6]]
+Smallest Path = 01256@28
+Largest Path = 032546@66
+Just Larger Path than 30 = 012546@36
+Just Smaller Path than 30 = 01256@28
+4th largest path = 03456@48
