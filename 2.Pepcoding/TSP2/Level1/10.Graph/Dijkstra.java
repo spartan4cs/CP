@@ -38,6 +38,9 @@ public class Dijkstra {
         bfsWithPQ(graph, src);
     }
 
+    //single source shortest path
+    //from single source to all vertex shortest path
+    //doesnot work for -ve wgts
     public static void bfsWithPQ(ArrayList<Edge>[] graph, int src) {
 
         boolean vis[] = new boolean[graph.length];
