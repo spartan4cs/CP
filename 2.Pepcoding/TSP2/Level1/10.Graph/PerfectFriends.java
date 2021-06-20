@@ -3,10 +3,9 @@ import java.util.*;
 
 public class PerfectFriends {
     public static void main(String[] args) throws Exception {
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         Scanner sc = new Scanner(System.in);
-        int n = Integer.parseInt(br.readLine());
-        int k = Integer.parseInt(br.readLine());
+        int n = sc.nextInt();
+        int k = sc.nextInt();
 
         // write your code here
 
@@ -22,14 +21,41 @@ public class PerfectFriends {
             g[nbr].add(src);
         }
 
-        // display
-        for (int i = 0; i < n; i++) {
-            System.out.print("i-> ");
-            for (Integer nbr : g[i]) {
-                System.out.print(nbr + ", ");
+        boolean vis[] = new boolean[n];
+
+        ArrayList<ArrayList<Integer>> res = new ArrayList<>();
+        for (int v = 0; v < n; v++) {
+            ArrayList<Integer> comp = new ArrayList<>();
+            if (vis[v] == false) {
+                getgcc(g, vis, v, comp);
+                res.add(comp);
             }
-            System.out.println();
         }
 
+        // System.out.println(res);[[0, 1], [2, 3], [4, 5, 6]]
+
+
+        
+        // display arr
+        // for (int i = 0; i < n; i++) {
+        // System.out.print(i + "-> ");
+        // for (Integer nbr : g[i]) {
+        // System.out.print(nbr + ", ");
+        // }
+        // System.out.println();
+        // }
+
+    }
+
+    public static void getgcc(ArrayList<Integer>[] g, boolean[] vis, int src, ArrayList<Integer> comp) {
+
+        vis[src] = true;
+        comp.add(src);
+
+        for (Integer e : g[src]) {
+            if (vis[e] == false) {
+                getgcc(g, vis, e, comp);
+            }
+        }
     }
 }
