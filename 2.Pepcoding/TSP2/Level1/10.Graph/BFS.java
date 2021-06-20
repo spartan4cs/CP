@@ -12,6 +12,16 @@ public class BFS {
         }
     }
 
+    static class Pair {
+        int vtx;
+        String psf;
+
+        Pair(int vtx, String psf) {
+            this.vtx = vtx;
+            this.psf = psf;
+        }
+    }
+
     public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -34,6 +44,33 @@ public class BFS {
 
         // write your code here
 
-        
+        boolean vis[] = new boolean[graph.length];
+        // rmwa
+
+        Queue<Pair> qu = new LinkedList<>();
+        qu.add(new Pair(src, src + ""));
+
+        while (qu.size() > 0) {
+
+            // remove
+            Pair rem = qu.remove();
+
+            // mark
+            if (vis[rem.vtx] == true) {
+                continue;
+            }
+            vis[rem.vtx] = true;
+
+            // print
+            System.out.println(rem.vtx + "@" + rem.psf);
+
+            // add neighbour
+            for (Edge e : graph[rem.vtx]) {
+                if (vis[e.nbr] == false) {
+                    qu.add(new Pair(e.nbr, rem.psf + e.nbr));
+                }
+            }
+
+        }
     }
 }
