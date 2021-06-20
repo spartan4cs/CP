@@ -37,7 +37,7 @@ public class Prims {
         // write your code here
 
         // creatign minimum spannig tree
-        // not cyclic + connected to all vertex
+        // not cyclic + connected to all vertex--> tree
         // all nodes connected with wire and wt is min
         ArrayList<Edge>[] mst = new ArrayList[vtces];
         for (int i = 0; i < vtces; i++) {
