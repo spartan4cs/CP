@@ -35,17 +35,16 @@ public class Div2D197 {
     static int xdir[] = { -1, 0, 1, 0 };
     static int ydir[] = { 0, -1, 0, 1 };
 
-    public static boolean getAns(char[][] arr, int si, int sj,) {
+    public static boolean getAns(char[][] arr, int si, int sj) {
 
-        
         for (int d = 0; d < 4; d++) {
             int ni = si + xdir[d];
             int nj = sj + ydir[d];
             if (ni == -1) {
-                ni += arr.length ;
+                ni += arr.length;
             }
             if (nj == -1) {
-                nj += arr[0].length ;
+                nj += arr[0].length;
             }
             if (ni == arr.length) {
                 ni = 0;
@@ -53,7 +52,7 @@ public class Div2D197 {
             if (nj == arr[0].length) {
                 nj = 0;
             }
-            if (arr[ni][nj] == '.' || arr[i][j] == 'S') {
+            if (arr[ni][nj] == '.' || arr[si][sj] == 'S') {
                 getAns(arr, ni, nj);
             }
         }
