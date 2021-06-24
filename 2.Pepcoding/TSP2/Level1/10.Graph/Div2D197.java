@@ -26,9 +26,9 @@ public class Div2D197 {
         }
         boolean[][] vis = new boolean[n][m];
 
-        boolean ans = dfs(arr, si, sj, vis, si, sjB);
-        String op = ans == true ? "Yes" : "No";
-        System.out.println(op);
+        dfs(arr, si, sj, vis, si, sj);
+        // String op = ans == true ? "Yes" : "No";
+        System.out.println("No");
         // for (int i = 0; i < n; i++) {
         // for (int j = 0; j < m; j++) {
         // System.out.println(arr[i][j]);
@@ -126,10 +126,15 @@ public class Div2D197 {
         return false;
     }
 
-    public static boolean dfs(char[][] arr, int si, int sj, boolean[][] vis, int i, int j) {
+    public static void dfs(char[][] arr, int si, int sj, boolean[][] vis, int i, int j) {
         // if (vis[si][sj].x == i && vis[si][sj].y == j) {
         // return true;
         // }
+
+        if (vis[si][sj] == true ) {
+            System.out.println("Yes");
+            System.exit(0);
+        }
         // add
         vis[si][sj] = true;
         for (int d = 0; d < 4; d++) {
@@ -147,18 +152,15 @@ public class Div2D197 {
             if (nj == arr[0].length) {
                 nj = 0;
             }
-            if (vis[ni][nj] == true && ni != i && nj != j) {
-                return true;
+            // if (vis[ni][nj] == true && ni != i && nj != j) {
+            // return true;
+            // }
+            if (arr[ni][nj] == '#') {
+                continue;
             }
-            if (arr[ni][nj] != '#' && vis[ni][nj] == false) {
 
-                boolean res = dfs(arr, ni, nj, vis, si, sj);
-                if (res == true) {
-                    return true;
-                }
-            }
+            dfs(arr, ni, nj, vis, si, sj);
 
         }
-        return false;
     }
 }
