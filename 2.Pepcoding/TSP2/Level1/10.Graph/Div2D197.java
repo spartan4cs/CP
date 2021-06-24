@@ -26,10 +26,12 @@ public class Div2D197 {
             }
 
         }
-        getAns(arr, si, sj, vis, n, m);
+        boolean ans = getAns1(arr, si, sj);
+        // getAns(arr, si, sj, vis, n, m);
 
-        // String op = ans == true ? "Yes" : "No";
-        System.out.println("No");
+        String op = ans == true ? "Yes" : "No";
+        System.out.println(op);
+        // System.out.println("No");
         // for (int i = 0; i < n; i++) {
         // for (int j = 0; j < m; j++) {
         // System.out.println(arr[i][j]);
@@ -64,6 +66,7 @@ public class Div2D197 {
                 return true;
             }
 
+            arr[rem.x][rem.y] = '1';
             // add
             for (int d = 0; d < 4; d++) {
                 int ni = rem.x + xdir[d];
