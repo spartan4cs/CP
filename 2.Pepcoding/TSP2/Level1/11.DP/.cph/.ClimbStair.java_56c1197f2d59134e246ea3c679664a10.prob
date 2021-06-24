@@ -1,0 +1,1 @@
+{"name":"Local: ClimbStair","url":"e:\\github\\CP\\2.Pepcoding\\TSP2\\Level1\\11.DP\\ClimbStair.java","tests":[{"id":1624554593591,"input":"4","output":"7"},{"id":1624554794713,"input":"20","output":"121415"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\github\\CP\\2.Pepcoding\\TSP2\\Level1\\11.DP\\ClimbStair.java","group":"local","local":true}

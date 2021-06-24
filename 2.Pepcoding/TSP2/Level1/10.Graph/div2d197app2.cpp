@@ -41,7 +41,7 @@ pair<int, int> vis[1505][1505];
 vector<string> v(1505);
 
 int dx[] = {-1, 0, 1, 0};
-int dy[] = {0, 1, 0, -1};
+int dy[] = {0, -1, 0, 1};
 char darr[] = {'t', 'r', 'l', 'd'};
 
 void dfs(int x, int y)
@@ -74,7 +74,7 @@ void dfs(int x, int y)
 
         if (v[x1][y1] != '#')
         {
-            cout << darr[i];
+            // cout << darr[i];
             dfs(x + dx[i], y + dy[i]);
         }
     }

@@ -10,6 +10,7 @@ public class Div2D197 {
         int n = sc.nextInt();
         int m = sc.nextInt();
         char[][] arr = new char[n][m];
+        Pair[][] vis = new Pair[n][m];
         int si = 0;
         int sj = 0;
         for (int i = 0; i < n; i++) {
@@ -21,12 +22,12 @@ public class Div2D197 {
                     si = i;
                     sj = j;
                 }
+                vis[i][j] = new Pair(Integer.MAX_VALUE, Integer.MAX_VALUE);
             }
 
         }
-        boolean[][] vis = new boolean[n][m];
+        getAns(arr, si, sj, vis, n, m);
 
-        dfs(arr, si, sj, vis, si, sj);
         // String op = ans == true ? "Yes" : "No";
         System.out.println("No");
         // for (int i = 0; i < n; i++) {
@@ -89,78 +90,38 @@ public class Div2D197 {
 
     }
 
-    public static boolean getAns(char[][] arr, int si, int sj, Pair[][] vis, int i, int j) {
-        // if (vis[si][sj].x == i && vis[si][sj].y == j) {
-        // return true;
-        // }
-        // add
-        for (int d = 0; d < 4; d++) {
-            int ni = si + xdir[d];
-            int nj = sj + ydir[d];
-            if (ni == -1) {
-                ni += arr.length;
-            }
-            if (nj == -1) {
-                nj += arr[0].length;
-            }
-            if (ni == arr.length) {
-                ni = 0;
-            }
-            if (nj == arr[0].length) {
-                nj = 0;
-            }
-            if (vis[ni][nj].x == i && vis[ni][nj].y == j) {
-                return true;
-            }
-            if (arr[ni][nj] != '#' && vis[ni][nj].x == Integer.MAX_VALUE && vis[ni][nj].y == Integer.MAX_VALUE) {
+    // for chewcking we will use ni nad nj
+    // for storing we will use
+    public static void getAns(char[][] arr, int si, int sj, Pair[][] vis, int n, int m) {
+        // System.out.println(si + " " + sj);
+        int ni = ((si % n) + n) % n;
+        int nj = ((sj % m) + m) % m; // 4 ,2
 
-                vis[ni][nj] = new Pair(ni, nj);
-
-                boolean res = getAns(arr, ni, nj, vis, i, j);
-                if (res == true) {
-                    return res;
-                }
-            }
-
+        if (vis[ni][nj].x == si && vis[ni][nj].y == sj) {
+            return;
         }
-        return false;
-    }
 
-    public static void dfs(char[][] arr, int si, int sj, boolean[][] vis, int i, int j) {
-        // if (vis[si][sj].x == i && vis[si][sj].y == j) {
-        // return true;
-        // }
-
-        if (vis[si][sj] == true ) {
+        // base case
+        if (vis[ni][nj].x != Integer.MAX_VALUE && vis[ni][nj].y != Integer.MAX_VALUE) {
+            // System.out.println(si + " " + sj + " " + vis[ni][nj].x + " " +
+            // vis[ni][nj].y);
             System.out.println("Yes");
             System.exit(0);
         }
-        // add
-        vis[si][sj] = true;
+        vis[ni][nj].x = si;
+        vis[ni][nj].y = sj;
         for (int d = 0; d < 4; d++) {
-            int ni = si + xdir[d];
-            int nj = sj + ydir[d];
-            if (ni == -1) {
-                ni += arr.length;
-            }
-            if (nj == -1) {
-                nj += arr[0].length;
-            }
-            if (ni == arr.length) {
-                ni = 0;
-            }
-            if (nj == arr[0].length) {
-                nj = 0;
-            }
-            // if (vis[ni][nj] == true && ni != i && nj != j) {
-            // return true;
-            // }
-            if (arr[ni][nj] == '#') {
-                continue;
-            }
+            ni = si + xdir[d];
+            nj = sj + ydir[d];
+            ni = ((ni % n) + n) % n;
+            nj = ((nj % m) + m) % m;
+            if (arr[ni][nj] != '#') {
 
-            dfs(arr, ni, nj, vis, si, sj);
+                getAns(arr, si + xdir[d], sj + ydir[d], vis, n, m);
+
+            }
 
         }
     }
+
 }
