@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch CycleInDirectGraph",
+            "request": "launch",
+            "mainClass": "CycleInDirectGraph",
+            "projectName": "10.Graph_a69ccd89"
+        },
+        {
+            "type": "java",
             "name": "Launch Div2D197",
             "request": "launch",
             "mainClass": "Div2D197",
