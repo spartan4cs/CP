@@ -26,9 +26,9 @@ public class Div2D197 {
             }
 
         }
-        boolean ans = getAns1(arr, si, sj);
+        // boolean ans = getAns1(arr, si, sj);
         // getAns(arr, si, sj, vis, n, m);
-
+        boolean ans = iscycle(arr, n, m);
         String op = ans == true ? "Yes" : "No";
         System.out.println(op);
         // System.out.println("No");
@@ -38,6 +38,24 @@ public class Div2D197 {
         // }
         // }
 
+    }
+
+    public static boolean iscycle(char[][] arr, int n, int m) {
+
+        boolean mypath[][] = new boolean[n][m];
+        boolean vis[][] = new boolean[n][m];
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < m; j++) {
+                if (vis[i][j] == false) {
+                    boolean res = dfs(arr, i, j, vis, mypath);
+                    if (res == true) {
+                        return true;
+                    }
+                }
+            }
+
+        }
+        return false;
     }
 
     static int xdir[] = { -1, 0, 1, 0 };
@@ -125,6 +143,42 @@ public class Div2D197 {
             }
 
         }
+    }
+
+    public static boolean dfs(char[][] arr, int si, int sj, boolean[][] vis, boolean[][] mypath) {
+
+        // add
+        vis[si][sj] = true;
+        mypath[si][sj] = true;
+        for (int d = 0; d < 4; d++) {
+            int ni = si + xdir[d];
+            int nj = sj + ydir[d];
+            if (ni == -1) {
+                ni += arr.length;
+            }
+            if (nj == -1) {
+                nj += arr[0].length;
+            }
+            if (ni == arr.length) {
+                ni = 0;
+            }
+            if (nj == arr[0].length) {
+                nj = 0;
+            }
+            if (mypath[ni][nj] == true) {
+                return true;
+            } else if (arr[ni][nj] != '#' && vis[ni][nj] == false) {
+
+                boolean res = dfs(arr, ni, nj, vis, mypath);
+                if (res == true) {
+                    return true;
+                }
+            }
+
+        }
+        mypath[si][sj] = false;
+        return false;
+
     }
 
 }
