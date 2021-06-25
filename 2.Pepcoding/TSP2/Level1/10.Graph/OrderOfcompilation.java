@@ -2,7 +2,8 @@ import java.io.*;
 import java.util.*;
 
 public class OrderOfcompilation {
-    static class Edge {
+
+    public static class Edge {
         int src;
         int nbr;
 
@@ -13,22 +14,22 @@ public class OrderOfcompilation {
     }
 
     public static void main(String[] args) throws Exception {
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-        int vtces = Integer.parseInt(br.readLine());
-        ArrayList<Edge>[] graph = new ArrayList[vtces];
-        for (int i = 0; i < vtces; i++) {
+        int vt = Integer.parseInt(br.readLine());
+        ArrayList<Edge>[] graph = new ArrayList[vt];
+        for (int i = 0; i < vt; i++) {
             graph[i] = new ArrayList<>();
         }
 
-        int edges = Integer.parseInt(br.readLine());
-        for (int i = 0; i < edges; i++) {
+        int ed = Integer.parseInt(br.readLine());
+        for (int i = 0; i < ed; i++) {
             String[] parts = br.readLine().split(" ");
             int v1 = Integer.parseInt(parts[0]);
             int v2 = Integer.parseInt(parts[1]);
             graph[v1].add(new Edge(v1, v2));
         }
-
         // write your code here
 
         // it will work for Directed Acyclic graph
