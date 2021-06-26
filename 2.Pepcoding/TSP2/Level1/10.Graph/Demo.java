@@ -10,7 +10,7 @@ class Demo {
 
         HashMap<String, ArrayList<Integer>> hm = new HashMap<>();
 
-        List<List<String>> queries = Arrays.asList(Arrays.asList("a","b"), );
+        List<List<String>> queries = Arrays.asList(Arrays.asList("a", "b"));
 
     }
 }
