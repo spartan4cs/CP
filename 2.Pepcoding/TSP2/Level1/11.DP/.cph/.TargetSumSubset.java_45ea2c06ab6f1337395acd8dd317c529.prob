@@ -1,0 +1,1 @@
+{"name":"Local: TargetSumSubset","url":"e:\\github\\CP\\2.Pepcoding\\TSP2\\Level1\\11.DP\\TargetSumSubset.java","tests":[{"id":1624720025513,"input":"6\n4\n2\n7\n1\n3\n0\n10","output":"true"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\github\\CP\\2.Pepcoding\\TSP2\\Level1\\11.DP\\TargetSumSubset.java","group":"local","local":true}
