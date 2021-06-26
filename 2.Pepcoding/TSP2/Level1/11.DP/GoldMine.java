@@ -29,7 +29,7 @@ public class GoldMine {
         // }
 
         // for tabulation
-        // res = tabulation1(arr, n, m, qb);
+        res = tabulation1(arr, n, m, qb);
         System.out.println(res);
 
         // print dp cost
