@@ -41,6 +41,19 @@ public class MinCostInMazeTraversal {
         ans = tabulation2(arr, n, m, qb);
         System.out.println(ans);
 
+        // print dp cost
+        System.out.println();
+        for (int i = 0; i < qb.length; i++) {
+            for (int j = 0; j < qb[0].length; j++) {
+                System.out.print(qb[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+        System.out.println();
+        /// rptin path
+        printMinPath(qb, 0, 0, n, m, "");
+
     }
 
     public static int recursion(int[][] arr, int x, int y, int n, int m) {
@@ -136,5 +149,31 @@ public class MinCostInMazeTraversal {
             }
         }
         return dp[0][0];
+    }
+
+    public static void printMinPath(int[][] dp, int x, int y, int n, int m, String psf) {
+
+        if (x == n - 1 && y == m - 1) {
+            System.out.println(psf);
+            return;
+        } else if (x == n - 1) {
+            printMinPath(dp, x, y + 1, n, m, psf + "r");
+        } else if (y == m - 1) {
+            printMinPath(dp, x + 1, y, n, m, psf + "d");
+        } else {
+            if (dp[x][y + 1] == dp[x + 1][y]) {
+
+                // both side
+                printMinPath(dp, x, y + 1, n, m, psf + "r");
+                printMinPath(dp, x + 1, y, n, m, psf + "d");
+
+            } else if (dp[x][y + 1] < dp[x + 1][y]) {
+                printMinPath(dp, x, y + 1, n, m, psf + "r");
+
+            } else {
+                printMinPath(dp, x + 1, y, n, m, psf + "d");
+
+            }
+        }
     }
 }
