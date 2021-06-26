@@ -33,13 +33,13 @@ public class GoldMine {
         System.out.println(res);
 
         // print dp cost
-        System.out.println();
-        for (int i = 0; i < qb.length; i++) {
-            for (int j = 0; j < qb[0].length; j++) {
-                System.out.print(qb[i][j] + " ");
-            }
-            System.out.println();
-        }
+        // System.out.println();
+        // for (int i = 0; i < qb.length; i++) {
+        // for (int j = 0; j < qb[0].length; j++) {
+        // System.out.print(qb[i][j] + " ");
+        // }
+        // System.out.println();
+        // }
 
     }
 
