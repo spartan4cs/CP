@@ -119,8 +119,7 @@ public class Leet_EvaluateDivision {
 
             if (graph.containsKey(v1) == false || graph.containsKey(v2) == false) {
                 res[q] = -1.0;
-            }
-            if (v1.equals(v2) == true) {
+            } else if (v1.equals(v2) == true) {
                 res[q] = 1.0;
             } else {
 
