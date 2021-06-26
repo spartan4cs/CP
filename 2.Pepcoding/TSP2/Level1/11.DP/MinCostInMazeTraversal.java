@@ -37,8 +37,8 @@ public class MinCostInMazeTraversal {
         // ans= dijkstra();
         // ans = recursion(arr, 0, 0, n, m);
         // ans = memorization(arr, 0, 0, n, m, qb);
-        ans = tabulation(arr, n, m, qb);
-
+        // ans = tabulation1(arr, n, m, qb);
+        ans = tabulation2(arr, n, m, qb);
         System.out.println(ans);
 
     }
@@ -88,7 +88,7 @@ public class MinCostInMazeTraversal {
         return res;
     }
 
-    public static int tabulation(int[][] arr, int n, int m, int[][] qb) {
+    public static int tabulation1(int[][] arr, int n, int m, int[][] qb) {
 
         for (int x = n - 1; x >= 0; x--) {
 
@@ -115,5 +115,26 @@ public class MinCostInMazeTraversal {
             }
         }
         return qb[0][0];
+    }
+
+    public static int tabulation2(int[][] arr, int n, int m, int[][] dp) {
+
+        for (int x = n - 1; x >= 0; x--) {
+
+            for (int y = m - 1; y >= 0; y--) {
+                if (x == n - 1 && y == m - 1) {
+                    dp[x][y] = arr[x][y];
+                    continue;
+                } else if (x == n - 1) {
+                    dp[x][y] = arr[x][y] + dp[x][y + 1];
+                } else if (y == m - 1) {
+                    dp[x][y] = arr[x][y] + dp[x + 1][y];
+                } else {
+                    dp[x][y] = arr[x][y] + Math.min(dp[x + 1][y], dp[x][y + 1]);
+                }
+
+            }
+        }
+        return dp[0][0];
     }
 }
