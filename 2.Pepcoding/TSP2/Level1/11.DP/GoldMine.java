@@ -202,6 +202,7 @@ public class GoldMine {
 
     public static int tabulation_SirAppraooch(int[][] arr, int n, int m, int[][] qb) {
 
+        int res = 0;
         for (int y = m - 1; y >= 0; y--) {
             for (int x = n - 1; x >= 0; x--) {
                 if (y == m - 1) {
@@ -222,17 +223,18 @@ public class GoldMine {
                     maxGold = Math.max(maxGold, qb[x + 1][y + 1]);// memorization_sirsAppraoch(arr, x + 1, y + 1, n, m,
                                                                   // qb));
                 }
-                int res = maxGold + arr[x][y];
-                qb[x][y] = res;
+                int ans = maxGold + arr[x][y];
+                qb[x][y] = ans;
+                res = Math.max(res, qb[x][y]);
             }
 
         }
-        int res = 0;
-        for (int i = 0; i < n; i++) {
+        // int res = 0;
+        // for (int i = 0; i < n; i++) {
 
-            res = Math.max(res, qb[i][0]);
+        // res = Math.max(res, qb[i][0]);
 
-        }
+        // }
         return res;
     }
 }
