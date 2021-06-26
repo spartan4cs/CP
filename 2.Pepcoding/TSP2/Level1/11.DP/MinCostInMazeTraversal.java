@@ -37,7 +37,7 @@ public class MinCostInMazeTraversal {
         // ans= dijkstra();
         // ans = recursion(arr, 0, 0, n, m);
         // ans = memorization(arr, 0, 0, n, m, qb);
-        ans = tabulation(arr, 0, 0, n, m, qb);
+        ans = tabulation(arr, n, m, qb);
 
         System.out.println(ans);
 
@@ -48,20 +48,21 @@ public class MinCostInMazeTraversal {
         if (x == n - 1 && y == m - 1) {
             return arr[x][y];
         }
-
-        int min = (int) 1e9;
+        // int min = (int) 1e9;
+        int h = (int) 1e9;
+        int v = (int) 1e9;
         if (x + 1 < n) {
 
-            int h = recursion(arr, x + 1, y, n, m);
-            min = Math.min(min, h);
+            h = recursion(arr, x + 1, y, n, m);
+            // min = Math.min(min, h);
         }
         if (y + 1 < m) {
 
-            int v = recursion(arr, x, y + 1, n, m);
-            min = Math.min(min, v);
+            v = recursion(arr, x, y + 1, n, m);
+            // min = Math.min(min, v);
         }
 
-        return arr[x][y] + min;
+        return arr[x][y] + Math.min(h, v);
     }
 
     public static int memorization(int[][] arr, int x, int y, int n, int m, int[][] qb) {
@@ -90,35 +91,32 @@ public class MinCostInMazeTraversal {
         return res;
     }
 
-    public static int tabulation(int[][] arr, int x, int y, int n, int m, int[][] qb) {
+    public static int tabulation(int[][] arr, int n, int m, int[][] qb) {
 
-        for (int i = n; i >= 0; i--) {
+        for (int x = n - 1; x >= 0; x--) {
 
-            for (int j = n; j >= 0; j--) {
+            for (int y = m - 1; y >= 0; y--) {
+                if (x == n - 1 && y == m - 1) {
+                    qb[x][y] = arr[x][y];
+                    continue;
+                }
 
+                int min = (int) 1e9;
+                if (x + 1 < n) {
+
+                    int h = qb[x + 1][y];// recursion(arr, x + 1, y, n, m);
+                    min = Math.min(min, h);
+                }
+                if (y + 1 < m) {
+
+                    int v = qb[x][y + 1];// recursion(arr, x, y + 1, n, m);
+                    min = Math.min(min, v);
+                }
+
+                int res = arr[x][y] + min;
+                qb[x][y] = res;
             }
         }
-        if (x == n - 1 && y == m - 1) {
-            return arr[x][y];
-        }
-
-        if (qb[x][y] != 0) {
-            return qb[x][y];
-        }
-        int min = (int) 1e9;
-        if (x + 1 < n) {
-
-            int h = recursion(arr, x + 1, y, n, m);
-            min = Math.min(min, h);
-        }
-        if (y + 1 < m) {
-
-            int v = recursion(arr, x, y + 1, n, m);
-            min = Math.min(min, v);
-        }
-
-        int res = arr[x][y] + min;
-        qb[x][y] = res;
-        return res;
+        return qb[0][0];
     }
 }
