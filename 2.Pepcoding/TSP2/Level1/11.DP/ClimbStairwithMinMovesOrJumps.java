@@ -24,10 +24,12 @@ public class ClimbStairwithMinMovesOrJumps {
         int[] qb = new int[n + 1];
 
         int ans = 0;
-        // ans = cbmm_rec(arr, n, 0);
+        ans = cbmm_rec(arr, n, 0);
         // ans = cbmm_mem(arr, n, 0, qb);
-        ans = cbmm_tab1(arr, n, 0, qb);
-        // ans =cbmm_tab2();
+        // ans = cbmm_tab1(arr, n, 0, qb);
+        if (ans == Integer.MAX_VALUE) {
+            ans = 0;
+        }
         System.out.println(ans);
     }
 
