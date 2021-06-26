@@ -48,18 +48,15 @@ public class MinCostInMazeTraversal {
         if (x == n - 1 && y == m - 1) {
             return arr[x][y];
         }
-        // int min = (int) 1e9;
         int h = (int) 1e9;
         int v = (int) 1e9;
         if (x + 1 < n) {
 
             h = recursion(arr, x + 1, y, n, m);
-            // min = Math.min(min, h);
         }
         if (y + 1 < m) {
 
             v = recursion(arr, x, y + 1, n, m);
-            // min = Math.min(min, v);
         }
 
         return arr[x][y] + Math.min(h, v);
