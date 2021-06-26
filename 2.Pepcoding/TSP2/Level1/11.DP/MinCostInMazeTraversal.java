@@ -34,7 +34,6 @@ public class MinCostInMazeTraversal {
 
         int qb[][] = new int[n][m];
         int ans = 0;
-        // ans= dijkstra();
         // ans = recursion(arr, 0, 0, n, m);
         // ans = memorization(arr, 0, 0, n, m, qb);
         // ans = tabulation1(arr, n, m, qb);
