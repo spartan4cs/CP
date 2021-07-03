@@ -1,3 +1,15 @@
+Tell me about yourself and waht are you currently working on
+
+climb stair - 
+1. You are given a number n representing number of stairs in a staircase.
+2. You are standing at the bottom of staircase. You are allowed to climb 1 step, 2 steps or 3 steps in one move.
+You need to get the list of all paths that can be used to climb to the top
+what will be your approach
+3 stairs
+111 12 21  3
+
+reverse a string using recursion
+n raised to k using recursion
 
 --------------------------------------------------------------------------------------Core java
 
