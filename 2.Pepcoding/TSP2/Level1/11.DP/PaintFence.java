@@ -20,7 +20,8 @@ class PaintFence {
             // min = Math.min(min,rec(arr, n-1,i));
         }
 
-        min = tab(arr);
+        // min = tab(arr);
+        min = tab2(arr);
         System.out.println(min);
 
     }
@@ -58,6 +59,27 @@ class PaintFence {
             min = Math.min(dp[arr.length - 1][i], min);
         }
         return min;
+    }
+
+    // tabulation sirs approach
+
+    public static int tab2(int[][] arr) {
+
+        int r = 0, g = 0, b = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+
+            int nr = arr[i][0] + Math.min(g, b);
+            int ng = arr[i][1] + Math.min(r, b);
+            int nb = arr[i][2] + Math.min(r, g);
+
+            // update old with new;
+            r = nr;
+            g = ng;
+            b = nb;
+
+        }
+        return Math.min(r, Math.min(g, b));
     }
 
 }
