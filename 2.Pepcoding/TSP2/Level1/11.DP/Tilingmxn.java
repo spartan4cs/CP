@@ -16,7 +16,6 @@ class Tilingmxn {
         int dp1[] = new int[n + 1];
         // ans = memo1(m,n,dp1);
         ans = tab1(m, n, dp1);
-        // ans = tab2(m,n,dp1);
 
         System.out.println(ans);
     }
