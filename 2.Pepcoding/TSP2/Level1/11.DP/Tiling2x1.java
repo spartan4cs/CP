@@ -8,7 +8,7 @@ class Tiling2x1 {
         int n = sc.nextInt();
         int ans = 0;
         int dp[] = new int[n + 1];
-        // ans= recursion(n);
+        ans = recursion(n);
         // ans = memo(n,dp);
         // ans = tab1(n,dp);
         ans = tab2(n, dp);
