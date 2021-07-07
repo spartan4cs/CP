@@ -12,9 +12,10 @@ class CountBinaryString {
         int[] dp1 = new int[n + 1];
 
         // ans = recursion(n, 1);
-         ans = memo(n, 1, dp);
-        //ans = tab(n, 1, dp0, dp1);
+        // ans = memo(n, 1, dp);
+        // ans = tab(n, 1, dp0, dp1);
 
+        ans = usingVar(n);
         System.out.println(ans);
     }
 
@@ -71,5 +72,20 @@ class CountBinaryString {
             dp0[n] += dp1[n - 1];// recursion(n - 1, 1);
         }
         return dp0[N - 1] + dp1[N - 1];
+    }
+
+    public static int usingVar(int n) {
+
+        int oz = 1;
+        int o1 = 1;
+        for (int i = 2; i <= n; i++) {
+            int nz = o1;
+            int n1 = oz + o1;
+
+            oz = nz;
+            o1 = n1;
+        }
+
+        return oz + o1;
     }
 }
