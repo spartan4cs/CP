@@ -16,7 +16,7 @@ public class ArrangeBuilding {
             o1 = n1;
         }
 
-        int ans = oz + o1;
+        long ans = oz + o1;
         System.out.println(ans * ans);
 
     }
