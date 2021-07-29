@@ -41,7 +41,9 @@ How JVM works in Java ?  (https://www.javainterviewpoint.com/java-virtual-machin
 		
 		
 try without catch is it allowed?
-in what scenerio finally wis not executed?
+in what scenerio finally wis not executed? - - 
+ -- when system.exit(1) in try block
+ -- exception is occuered in finally
 
     public static void main(String[] args) {
         try {
