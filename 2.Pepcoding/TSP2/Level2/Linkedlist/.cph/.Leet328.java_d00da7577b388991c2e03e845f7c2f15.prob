@@ -1,0 +1,1 @@
+{"name":"Local: Leet328","url":"e:\\github\\CP\\2.Pepcoding\\TSP2\\Level2\\Linkedlist\\Leet328.java","tests":[{"id":1628187303060,"input":"5\n1 2 3 4 5","output":"1 3 5 2 4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"e:\\github\\CP\\2.Pepcoding\\TSP2\\Level2\\Linkedlist\\Leet328.java","group":"local","local":true}
