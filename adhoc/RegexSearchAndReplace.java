@@ -13,5 +13,11 @@ public class RegexSearchAndReplace {
         INPUT = m.replaceAll(REPLACE);
 
         System.out.println(INPUT);
+        
+        StringBuilder sb = new StringBuilder();
+        while (m.find()) {
+            sb.append(m.group());
+        }
+        System.out.println("matching string" + sb.toString());
     }
 }
