@@ -3,8 +3,6 @@
 </br>
 Practice resources</br>
 
-## RecursionAndBacktracking [PDF](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Recursion.pdf)
-
 | Java Solution                                  |                                  Java Solution |
 | :--------------------------------------------- | ---------------------------------------------: |
 | [Level1 Resources](2.Pepcoding/TSP2/Level1.md) | [Level2 Resources](2.Pepcoding/TSP2/Level2.md) |
