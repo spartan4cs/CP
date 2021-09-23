@@ -2,7 +2,7 @@
 
 | # Sr |                        Topics                         |
 | ---- | :---------------------------------------------------: |
-| 01   | [RecursionAndBacktracking](#RecursionAndBacktracking) |
+| 01   | [RecursionAndBacktracking](#recursionandbacktracking) |
 | 02   |                   [Stacks](#Stacks)                   |
 | 03   |                   [Queues](#Queues)                   |
 
