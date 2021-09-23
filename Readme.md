@@ -1,9 +1,9 @@
 ![](https://visitor-badge.glitch.me/badge?page_id=spartan4cs.cp)
 
-</br>
-Practice resources</br>
 ## Practice Resources
+
 ---
+
 # Level1
 
 | # Sr |                                        Topics                                        |
@@ -13,10 +13,6 @@ Practice resources</br>
 | 03   |                  [Queues](/2.Pepcoding/TSP2/Level1.md/#queues-pfd)                   |
 
 ---
-
-| Java Solution                                  |                                  Java Solution |
-| :--------------------------------------------- | ---------------------------------------------: |
-| [Level1 Resources](2.Pepcoding/TSP2/Level1.md) | [Level2 Resources](2.Pepcoding/TSP2/Level2.md) |
 
 Basic Pepcoding:https://www.pepcoding.com/resources/
 
