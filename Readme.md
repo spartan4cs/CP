@@ -12,7 +12,7 @@
 | 02   |                   [Stacks](2.Pepcoding/TSP2/Level1.md/#stacks-pdf)                   |
 | 03   |                  [Queues](/2.Pepcoding/TSP2/Level1.md/#queues-pdf)                   |
 | 04   |             [Linked List](/2.Pepcoding/TSP2/Level1.md/#linked-list-pdf)              |
-| 05   |             [Generic Tree](/2.Pepcoding/TSP2/Level1.md/#linked-list-pdf)             |
+| 05   |            [Generic Tree](/2.Pepcoding/TSP2/Level1.md/#generic-tree-pdf)             |
 
 ---
 
