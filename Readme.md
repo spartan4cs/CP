@@ -2,11 +2,12 @@
 
 </br>
 Practice resources</br>
-| Problem                                                                                                                                                                         |                                                                                                                                                                  Java Solution |
-| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
-| [Print Decreasing Easy](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/introduction-to-recursion/print-decreasing-official/ojquestion)                        |                                     [Level1](2.Pepcoding/TSP2/Level1.md) |
 
-[Level1](2.Pepcoding/TSP2/Level1.md)
+## RecursionAndBacktracking [PDF](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Recursion.pdf)
+
+| Problem                                                                                                                                                  |                        Java Solution |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------- | -----------------------------------: |
+| [Print Decreasing Easy](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/introduction-to-recursion/print-decreasing-official/ojquestion) | [Level1](2.Pepcoding/TSP2/Level1.md) |
 
 Basic Pepcoding:https://www.pepcoding.com/resources/
 
