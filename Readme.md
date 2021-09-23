@@ -1,7 +1,8 @@
 ![](https://visitor-badge.glitch.me/badge?page_id=spartan4cs.cp)
 
 </br>
-Practice resources</br>
+
+## Practice Resources
 
 | Java Solution                                  |                                  Java Solution |
 | :--------------------------------------------- | ---------------------------------------------: |
