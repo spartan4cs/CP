@@ -1,4 +1,4 @@
-## RecursionAndBacktracking [PDF](https://github.com/spartan4cs/CP/blob/main/1.%20%20Pepcoding/TSP2/Level1/Recursion.pdf)
+## RecursionAndBacktracking [PDF](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Recursion.pdf)
 
 | Problem                                                                                                                                                                         |                                                                                                                                                                  Java Solution |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
