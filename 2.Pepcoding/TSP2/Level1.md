@@ -78,7 +78,7 @@
 | [Minimum Stack -1 ](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/stacks-and-queues/minimum-stack-i-official/ojquestion)                                   |                      [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/4.StacksAnd%20Queues/MinimumStack.java) |
 | [Minimum Stack - constant space](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/stacks-and-queues/min-stack-ii-official/ojquestion)                         |         [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/4.StacksAnd%20Queues/MinimumStackConstantSpace.java) |
 
-##Queues [PFD](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Stacks%20and%20queues.pdf)
+## Queues [PFD](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Stacks%20and%20queues.pdf)
 
 | Problem                                                                                                                                                                                   |                                                                                                                                      Java Solution |
 | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------: |
