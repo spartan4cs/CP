@@ -5,6 +5,7 @@
 | 01   | [RecursionAndBacktracking](#recursionandbacktracking-pdf) |
 | 02   |                   [Stacks](#stacks-pdf)                   |
 | 03   |                   [Queues](#queues-pfd)                   |
+| 04   |              [Linked List](#linked-list-pdf)              |
 
 ---
 
