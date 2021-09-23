@@ -84,7 +84,7 @@
 | [Stack to Queue Adapter-Remove efficient](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/stacks-and-queues/stack-to-queue-adapter-remove-efficient-official/ojquestion) | [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/4.StacksAnd%20Queues/Queue/StackToQueueAdapter_RemoveEfficient.java) |
 | [Two Stacks in an Array ](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/stacks-and-queues/two-stacks-official/ojquestion)                                              |                     [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/4.StacksAnd%20Queues/Queue/TwoStackInArray.java) |
 
-## Linked List [PDF](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/LinkedList.pdf) [PDF2] (https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Linklist_shreesh.pdf)
+## Linked List [PDF](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/LinkedList.pdf) [PDF2](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Linklist_shreesh.pdf)
 
 | Problem                                                                                                                                                                   |                                                                                                                 Java Solution |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------: |
