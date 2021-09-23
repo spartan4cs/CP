@@ -21,8 +21,6 @@
 | [ Print Zigzag Easy](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/introduction-to-recursion/print-zig-zag-official/ojquestion)                              |               [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/2.Recursion%20And%20Backtracking/intro/PrintZigZag.java) |
 | [ Tower Of Hanoi](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/introduction-to-recursion/toh-official/ojquestion)                                           |              [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/2.Recursion%20And%20Backtracking/intro/TowerOfHanoi.java) |
 
----
-
 | Problem                                                                                                                                                    |                                                                                                                                                Java Solution |
 | :--------------------------------------------------------------------------------------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | [ Display Array Easy](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/recursion-in-arrays/display-array-official/ojquestion)              |     [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/2.Recursion%20And%20Backtracking/recursion%20in%20arrrays/DisplayArr.java) |
@@ -32,8 +30,6 @@
 | [ Last Index Easy](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/recursion-in-arrays/last-index-official/ojquestion)                    |      [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/2.Recursion%20And%20Backtracking/recursion%20in%20arrrays/LastIndex.java) |
 | [ All Indices Of Array](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/recursion-in-arrays/all-indices-official/ojquestion)              |     [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/2.Recursion%20And%20Backtracking/recursion%20in%20arrrays/AllIndices.java) |
 
----
-
 | Problem                                                                                                                                                             |                                                                                                                                                      Java Solution |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | [ Get Subsequence Easy](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/recursion-with-arraylist/get-subsequence-official/ojquestion)              |   [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/2.Recursion%20And%20Backtracking/recursion%20with%20arraylist/GetSubsequence.java) |
@@ -41,8 +37,6 @@
 | [ Get Stair Paths Easy](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/recursion-with-arraylist/get-stair-paths-official/ojquestion)              |    [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/2.Recursion%20And%20Backtracking/recursion%20with%20arraylist/GetStairPaths.java) |
 | [ Get Maze Paths Easy](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/recursion-with-arraylist/get-maze-paths-official/ojquestion)                |      [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/2.Recursion%20And%20Backtracking/recursion%20with%20arraylist/GetMazePath.java) |
 | [ Get Maze Path With Jumps](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/recursion-with-arraylist/get-maze-path-with-jumps-official/ojquestion) | [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/2.Recursion%20And%20Backtracking/recursion%20with%20arraylist/GetMazepathJumps.java) |
-
----
 
 | Problem                                                                                                                                                                   |                                                                                                                                                            Java Solution |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -53,8 +47,6 @@
 | [ Print Maze Paths With Jumps Easy](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/recursion-in-strings/print-maze-path-with-jumps-official/ojquestion) | [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/2.Recursion%20And%20Backtracking/recursion%20with%20arraylist/PrintMazePathWithJumps.java) |
 | [ Print Permutations Easy](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/recursion-in-strings/print-permutations-official/ojquestion)                  |       [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/2.Recursion%20And%20Backtracking/recursion%20with%20arraylist/PrintPermutation.java) |
 | [ Print Encodings](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/recursion-in-strings/print-encodings-official/ojquestion)                             |         [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/2.Recursion%20And%20Backtracking/recursion%20with%20arraylist/PrintEncodings.java) |
-
----
 
 | Problem                                                                                                                                                         |                                                                                                                                                                  Java Solution |
 | :-------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
