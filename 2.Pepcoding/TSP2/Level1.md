@@ -1,3 +1,11 @@
+#Table
+
+| # Sr |                        Topics                         |
+| ---- | :---------------------------------------------------: |
+| 01   | [RecursionAndBacktracking](#RecursionAndBacktracking) |
+| 02   |                   [Stacks](#Stacks)                   |
+| 03   |                   [Queues](#Queues)                   |
+
 ## RecursionAndBacktracking [PDF](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Recursion.pdf)
 
 | Problem                                                                                                                                                                         |                                                                                                                                        Java Solution |
