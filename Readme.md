@@ -14,7 +14,7 @@
 
 ---
 
-# [Level1](2.Pepcoding/TSP2/Level2.md)
+# [Level2](2.Pepcoding/TSP2/Level2.md)
 
 ---
 
