@@ -1,8 +1,18 @@
 ![](https://visitor-badge.glitch.me/badge?page_id=spartan4cs.cp)
 
 </br>
-
+Practice resources</br>
 ## Practice Resources
+---
+# Level1
+
+| # Sr |                                        Topics                                        |
+| ---- | :----------------------------------------------------------------------------------: |
+| 01   | [RecursionAndBacktracking](2.Pepcoding/TSP2/Level1.md/#recursionandbacktracking-pdf) |
+| 02   |                   [Stacks](2.Pepcoding/TSP2/Level1.md/#stacks-pdf)                   |
+| 03   |                  [Queues](/2.Pepcoding/TSP2/Level1.md/#queues-pfd)                   |
+
+---
 
 | Java Solution                                  |                                  Java Solution |
 | :--------------------------------------------- | ---------------------------------------------: |
