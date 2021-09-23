@@ -1,10 +1,12 @@
-# INdex
+# Index
 
 | # Sr |                          Topics                           |
 | ---- | :-------------------------------------------------------: |
 | 01   | [RecursionAndBacktracking](#recursionandbacktracking-pdf) |
 | 02   |                   [Stacks](#stacks-pdf)                   |
 | 03   |                   [Queues](#queues-pfd)                   |
+
+---
 
 ## RecursionAndBacktracking [PDF](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Recursion.pdf)
 
