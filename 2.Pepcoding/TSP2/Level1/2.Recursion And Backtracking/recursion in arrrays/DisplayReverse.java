@@ -15,7 +15,7 @@ public class DisplayReverse {
 
     private static void printReverse(int index, int[] arr) {
         // base
-        if (index > arr.length - 1) {
+        if (index == arr.length) {
             return;
         }
 
