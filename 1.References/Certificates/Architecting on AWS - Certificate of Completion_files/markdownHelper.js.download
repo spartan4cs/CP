@@ -1,0 +1,2 @@
+/** Copyright 2021 Amazon.com Inc. or its affiliates. All Rights Reserved. **/
+define(["jquery","to-markdown","pagedown-converter","pagedown-sanitizer","dialogBox","resourceManager","argumentNullError","stringHelper"],function($,a,b,c,d,e,f,g){var h=function(){};return h.toHtml=function(a){var b;return b=Markdown.getSanitizingConverter(),b.makeHtml(a)},h.showAsHtml=function(a){var b;b=h.toHtml(a),d.showHtml(b,e.getString("General_Dialogbox_MarkdownToHtml_Title"))},h.toMarkdown=function(b){return a(b)},h});

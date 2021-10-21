@@ -1,0 +1,2 @@
+/** Copyright 2021 Amazon.com Inc. or its affiliates. All Rights Reserved. **/
+define(["jquery","jqueryHelper","stringHelper","argumentNullError","argumentError"],function($,a,b,c,d){var e=function(){};return e.initializeAll=function(){e.initializeEqualHeightGrid()},e.initializeEqualHeightGrid=function(){var b,c,d;b=a.select(".container-fluid.kiku-row-equal-height div.kiku-grid-cell"),b.each(function(){$(this).css("padding","20px")}),c=b.map(function(){return $(this).height()}).get(),d=Math.max.apply(null,c),b.height(d)},e});
