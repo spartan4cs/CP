@@ -50,33 +50,22 @@ class NQueenSubsetApproach {
             return;
         }
 
+        // yes call only if it is valid to place the queen
+        if (isValidToPlace(board, sr, sc) == true) {
+            // mark
+            board[sr][sc] = 1;
+            // call
+            printNQueens(board, sr + 1, 0, qsf + 1, asf + sr + "-" + sc + ", ");
+            // unmark
+            board[sr][sc] = 0;
+        }
+
+        // condition check for no call
         if (sc + 1 < board[0].length) { // valid column
-
-            // yes call only if it is valid to place the queen
-            if (isValidToPlace(board, sr, sc) == true) {
-                // mark
-                board[sr][sc] = 1;
-                // call
-                printNQueens(board, sr + 1, 0, qsf + 1, asf + sr + "-" + sc + ", ");
-                // unmark
-                board[sr][sc] = 0;
-            }
-
             // no call
             printNQueens(board, sr, sc + 1, qsf, asf);
 
         } else { // invalid column
-
-            // yes call if valid to place
-            if (isValidToPlace(board, sr, sc) == true) {
-                // mark
-                board[sr][sc] = 1;
-                // call
-                printNQueens(board, sr + 1, 0, qsf + 1, asf + sr + "-" + sc + ", ");
-                // unmark
-                board[sr][sc] = 0;
-            }
-
             /// no call
             printNQueens(board, sr + 1, 0, qsf, asf);
 
