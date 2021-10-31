@@ -1,0 +1,2 @@
+After installing Citrix receiver use this commmand to add ssl auth
+sudo cp /etc/ssl/certs/USERTrust_RSA_Certification_Authority.pem sudo cp /etc/ssl/certs/USERTrust_RSA_Certification_Authority.pem
