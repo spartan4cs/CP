@@ -1,5 +1,9 @@
 ## RecursionAndBacktracking [PDF](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Recursion.pdf)
 
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+
 | Problem                                                                                                                                                                         |                                                                                                                                        Java Solution |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------: |
 | [Print Decreasing Easy](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/introduction-to-recursion/print-decreasing-official/ojquestion)                        |           [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/2.Recursion%20And%20Backtracking/intro/PrintDecreasing.java) |
