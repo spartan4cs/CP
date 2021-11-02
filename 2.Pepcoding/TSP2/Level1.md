@@ -8,7 +8,7 @@
 
 ---
 
-# <p style="text-align: center;">RecursionAndBacktracking</p> [PDF](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Recursion.pdf)
+# <div style="text-align: center;">RecursionAndBacktracking [PDF](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Recursion.pdf) </div>
 
 | Problem                                                                                                                                                                         | Java Solution                                                                                                                                        | todo                                                   |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
