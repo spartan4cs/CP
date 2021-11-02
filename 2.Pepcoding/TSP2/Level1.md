@@ -58,7 +58,7 @@
 
 ---
 
-# Stacks [PDF](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Stacks%20and%20queues.pdf)
+# <div align="center">Stacks [PDF](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Stacks%20and%20queues.pdf) </div>
 
 | Problem                                                                                                                                                                       |                                                                                                                              Java Solution |
 | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------------------------------------------: |
@@ -82,7 +82,7 @@
 
 ---
 
-# Queues [PDF](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Stacks%20and%20queues.pdf)
+# <div align="center">Queues [PDF](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Stacks%20and%20queues.pdf) </div>
 
 | Problem                                                                                                                                                                                   |                                                                                                                                      Java Solution |
 | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------: |
@@ -96,7 +96,7 @@
 
 ---
 
-# Linked List [PDF](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/LinkedList.pdf) [PDF2](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Linklist_shreesh.pdf)
+# <div align="center"> Linked List [PDF](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/LinkedList.pdf) [PDF2](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Linklist_shreesh.pdf) </div>
 
 | Problem                                                                                                                                                        |                                                                                                              Java Solution |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------: |
@@ -135,7 +135,7 @@
 
 ---
 
-# Generic Tree [PDF](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Generic%20tree.pdf) [PDF2](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/generic%20tree%20sheerish.pdf)
+# <div align="center"> Generic Tree [PDF](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Generic%20tree.pdf) [PDF2](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/generic%20tree%20sheerish.pdf) </div>
 
 | Problem                                                                                                                                                                                           |                                                                                                                  Java Solution |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------: |
