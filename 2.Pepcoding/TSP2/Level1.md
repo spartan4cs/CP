@@ -4,7 +4,7 @@
 | 02   |                   [Stacks](#stacks-pdf-)                   |
 | 03   |                   [Queues](#queues-pdf-)                   |
 | 04   |           [Linked List](#-linked-list-pdf-pdf2-)           |
-| 05   |          [Generic Tree](#generic-tree-pdf-pdf2-)           |
+| 05   |          [Generic Tree](#-generic-tree-pdf-pdf2-)          |
 
 ---
 
