@@ -1,3 +1,13 @@
+| # Sr |                     Table Of Contents                     |
+| ---- | :-------------------------------------------------------: |
+| 01   | [RecursionAndBacktracking](#recursionandbacktracking-pdf) |
+| 02   |                   [Stacks](#stacks-pdf)                   |
+| 03   |                   [Queues](#queues-pdf)                   |
+| 04   |           [Linked List](#linked-list-pdf-pdf2)            |
+| 05   |          [Generic Tree](#generic-tree-pdf-pdf2)           |
+
+---
+
 ## RecursionAndBacktracking [PDF](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Recursion.pdf)
 
 | Problem                                                                                                                                                                         | Java Solution                                                                                                                                        | todo                                                   |
