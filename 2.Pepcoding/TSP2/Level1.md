@@ -171,3 +171,27 @@
 | [ Diameter Of Generic Tree ](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/generic-tree/diameter-of-generic-tree-official/ojquestion)                                          |                   [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/6.GenericTree/DiameterGT.java) |
 | [ Iterative Preorder And Postorder Of Generic Tree ](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/generic-tree/iterative-preorder-postorder-generic-tree-official/ojquestion) | [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/6.GenericTree/IterativePreorderPostorderGT.java) |
 | [ Iterable And Iterator](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/generic-tree/iterable-iterator-official/video)                                                          |                                        [Solution](https://www.youtube.com/watch?v=t4IKNhNBTdo&list=TLGGXv0lFdWAQ5EyMzA5MjAyMQ) |
+
+---
+
+# <div align="center"> Binary Tree [PDF]() [PDF2]() </div>
+
+---
+
+# <div align="center"> Binary Search Tree [PDF]() [PDF2]() </div>
+
+---
+
+# <div align="center"> Hash & Heap [PDF]() [PDF2]() </div>
+
+---
+
+# <div align="center"> Graph [PDF]() [PDF2]() </div>
+
+---
+
+# <div align="center"> DP [PDF]() [PDF2]() </div>
+
+---
+
+# <div align="center"> TimeComplexity [PDF]() [PDF2]() </div>
