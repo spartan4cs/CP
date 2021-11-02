@@ -6,13 +6,13 @@
 
 # [Level1](2.Pepcoding/TSP2/Level1.md)
 
-| # Sr |                                        Topics                                        |
-| ---- | :----------------------------------------------------------------------------------: |
-| 01   | [RecursionAndBacktracking](2.Pepcoding/TSP2/Level1.md/#recursionandbacktracking-pdf) |
-| 02   |                   [Stacks](2.Pepcoding/TSP2/Level1.md/#stacks-pdf)                   |
-| 03   |                  [Queues](/2.Pepcoding/TSP2/Level1.md/#queues-pdf)                   |
-| 04   |           [Linked List](/2.Pepcoding/TSP2/Level1.md/#linked-list-pdf-pdf2)           |
-| 05   |          [Generic Tree](/2.Pepcoding/TSP2/Level1.md/#generic-tree-pdf=pdf2)          |
+| # Sr |                                        Topics                                         |
+| ---- | :-----------------------------------------------------------------------------------: |
+| 01   | [RecursionAndBacktracking](2.Pepcoding/TSP2/Level1.md/#recursionandbacktracking-pdf-) |
+| 02   |                   [Stacks](2.Pepcoding/TSP2/Level1.md/#stacks-pdf-)                   |
+| 03   |                  [Queues](/2.Pepcoding/TSP2/Level1.md/#queues-pdf-)                   |
+| 04   |          [Linked List](/2.Pepcoding/TSP2/Level1.md/#-linked-list-pdf-pdf2-)           |
+| 05   |         [Generic Tree](/2.Pepcoding/TSP2/Level1.md/#-generic-tree-pdf=pdf2-)          |
 
 ---
 
