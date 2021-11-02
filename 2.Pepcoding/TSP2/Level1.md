@@ -8,10 +8,8 @@
 
 ---
 
-<p align="center">
 # RecursionAndBacktracking [PDF](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Recursion.pdf)
 
-</p>
 | Problem                                                                                                                                                                         | Java Solution                                                                                                                                        | todo                                                   |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
 | [Print Decreasing Easy](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/introduction-to-recursion/print-decreasing-official/ojquestion)                        | [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/2.Recursion%20And%20Backtracking/intro/PrintDecreasing.java)           | <ul><li>- [x] completed? </li><li>- [ ] todo</li></ul> |
