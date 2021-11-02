@@ -94,6 +94,8 @@
 | [Stack to Queue Adapter-Remove efficient](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/stacks-and-queues/stack-to-queue-adapter-remove-efficient-official/ojquestion) | [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/4.StacksAnd%20Queues/Queue/StackToQueueAdapter_RemoveEfficient.java) |
 | [Two Stacks in an Array ](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/stacks-and-queues/two-stacks-official/ojquestion)                                              |                     [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/4.StacksAnd%20Queues/Queue/TwoStackInArray.java) |
 
+---
+
 # Linked List [PDF](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/LinkedList.pdf) [PDF2](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Linklist_shreesh.pdf)
 
 | Problem                                                                                                                                                        |                                                                                                              Java Solution |
@@ -130,6 +132,8 @@
 | [ Add Two Linked Lists ](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/linkedlist/add-two-linkedlists-official/ojquestion)                        |          [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/5.LinkedList/Add2LinkedList.java) |
 | [ Intersection Point Of Linked Lists](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/linkedlist/intersection-of-linked-lists-official/ojquestion)  |   [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/5.LinkedList/IntersectionPointOfLL.java) |
 | [Copy Linkedlist With Random Pointers ](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/linkedlist/copy-linkedlist-with-random-pointers/ojquestion) | [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/5.LinkedList/CopyLLwithRandomnumbers.java) |
+
+---
 
 # Generic Tree [PDF](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/Generic%20tree.pdf) [PDF2](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/generic%20tree%20sheerish.pdf)
 
