@@ -7,13 +7,12 @@
 | 03   |                   [Queues](#queues-pdf-)                   |
 | 04   |           [Linked List](#-linked-list-pdf-pdf2-)           |
 | 05   |          [Generic Tree](#-generic-tree-pdf-pdf2-)          |
-| 06   |                      [Generic Tree]()                      |
-| 07   |                      [Binary Tree]()                       |
-| 08   |                   [Binary Search Tree]()                   |
-| 09   |                      [Hash & Heap]()                       |
-| 10   |                         [Graph]()                          |
-| 11   |                           [DP]()                           |
-| 12   |                    [Time Complexity]()                     |
+| 06   |                      [Binary Tree]()                       |
+| 07   |                   [Binary Search Tree]()                   |
+| 08   |                      [Hash & Heap]()                       |
+| 09   |                         [Graph]()                          |
+| 10   |                           [DP]()                           |
+| 11   |                    [Time Complexity]()                     |
 
 ---
 
