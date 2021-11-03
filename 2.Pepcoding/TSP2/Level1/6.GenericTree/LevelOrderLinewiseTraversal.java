@@ -194,21 +194,19 @@ public class LevelOrderLinewiseTraversal {
     private static void levelOrderLinewisePair(Node root) {
 
         Queue<Pair> qu = new ArrayDeque<>();
-
         qu.add(new Pair(root, 1));
-
         int currLevel = 1;
 
         while (qu.size() > 0) {
 
-            // RPA
+            // RWPA
 
             Pair rem = qu.remove();
-
             if (rem.level > currLevel) {
                 System.out.println();
                 currLevel = rem.level;
             }
+
             System.out.print(rem.node.data + " ");
 
             for (int i = 0; i < rem.node.children.size(); i++) {
