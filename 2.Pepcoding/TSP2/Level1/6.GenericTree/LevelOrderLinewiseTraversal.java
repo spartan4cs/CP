@@ -178,8 +178,6 @@ public class LevelOrderLinewiseTraversal {
         System.out.println(height);
     }
 
-    // Approach 4 using Pair
-
     public static class Pair {
         Node node;
         int level;
@@ -191,6 +189,7 @@ public class LevelOrderLinewiseTraversal {
 
     }
 
+    // Approach 4 using Pair
     private static void levelOrderLinewisePair(Node root) {
 
         Queue<Pair> qu = new ArrayDeque<>();
