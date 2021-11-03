@@ -167,14 +167,57 @@ public class LevelOrderLinewiseTraversal {
                 Node rem = q.remove();
                 System.out.print(rem.data + " ");
                 q.addAll(rem.children);
-            } // at the end of this which loop
-              // we can ensure that level is completed
+            }
+            // at the end of this which loop, we can ensure that level is completed
+
             height++; // can be used for getting height of tree
             // hit enter
             System.out.println();
 
         }
         System.out.println(height);
+    }
+
+    // Approach 4 using Pair
+
+    public static class Pair {
+        Node node;
+        int level;
+
+        public Pair(Node node, int level) {
+            this.node = node;
+            this.level = level;
+        }
+
+    }
+
+    private static void levelOrderLinewisePair(Node root) {
+
+        Queue<Pair> qu = new ArrayDeque<>();
+
+        qu.add(new Pair(root, 1));
+
+        int currLevel = 1;
+
+        while (qu.size() > 0) {
+
+            // RPA
+
+            Pair rem = qu.remove();
+
+            if (rem.level > currLevel) {
+                System.out.println();
+                currLevel = rem.level;
+            }
+            System.out.print(rem.node.data + " ");
+
+            for (int i = 0; i < rem.node.children.size(); i++) {
+                Node child = rem.node.children.get(i);
+                qu.add(new Pair(child, rem.level + 1));
+
+            }
+        }
+
     }
 
     public static void main(String[] args) throws Exception {
@@ -187,9 +230,10 @@ public class LevelOrderLinewiseTraversal {
         }
 
         Node root = construct(arr);
-        levelOrderLinewise(root);
-        levelOrderLinewiseDelimiter(root);
-        levelOrderLinewiseQueueSize(root);
+        // levelOrderLinewise(root);
+        // levelOrderLinewiseDelimiter(root);
+        // levelOrderLinewiseQueueSize(root);
+        levelOrderLinewisePair(root);
     }
 
 }
