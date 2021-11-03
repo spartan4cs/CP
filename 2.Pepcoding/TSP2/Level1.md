@@ -239,6 +239,8 @@
 | [ Get Common Elements - 2 ](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/heap-and-hashmap/gce2-official/ojquestion)                              |                   [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/9.HashMapAndHeap/GetCommonElements2.java) |
 | [ Longest Consecutive Sequence Of Elements ](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/heap-and-hashmap/lcqs-official/ojquestion)             | [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/9.HashMapAndHeap/LongestConsecutiveSequenceOfElements.java) |
 | [ Write Priority Queue Using Heap ](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/heap-and-hashmap/priority-queue-using-heap-official/ojquestion) |                  [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/9.HashMapAndHeap/CustomPriorityQueue.java) |
+| [ Write Hashmap ](https://classroom.pepcoding.com/myClassroom/the-switch-program-2/heap-and-hashmap/hashmap-official/ojquestion)                                     |                            [Solution](https://github.com/spartan4cs/CP/blob/main/2.Pepcoding/TSP2/Level1/9.HashMapAndHeap/GenericHM.java) |
+| [ Efficient Heap Constructor](https://www.pepcoding.com/resources/online-java-foundation/hashmap-and-heap/heap-eff-constructor/video)                                |                                                                                                                              [Solution]() |
 
 ---
 
