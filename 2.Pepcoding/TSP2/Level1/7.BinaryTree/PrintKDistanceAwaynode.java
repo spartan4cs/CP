@@ -82,7 +82,7 @@ public class PrintKDistanceAwaynode {
 
     public static void printklevel(Node node, Node blockage, int k) {
 
-        if (node == null || node == blockage) {
+        if (node == null || node == blockage || k < 0) {
             return;
 
         }
@@ -133,7 +133,7 @@ public class PrintKDistanceAwaynode {
         for (int i = 0; i < ntr.size(); i++) {
             Node node = ntr.get(i);
             printklevel(node, blockage, k - i);
-            blockage = node; // in next iteration, current node will be brockage
+            blockage = node; // in next iteration, current node will be blockage
         }
 
     }
