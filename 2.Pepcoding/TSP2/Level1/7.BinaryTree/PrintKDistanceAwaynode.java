@@ -130,11 +130,10 @@ public class PrintKDistanceAwaynode {
 
         Node blockage = null;
 
-        for (int i = 0; i < ntr.size() && k >= 0; i++) {
+        for (int i = 0; i < ntr.size(); i++) {
             Node node = ntr.get(i);
-            printklevel(node, blockage, k);
-            k--;
-            blockage = node;
+            printklevel(node, blockage, k - i);
+            blockage = node; // in next iteration, current node will be brockage
         }
 
     }
