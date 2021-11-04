@@ -72,9 +72,9 @@ public class KthLargestInGT {
         int data = Integer.MAX_VALUE;
         for (int i = 0; i < k; i++) {
 
-            floor = Integer.MIN_VALUE;
             ceilAndFloor(node, data);// this will give me floor
             data = floor;//update data
+            floor = Integer.MIN_VALUE;
         }
         return data;
     }
