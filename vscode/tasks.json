@@ -72,6 +72,17 @@
                 "kind": "build",
                 "isDefault": true
             }
-        }
+        },
+        {
+            "label": "Build and Deploy in gh pages for docusaurus",
+            "type": "shell",
+            "command": "set GIT_USER=spartan4cs && npm run deploy",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        
     ]
 }
