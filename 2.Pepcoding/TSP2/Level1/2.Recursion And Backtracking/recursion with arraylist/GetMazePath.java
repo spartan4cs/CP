@@ -14,7 +14,7 @@ public class GetMazePath {
 
         ArrayList<String> myres = new ArrayList<>();
 
-        if (sc <= dc) {
+        if (sc + 1 <= dc) {
 
             ArrayList<String> hres = getMazePathSmart(sr, sc + 1, dr, dc);
             for (String h : hres) {
@@ -22,7 +22,7 @@ public class GetMazePath {
             }
         }
 
-        if (sr <= dr) {
+        if (sr + 1 <= dr) {
             ArrayList<String> vres = getMazePathSmart(sr + 1, sc, dr, dc);
             for (String v : vres) {
                 myres.add("v" + v);
