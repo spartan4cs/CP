@@ -25,7 +25,7 @@ public class Multisolver_Smallest_Longest_Ceil_Floor_KthlargestPath {
         }
 
         public int compareTo(Pair o) {
-            return this.wsf - o.wsf;
+            return o.wsf - this.wsf;
         }
     }
 

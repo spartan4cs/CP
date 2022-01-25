@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Multisolver_Smallest_Longest_Ceil_Floor_KthlargestPath",
+            "request": "launch",
+            "mainClass": "Multisolver_Smallest_Longest_Ceil_Floor_KthlargestPath",
+            "projectName": "10.Graph_b953f668"
+        },
+        {
+            "type": "java",
             "name": "Launch CycleInDirectGraph",
             "request": "launch",
             "mainClass": "CycleInDirectGraph",
