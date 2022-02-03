@@ -1,3 +1,11 @@
-{ name='akash', age='26', salary='75000'}
-{ name='akash', age='28', salary='75000'}
-{ name='akash', age='28', salary='76000'}
+false
+20
+81
+[1, 2, 3, 4]
+[abc, def, ghi]
+ABC
+DEF
+GHI
+[ef, d, aBc, 123456]
+[123456, aBc, d, ef]
+[Pankaj, David, Lisa, Amit]
