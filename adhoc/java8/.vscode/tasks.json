@@ -44,6 +44,26 @@
           }
       },
       {
+          "label": "Build and Run java ",
+          "type": "shell",
+          "command": "javac ${fileBasename} && java ${fileBasenameNoExtension}>Output.txt",
+          "problemMatcher": [],
+          "group": {
+              "kind": "build",
+              "isDefault": true
+          }
+      },
+      {
+          "label": "Build java ",
+          "type": "shell",
+          "command": "javac ${fileBasename}",
+          "problemMatcher": [],
+          "group": {
+              "kind": "build",
+              "isDefault": true
+          }
+      },
+      {
           "label": "Run java ",
           "type": "shell",
           "command": "java ${fileBasenameNoExtension}>Output.txt ",
