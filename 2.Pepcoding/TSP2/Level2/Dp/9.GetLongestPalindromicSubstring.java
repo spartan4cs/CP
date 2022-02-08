@@ -19,6 +19,7 @@ class GetLongestPalindromicSubstring {
                     dp[i][j] = s.charAt(i) == s.charAt(j) && dp[i + 1][j - 1];
                 }
                 if (dp[i][j] == true) {
+                    // i and j represent substring from i to j
                     x = i;
                     y = j;
                 }
