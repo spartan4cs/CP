@@ -22,10 +22,9 @@ class Box_Stacking {
         }
 
         public int compareTo(Box o) {
-            if (o.area != this.area)
-                return o.area - this.area;
-            else
-                return o.h - this.h;
+
+            return o.area - this.area;
+
         }
     }
 
