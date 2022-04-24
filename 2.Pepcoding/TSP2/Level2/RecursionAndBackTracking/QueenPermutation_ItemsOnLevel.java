@@ -1,7 +1,7 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class QueenPermutation {
+public class QueenPermutation_ItemsOnLevel {
     public static void queensPermutations(int qpsf, int tq, int[][] chess) {
         // write your code here
 
@@ -20,6 +20,8 @@ public class QueenPermutation {
             return;
         }
 
+        
+        //place the item on all chess box
         for (int i = 0; i < chess.length; i++) {
             for (int j = 0; j < chess[0].length; j++) {
                 if (chess[i][j] == 0) {
