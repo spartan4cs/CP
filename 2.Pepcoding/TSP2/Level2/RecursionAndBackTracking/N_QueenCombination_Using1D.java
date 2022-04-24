@@ -57,7 +57,7 @@ public class N_QueenCombination_Using1D {
 
             if (chess[row][col] == false && IsQueenSafe(chess, row, col)) {
                 chess[row][col] = true;
-                nqueens(qpsf + 1, tq, chess, row * chess.length + col);
+                nqueens(qpsf + 1, tq, chess, row * chess.length + col); //row* 4+col will give cellno
                 chess[row][col] = false;
             }
         }
