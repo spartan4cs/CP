@@ -1,7 +1,7 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
-public class QueenCombination_BoxOnLevel {
+public class QueenCombination1_BoxOnLevel {
 
     // level box
     // option yes / no for item
