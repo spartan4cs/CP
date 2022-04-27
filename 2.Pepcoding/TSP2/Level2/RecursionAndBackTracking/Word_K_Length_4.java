@@ -28,7 +28,9 @@ public class Word_K_Length_4 {
             System.out.println(asf);
             return;
         }
-        for (char c : fmap.keySet()) {
+        for (int i = 0; i < ustr.length(); i++) {
+
+            char c = ustr.charAt(i);
             int n = fmap.get(c);
             if (n > 0) {
 
