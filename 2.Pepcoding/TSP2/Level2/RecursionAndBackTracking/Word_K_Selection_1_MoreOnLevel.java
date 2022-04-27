@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Word_K_Selection_1 {
+public class Word_K_Selection_1_MoreOnLevel {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.next();
