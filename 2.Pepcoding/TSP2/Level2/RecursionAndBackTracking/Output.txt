@@ -1,6 +1,6 @@
-bc
-cb
-ac
 ab
-ca
+ac
 ba
+bc
+ca
+cb
