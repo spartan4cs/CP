@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class Combination2_BoxOnLevel {
 
   public static void combinations(int cb, int tb, int ssf, int ts, String asf) {
     // write your code here
@@ -13,14 +13,13 @@ public class Main {
       return;
     }
 
+    // box on level
+    // yes and no call
 
-    //box on level
-    //yes and no call
-
-    //yes call
+    // yes call
     combinations(cb + 1, tb, ssf + 1, ts, asf + "i");
 
-    //no call
+    // no call
     combinations(cb + 1, tb, ssf, ts, asf + "-");
   }
 

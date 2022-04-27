@@ -1,23 +1,22 @@
 import java.io.*;
 import java.util.*;
 
-public class Main {
+public class Permutation2_BoxOnLevel {
 
   public static void permutations(int cb, int tb, int[] items, int ssf, int ts, String asf) {
     // write your code here
 
     if (cb > tb) {
-      //if (ssf == ts) {
+      // if (ssf == ts) {
       System.out.println(asf);
       // }
       return;
     }
 
+    // box on level
+    // yes and no call
 
-    //box on level
-    //yes and no call
-
-    //yes call
+    // yes call
     for (int i = 0; i < items.length; i++) {
       if (items[i] == 0) {
 
@@ -27,7 +26,7 @@ public class Main {
       }
     }
 
-    //nocall
+    // nocall
     permutations(cb + 1, tb, items, ssf, ts, asf + 0 + "");
   }
 
