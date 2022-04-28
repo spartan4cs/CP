@@ -14,11 +14,12 @@ public class CoinChangeCombination_2 {
         int amt = sc.nextInt();
 
         // coins on option
+        // same coin can be used multiple times
 
-        coinCombination2(coins, 0, amt, "", -1);
+        coinCombination2(coins, 0, amt, "", 0);
     }
 
-    private static void coinCombination2(int[] coins, int cl, int amt, String asf, int lp) {
+    private static void coinCombination2(int[] coins, int cl, int amt, String asf, int lo) {
 
         if (amt == 0) {
             System.out.println(asf + ".");
@@ -28,7 +29,7 @@ public class CoinChangeCombination_2 {
             return;
         }
 
-        for (int i = lp + 1; i < coins.length; i++) {
+        for (int i = lo; i < coins.length; i++) {
             int coin = coins[i];
             if (amt - coin >= 0) {
 
