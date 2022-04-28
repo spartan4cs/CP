@@ -4,19 +4,20 @@ import java.util.Scanner;
 public class GoldMine2 {
     static int max = 0;
 
+    static int sum = 0;
+
     public static void getMaxGold(int[][] arr) {
         // write your code here
 
-        boolean[][] vis = new boolean[arr.length][arr.length];
+        boolean[][] vis = new boolean[arr.length][arr[0].length];
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[0].length; j++) {
 
                 if (arr[i][j] != 0 && !vis[i][j]) {
 
-                    int localmax = dfs(arr, i, j, vis);
-                    if (localmax > max) {
-                        max = localmax;
-                    }
+                    sum = 0;
+                    max = Math.max(max, dfs(arr, i, j, vis));
+
                 }
             }
         }
@@ -29,16 +30,17 @@ public class GoldMine2 {
 
         vis[r][c] = true;
 
-        int max = 0;
         for (int i = 0; i < 4; i++) {
             int nr = r + rdir[i];
             int nc = c + cdir[i];
-            if (nr >= 0 && nr < arr.length && nc >= 0 && nc < arr[0].length && arr[nr][nc] != 0 && !vis[nr][nc]) {
-                max = Math.max(max, dfs(arr, nr, nc, vis));
+            if (nr >= 0 && nr < arr.length && nc >= 0 && nc < arr[0].length && arr[nr][nc] != 0
+                    && !vis[nr][nc]) {
+                dfs(arr, nr, nc, vis);
             }
 
         }
-        return max + arr[r][c];
+        sum= sum + arr[r][c];
+        return sum;
     }
 
     public static void main(String[] args) {
