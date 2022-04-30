@@ -1,3 +1,7 @@
-5 5 5 5 
-5 5 5 5 
-true
+(a)(b)(a)(a)(b)(a)
+(a)(b)(a)(aba)
+(a)(b)(aa)(b)(a)
+(a)(baab)(a)
+(aba)(a)(b)(a)
+(aba)(aba)
+(abaaba)
