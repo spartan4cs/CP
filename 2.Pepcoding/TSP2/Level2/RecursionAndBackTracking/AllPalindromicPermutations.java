@@ -6,7 +6,19 @@ public class AllPalindromicPermutations {
 
         if (cs == ts) {
 
-            
+            String rev = "";
+            for (int i = asf.length() - 1; i > 0; i--) {
+                rev += asf.charAt(i);
+            }
+
+            String ans = asf;
+            if (oddc != null) {
+                ans += oddc;
+            }
+            ans += rev;
+            System.out.println(ans);
+            return;
+
         }
 
         for (char ch : fmap.keySet()) {
