@@ -7,7 +7,7 @@ public class AllPalindromicPermutations {
         if (cs == ts) {
 
             String rev = "";
-            for (int i = asf.length() - 1; i > 0; i--) {
+            for (int i = asf.length() - 1; i >= 0; i--) {
                 rev += asf.charAt(i);
             }
 
