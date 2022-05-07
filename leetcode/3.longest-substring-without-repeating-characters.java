@@ -9,12 +9,21 @@ import java.util.HashSet;
 // @lc code=start
 class Solution {
     public int lengthOfLongestSubstring(String s) {
+        int a = 0;
+        int b = 0;
+        int ans = 0;
         HashSet<Character> hs = new HashSet<>();
-        for (int i = 0; i < s.length(); i++) {
-            hs.add(s.charAt(i));
-
+        while (b < s.length()) {
+            if (!hs.contains(s.charAt(b))) {
+                hs.add(s.charAt(b));
+                b++;
+                ans = Math.max(ans, hs.size());
+            } else {
+                hs.remove(s.charAt(a));
+                a++;
+            }
         }
-        return hs.size();
+        return ans;
     }
 }
 // @lc code=end
