@@ -1,3 +1,4 @@
+import java.util.*;
 /*
  * @lc app=leetcode id=2 lang=java
  *
@@ -5,16 +6,25 @@
  */
 
 // @lc code=start
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- * int val;
- * ListNode next;
- * ListNode() {}
- * ListNode(int val) { this.val = val; }
- * ListNode(int val, ListNode next) { this.val = val; this.next = next; }
- * }
- */
+
+//  Definition for singly-linked list.
+public class ListNode {
+    int val;
+    ListNode next;
+
+    ListNode() {
+    }
+
+    ListNode(int val) {
+        this.val = val;
+    }
+
+    ListNode(int val, ListNode next) {
+        this.val = val;
+        this.next = next;
+    }
+}
+
 class Solution {
     public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         ListNode ans = new ListNode(-1);
@@ -68,7 +78,7 @@ class Solution {
             l2 = l2.next;
         }
 
-        if (cf>0) {
+        if (cf > 0) {
             ans.next = new ListNode(cf);
 
         }
