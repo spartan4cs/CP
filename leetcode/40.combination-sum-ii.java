@@ -26,10 +26,10 @@ class Solution {
 
         List<List<Integer>> ans = new ArrayList<>();
         for (int i = lc + 1; i < candidates.length; i++) {
-            if (i > 0 && i != lc + 1 && candidates[i] == candidates[i - 1]) {
+            if (i != lc + 1 && candidates[i] == candidates[i - 1]) {
 
-                //skip if same number as option in curent level
-                //dont skip if it at new level
+                // skip if same number as option in curent level
+                // dont skip if it is 1st occurence  at new level
                 continue;
             }
             if (target - candidates[i] >= 0) {
