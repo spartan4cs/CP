@@ -1,6 +1,4 @@
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.*;
 
 /*
  * @lc app=leetcode id=40 lang=java
@@ -29,7 +27,7 @@ class Solution {
             if (i != lc + 1 && candidates[i] == candidates[i - 1]) {
 
                 // skip if same number as option in curent level
-                // dont skip if it is 1st occurence  at new level
+                // dont skip if it is 1st occurence at new level
                 continue;
             }
             if (target - candidates[i] >= 0) {
