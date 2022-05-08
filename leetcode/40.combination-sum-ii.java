@@ -12,22 +12,11 @@ import java.util.HashSet;
 class Solution {
     public List<List<Integer>> combinationSum2(int[] candidates, int target) {
 
-        // word k selection 4
-        HashMap<Integer, Integer> fmap = new HashMap<>();
-        HashSet<Integer> st = new HashSet<>();
-
-        for (int i : candidates) {
-            fmap.put(i, fmap.getOrDefault(i, 0) + 1);
-            st.add(i);
-
-        }
-        Integer[] uniqueCandidate = new Integer[st.size()];
-        st.toArray(uniqueCandidate);
-        return helper(candidates, target, 0, fmap, uniqueCandidate);
+        Arrays.sort(candidates);
+        return helper(candidates, target, -1);
     }
 
-    private List<List<Integer>> helper(int[] candidates, int target, int lc, HashMap<Integer, Integer> fmap,
-            Integer[] uniqueCandidate) {
+    private List<List<Integer>> helper(int[] candidates, int target, int lc) {
         if (target == 0) {
             List<List<Integer>> bans = new ArrayList<>();
             bans.add(new ArrayList<>());
@@ -36,16 +25,19 @@ class Solution {
         }
 
         List<List<Integer>> ans = new ArrayList<>();
-        for (int i = lc; i < uniqueCandidate.length; i++) {
+        for (int i = lc + 1; i < candidates.length; i++) {
+            if (i > 0 && i != lc + 1 && candidates[i] == candidates[i - 1]) {
 
-            int currentCandidate = uniqueCandidate[i];
-            if (fmap.get(currentCandidate) > 0 && target - currentCandidate >= 0) {
+                //skip if same number as option in curent level
+                //dont skip if it at new level
+                continue;
+            }
+            if (target - candidates[i] >= 0) {
 
-                fmap.put(currentCandidate, fmap.get(currentCandidate) - 1);
-                List<List<Integer>> lans = helper(candidates, target - currentCandidate, i, fmap, uniqueCandidate);
+                List<List<Integer>> lans = helper(candidates, target - candidates[i], i);
                 if (lans.size() > 0) {
                     for (List<Integer> l : lans) {
-                        l.add(currentCandidate);
+                        l.add(candidates[i]);
                         ans.add(l);
 
                     }
