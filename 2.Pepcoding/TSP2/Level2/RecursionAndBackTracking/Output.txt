@@ -1,2 +1,1 @@
-(())()
-()()()
+DoubleSummaryStatistics{count=6, sum=21143.000000, min=1234.000000, average=3523.833333, max=7100.000000}
