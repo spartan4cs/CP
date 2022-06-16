@@ -14,6 +14,7 @@ class Solution {
     public List<Integer> partitionLabels(String s) {
         Map<Character, Integer> lastIndex = new HashMap<>();
         int slen = s.length();
+        // maintain last index
         for (int i = 0; i < s.length(); i++) {
             lastIndex.put(s.charAt(i), i);
         }
@@ -21,17 +22,21 @@ class Solution {
         // System.out.println(lastIndex);
         List<Integer> ans = new ArrayList<>();
         int itr = 0;
+        // start and end index for each char
+        // and update only end index
         int startIndex = 0;
         Integer endIndex = lastIndex.get(s.charAt(0));
         while (itr < slen) {
 
             Integer currEndIndex = lastIndex.get(s.charAt(itr));
 
+            // update end index
             endIndex = Math.max(endIndex, currEndIndex);
             if (itr == endIndex) {
                 ans.add(endIndex - startIndex + 1);
+                // update start and end index
                 startIndex = itr + 1;
-                if (startIndex!=slen) {
+                if (startIndex != slen) {
 
                     endIndex = lastIndex.get(s.charAt(startIndex));
                 }
