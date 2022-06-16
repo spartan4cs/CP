@@ -11,38 +11,43 @@ import java.util.Stack;
 // @lc code=start
 class MinStack {
 
+    private Stack<int[]> st;
 
-    Stack<Integer> st;
-    Stack<Integer> min;
     public MinStack() {
         st = new Stack<>();
-        min = new Stack<>();
-
     }
 
     public void push(int val) {
-        st.push(val);
-        if (val<getMin()) {
-            min.push(val);
+        // if the stack is empty, the min value should be the val itself
+        if (st.isEmpty()) {
+            int[] arr = new int[2];
+            arr[0] = val;
+            arr[1] = val;
+            st.push(arr);
         }
+        // now, compare the existed min val to this new added val
+        else {
+            int[] arr = new int[2];
+            arr[0] = val;
+            arr[1] = Math.min(getMin(), val);
+            st.push(arr);
+        }
+
     }
 
     public void pop() {
-        int val =st.pop();
-        if (val==getMin()) {
-            min.pop();
-        }
-
+        st.pop();
     }
 
     public int top() {
-
-        return st.peek();
+        int[] arr = st.peek();
+        return arr[0];
     }
 
     public int getMin() {
-        
-        return min.peek();
+        // the current min value for the elements in the stacks currently
+        // always store in the top element
+        return st.peek()[1];
     }
 }
 
