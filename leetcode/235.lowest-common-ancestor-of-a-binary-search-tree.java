@@ -21,45 +21,19 @@ public class TreeNode {
 }
 
 class Solution {
-    public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+    public TreeNode lowestCommonAncestor(TreeNode node, TreeNode d1, TreeNode d2) {
 
-        ArrayList<TreeNode> pData = ntr(root, p);
-        ArrayList<TreeNode> qData = ntr(root, q);
-
-        // System.out.println(pData);
-        // System.out.println(qData);
-
-        int i = pData.size() - 1;
-        while (pData.get(i).val == qData.get(i).val) {
-
-            i--;
-        }
-        i++;
-        return pData.get(i);
+        if(d1.val>node.val && d2.val>node.val){
+            return lowestCommonAncestor(node.right,d1,d2);
+             
+         }else if(d1.val<node.val && d2.val<node.val){
+           return lowestCommonAncestor(node.left,d1,d2);
+             
+         }else{
+              return node;  
+         }
     }
 
-    public List<TreeNode> ntr(TreeNode root, TreeNode p) {
-
-        if (root.val == p.val) {
-            List<TreeNode> b_ans = new ArrayList<>();
-            b_ans.add(p.val);
-            return b_ans;
-        }
-        if (root.left != null) {
-            List<TreeNode> l = ntr(root.left, p);
-            if (l.size() > 0) {
-                l.add(root);
-                return l;
-            }
-        }
-        if (root.right != null) {
-            List<TreeNode> r = ntr(root.right, p);
-            if (r.size() > 0) {
-                r.add(root);
-                return r;
-            }
-        }
-        return new ArrayList<>();
-    }
+  
 }
 // @lc code=end
