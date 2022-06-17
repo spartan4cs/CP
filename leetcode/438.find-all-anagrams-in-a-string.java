@@ -11,6 +11,8 @@ import java.util.Set;
 
 // @lc code=start
 class Solution {
+
+    // refered :https://www.youtube.com/watch?v=fYgU6Bi2fRg
     public boolean isEqualArr(int[] a, int[] b) {
         for (int i = 0; i < b.length; i++) {
             if (a[i] != b[i]) {
