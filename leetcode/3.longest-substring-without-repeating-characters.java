@@ -17,7 +17,7 @@ class Solution {
             if (!hs.contains(s.charAt(b))) {
                 hs.add(s.charAt(b));
                 b++;
-                ans = Math.max(ans, hs.size());
+                ans = Math.max(ans, hs.size());// can use b-a instead of hs.size
             } else {
                 hs.remove(s.charAt(a));
                 a++;
