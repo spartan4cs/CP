@@ -17,6 +17,8 @@ class Demo {
         int j = sc.nextInt();
         int[][] arr = new int[i][j];
 
+        Map<String,int[]> a = new TreeMp
+
         // input
         for (int r = 0; r < arr.length; r++) {
             for (int c = 0; c < arr[0].length; c++) {
