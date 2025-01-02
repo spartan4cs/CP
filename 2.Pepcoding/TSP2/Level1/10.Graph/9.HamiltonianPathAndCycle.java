@@ -43,7 +43,7 @@ public class HamiltonianPathAndCycle {
 
     public static void visitAllPath(ArrayList<Edge>[] graph, int src, HashSet<Integer> vis, String psf, int osrc) {
 
-        if (vis.size() == graph.length - 1) {
+        if (vis.size() == graph.length - 1) {//vvimp to get the edge case 
             psf += src;
             System.out.print(psf);
             // check if cycle
