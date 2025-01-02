@@ -52,6 +52,8 @@ public class BFS {
 
         while (qu.size() > 0) {
 
+            // rpa, rwma
+
             // remove
             Pair rem = qu.remove();
 
