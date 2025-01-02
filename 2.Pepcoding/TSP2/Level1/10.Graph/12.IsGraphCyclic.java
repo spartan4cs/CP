@@ -61,16 +61,16 @@ public class IsGraphCyclic {
         qu.add(src);
         while (qu.size() > 0) {
 
-            // rmwa
+            // rwma
 
             Integer rem = qu.remove();
 
-            // mark
-
+            //work
             if (vis[rem] == true) {
                 // cycle dected
                 return true;
             }
+            // mark
             vis[rem] = true;
 
             // add
