@@ -55,10 +55,11 @@ public class BFS {
             // remove
             Pair rem = qu.remove();
 
-            // mark
+            //work
             if (vis[rem.vtx] == true) {
                 continue;
             }
+            // mark
             vis[rem.vtx] = true;
 
             // print
